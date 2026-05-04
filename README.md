@@ -1,74 +1,131 @@
 # TrustGuard
 
-Android için kapsamlı güvenlik ve gizlilik uygulaması.
-
-## İndir
-
-**[Releases sayfasından en son APK'yı indir](../../releases/latest)**
-
-> Kurulum: APK'yı indirdikten sonra Android ayarlarından "Bilinmeyen kaynaklardan yükleme"ye izin ver ve dosyayı aç.
+**TrustGuard is a free, open-source, local-first Android privacy and security toolkit.
+It is not monetized, does not include ads, does not require an account, and is not distributed through Google Play.**
 
 ---
 
-## Özellikler
+## Download
 
-- **VPN & DNS Engelleme** — Reklam ve tracker'ları VPN tabanlı DNS filtresiyle engelle
-- **Uygulama Güvenliği** — Yüklü uygulamaların izinlerini analiz et, risk seviyesini gör
-- **Güvenlik Duvarı** — Uygulamaların internet erişimini kontrol et
-- **Adware Tespiti** — Reklam yazılımı barındıran uygulamaları tespit et
-- **Gizlilik Araçları** — Sahte kimlik, uygulama kilitleme, gizli kasa
-- **Dosya Kurtarma** — Silinen dosyaları geri getir
-- **Sistem Optimizasyonu** — Pil ve depolama analizi
-- **Şişkinlik Yazılımı Tespiti** — Ön yüklü gereksiz uygulamaları tespit et
-- **Paket Dinleyici** — Ağ trafiğini izle
-- **Ebeveyn Kontrolü** — Uygulama zaman sınırları ve içerik filtresi
-- **Wi-Fi Güvenlik Analizi** — Bağlı ağın güvenliğini kontrol et
+**[Download the latest APK from Releases](../../releases/latest)**
 
-## Teknik Bilgiler
+> Installation: Enable "Install from unknown sources" in Android settings, then open the APK.
+
+---
+
+## Privacy & Monetization
+
+TrustGuard is completely free and open source.
+
+- No ads
+- No subscriptions
+- No in-app purchases
+- No account required
+- No analytics
+- No personal data collection or selling
+- No remote monitoring dashboard
+- No cloud sync
+
+All processing happens locally on your device.
+
+---
+
+## What TrustGuard Does Not Do
+
+- It does not spy on users.
+- It does not upload browsing history.
+- It does not read private messages.
+- It does not hide itself from the user.
+- It does not provide covert parental surveillance.
+- It does not sell or share any data.
+- It does not send traffic to a remote VPN server.
+
+---
+
+## Features
+
+- **App Permission Analyzer** — Inspect installed apps and understand their permission risk levels
+- **Local VPN-based DNS Blocker** — Block ads and trackers via local DNS filtering (no remote VPN server)
+- **Firewall** — Control which apps can access the internet
+- **Wi-Fi Security Checker** — Analyze the security of connected networks
+- **Suspicious App Indicators** — Detect adware and bloatware patterns
+- **Device Hygiene Checks** — Root detection, USB debug status, unknown sources
+- **Local Network Activity Monitor** — Observe network connections on device
+- **Privacy Tools** — App vault, fake identity generator, app locking
+- **File Recovery** — Recover deleted files from local storage
+- **System Optimization** — Battery and storage analysis
+- **Parental Controls** — App time limits and content filtering (transparent, user-controlled)
+- **Family Shield** — Configurable per-profile restrictions
+
+---
+
+## Technical Details
 
 | | |
 |---|---|
 | Platform | Android 7.0+ (API 24) |
-| Dil | Kotlin |
+| Language | Kotlin |
 | UI | Jetpack Compose |
-| Mimari | MVVM + Clean Architecture |
-| Paket | `com.trustedgelabs.trustguard` |
-
-## Geliştirme Ortamı
-
-### Gereksinimler
-- Android Studio Hedgehog veya üzeri
-- JDK 17
-- Android SDK 35
-
-### Kurulum
-
-```bash
-git clone https://github.com/YOUR_USERNAME/TrustGuard.git
-cd TrustGuard
-cp local.properties.example local.properties
-# local.properties dosyasını kendi SDK yolunla düzenle
-```
-
-### Release Build (isteğe bağlı)
-
-Release APK almak için `local.properties` dosyasına kendi keystore bilgilerini ekle:
-
-```
-RELEASE_STORE_FILE=../your-key.jks
-RELEASE_STORE_PASSWORD=...
-RELEASE_KEY_ALIAS=...
-RELEASE_KEY_PASSWORD=...
-```
-
-```bash
-./gradlew assembleRelease
-```
-
-## Lisans
-
-Bu proje MIT lisansı ile lisanslanmıştır.
+| Architecture | MVVM + Clean Architecture |
+| Package | `com.trustedgelabs.trustguard` |
+| Distribution | GitHub Releases only |
 
 ---
 
-Geliştirici: **TrustEdge Labs**
+## Building from Source
+
+### Requirements
+- Android Studio Hedgehog or newer
+- JDK 17
+- Android SDK 35
+
+### Setup
+
+```bash
+git clone https://github.com/trustedgelabs-dev/TrustGuard.git
+cd TrustGuard
+cp local.properties.example local.properties
+# Edit local.properties with your SDK path
+./gradlew assembleDebug
+```
+
+See [local.properties.example](local.properties.example) for signing configuration.
+
+---
+
+## Verifying the APK
+
+You can verify the integrity of the downloaded APK using its SHA-256 checksum published in each [release](../../releases).
+
+```bash
+# Linux / macOS
+sha256sum app-release.apk
+
+# Windows (PowerShell)
+certutil -hashfile app-release.apk SHA256
+```
+
+---
+
+## Repository Files
+
+| File | Purpose |
+|---|---|
+| [PERMISSIONS.md](PERMISSIONS.md) | Explanation of every Android permission requested |
+| [PRIVACY.md](PRIVACY.md) | Full privacy policy |
+| [SECURITY.md](SECURITY.md) | How to report vulnerabilities |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
+
+---
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0**.
+See [LICENSE](LICENSE) for details.
+
+Forks and derivatives must remain open source under the same license.
+
+---
+
+Developer: **TrustEdge Labs**
