@@ -40,7 +40,7 @@ TrustGuard processes the following data **only on your device**:
 
 ## Internet Access
 
-TrustGuard requests the `INTERNET` permission solely to operate the local VPN tunnel for DNS filtering. It does not make outbound connections to any remote server.
+TrustGuard requests the `INTERNET` permission solely to operate the local VPN tunnel for DNS filtering. TrustGuard does not send personal data, analytics, telemetry, or usage history to TrustEdge Labs servers. DNS filtering may forward DNS queries to the configured upstream DNS resolver (e.g. Cloudflare 1.1.1.1) as required for normal internet resolution.
 
 ---
 
@@ -64,4 +64,4 @@ If this policy changes in a future version, the change will be documented in [CH
 
 ## Contact
 
-For privacy-related questions: **privacy@trustedgelabs.com**
+For privacy-related questions: **privacy@trustedgelabs.dev**

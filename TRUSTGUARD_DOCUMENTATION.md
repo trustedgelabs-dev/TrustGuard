@@ -21,9 +21,7 @@
 7. [Izin Siniflandirma ve Risk Analizi](#7-izin-siniflandirma-ve-risk-analizi)
 8. [Dosya Kurtarma Sistemi](#8-dosya-kurtarma-sistemi)
 9. [Optimizasyon Motoru](#9-optimizasyon-motoru)
-10. [Premium / Faturalandirma Sistemi](#10-premium--faturalandirma-sistemi)
-11. [Gunluk Limit ve Anti-Tamper Sistemi](#11-gunluk-limit-ve-anti-tamper-sistemi)
-12. [Guvenlik Onlemleri](#12-guvenlik-onlemleri)
+10. [Guvenlik Onlemleri](#10-guvenlik-onlemleri)
 13. [Android Izinleri](#13-android-izinleri)
 14. [Yerellesltirme](#14-yerellestirme)
 15. [Tema ve Tasarim Sistemi](#15-tema-ve-tasarim-sistemi)
@@ -646,135 +644,7 @@ fun calculateSecurityScore(apps: List<AppInfo>): Int {
 
 ---
 
-## 10. Premium / Faturalandirma Sistemi
-
-**Dosya:** `billing/BillingManager.kt`
-
-### Urun Bilgisi
-
-| Ozellik | Deger |
-|---------|-------|
-| Urun ID | `trustguard_premium_yearly` |
-| Tur | Yillik abonelik |
-| Fiyat | Play Console'dan dinamik (ornk: ₺149,99 / $9.99) |
-| Faturalandirma Kutuphanesi | Google Play Billing v7.1.1 |
-
-### Singleton Durum Yonetimi
-
-```kotlin
-object BillingManager {
-    val isPremium: StateFlow<Boolean>           // Premium durumu
-    val premiumProductDetails: ProductDetails?   // Play Store urun detaylari
-
-    fun getFormattedPrice(): String              // Dinamik fiyat metni
-    fun getPriceAmountMicros(): Long             // Ham mikro fiyat
-    fun getCurrencyCode(): String                // Para birimi (TRY, USD vs.)
-    fun initialize()                             // Faturalandirma istemcisi kurulumu
-    fun queryProductDetails()                    // Play Store'dan fiyat sorgulama
-    fun queryExistingPurchases()                 // Mevcut abonelik kontrolu
-}
-```
-
-### Premium Ozellikler
-
-- **Uygulama Butunlugu Taramasi:** Yukleme kaynagi dogrulama
-- **Ag Izleme:** Uygulama bazli trafik izleme
-- **Aile Kalkani Modu:** Cocuk cihaz korumasi
-- **Gercek Zamanli Arka Plan Korumasi:** Surekli izleme
-- **Sinirsiz Tarama:** Gunluk tarama limiti kalkar
-- **Premium DNS Engelleme Listeleri:** Ek izleyici listeleri
-
-### UI Entegrasyonu
-
-- `NavGraph.kt`: Premium ekranlar `isPremium` kontrolu ile korunur
-- `DashboardScreen.kt`: Pro araclar ucretsiz kullanicilara kilitli gosterilir
-- `PremiumScreen.kt`: Aile Kalkani duygusal hook + ozellik kartlari + guven rozetleri
-
----
-
-## 11. Gunluk Limit ve Anti-Tamper Sistemi
-
-**Dosya:** `util/DailyLimitManager.kt`
-
-### Amac
-
-Ucretsiz kullanicilarin gunluk 2 tarama limitini atlatmasini onlemek. Kullanicinin "Uygulama verilerini temizle" yaparak limiti sifirlamasina karsi cok katmanli koruma.
-
-### Katman 1: Cihaz Parmak Izi
-
-```kotlin
-private fun getDeviceFingerprint(context: Context): String {
-    val androidId = Settings.Secure.ANDROID_ID
-    val installTime = packageInfo.firstInstallTime
-    val raw = "$androidId-$installTime-$packageName"
-    return SHA256(raw).base64().take(16)
-}
-```
-
-- `ANDROID_ID` ile cihaza ozgu
-- Uygulama yukleme zamani dahil
-- Veri temizleme sonrasi bile tutarli kalir
-
-### Katman 2: Deger Kodlama
-
-```kotlin
-private fun encodeValue(value: String, context: Context): String {
-    val combined = "$deviceFingerprint:$value"
-    return Base64.encode(combined)
-}
-```
-
-- Degerler `cihazParmakIzi:gercekDeger` formatinda Base64 kodlanir
-- Gecerli parmak izi olmadan cozmek/degistirmek mumkun degil
-- Farkli cihazdan geri yukleme tespit edilir
-
-### Katman 3: Butunluk Hash'i
-
-```kotlin
-private fun computeIntegrityHash(date: String, count: Int, context: Context): String {
-    return SHA256("$deviceFingerprint|$date|$count|tg_salt_2024")
-}
-```
-
-- Hash: cihaz parmak izi + tarih + tarama sayisi + tuz
-- Veriden ayri depolanir
-- Herhangi bir degisiklik okumada tespit edilir
-
-### Katman 4: Cift SharedPreferences (Birincil + Yedek)
-
-| | Birincil | Yedek |
-|---|---------|-------|
-| Dosya Adi | `tg_app_metrics` | `tg_analytics_cache` |
-| Sayi Anahtari | `m_evt_c` | `c_buf_c` |
-| Tarih Anahtari | `m_evt_d` | `c_buf_d` |
-| Hash Anahtari | `m_chk` | `c_chk` |
-
-- Anahtar adlari gizlenmis (ne depoladiklari belli degil)
-- Ayni kodlanmis degerler ve hash her iki dosyada saklanir
-- Biri temizlenirse digeri kurtarma icin kullanilir
-
-### Kurtarma Mantigi
-
-```
-1. Birincil SharedPreferences'i oku → Basarili? → Kullan
-2. Yedek SharedPreferences'i oku → Basarili? → Birincili geri yukle + Kullan
-3. Her ikisi de temiz → firstSeen kontrolu yap
-   a. firstSeen == 0 → Gercekten ilk kurulum → 0 tarama
-   b. firstSeen > 0 → Veri temizlendi! → Ceza: bugunku limit dolu
-```
-
-### Anti-Tamper Ozeti
-
-| Saldiri | Onlem |
-|---------|-------|
-| "Uygulama verilerini temizle" | Yedek SharedPreferences kurtarir |
-| Her iki prefs'i temizle | firstSeen kontrolu, limit dolu sayilir |
-| XML dosyasini manuel duzenle | Butunluk hash'i tutmaz, gecersiz sayilir |
-| Baska cihazdan geri yukle | Cihaz parmak izi eslesmedz |
-
----
-
-## 12. Guvenlik Onlemleri
+## 10. Guvenlik Onlemleri
 
 ### 12.1 Istisna Yonetimi Desenleri
 

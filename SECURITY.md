@@ -10,7 +10,7 @@ If you discover a security vulnerability in TrustGuard, please report it respons
 
 Send a description of the vulnerability to:
 
-**security@trustedgelabs.com**
+**security@trustedgelabs.dev**
 
 Include the following in your report:
 - A description of the vulnerability
