@@ -9,10 +9,10 @@ TrustGuard requests only the permissions required for its stated features. Every
 ## Network & VPN
 
 ### `INTERNET`
-Used exclusively for local DNS filtering via the VPN interface. TrustGuard does not connect to any remote server or transmit user data over the internet.
+Used exclusively for local DNS filtering via the VPN interface. TrustGuard does not send personal data, analytics, telemetry, or usage history to TrustEdge Labs servers. DNS filtering may forward DNS queries to the configured upstream resolver (e.g. Cloudflare 1.1.1.1) as required for normal internet resolution.
 
 ### `BIND_VPN_SERVICE`
-Required to create the local VPN tunnel used for DNS-based ad and tracker blocking. All traffic filtering happens on-device — no traffic is routed to an external server.
+Required to create the local VPN tunnel used for DNS-based ad and tracker blocking. All traffic filtering happens on-device — no traffic is routed to TrustEdge Labs or any third-party VPN provider. Non-blocked DNS queries are forwarded to the configured upstream resolver as required for normal internet resolution.
 
 ### `CHANGE_NETWORK_STATE` / `ACCESS_NETWORK_STATE` / `ACCESS_WIFI_STATE`
 Used to read Wi-Fi connection details for the security analysis feature. No data leaves the device.

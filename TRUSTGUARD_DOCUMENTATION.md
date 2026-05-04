@@ -1,92 +1,95 @@
-# TrustGuard - Kapsamli Uygulama Dokumantasyonu
+# TrustGuard - Comprehensive Application Documentation
 
-**Gelistirici:** TrustEdge Labs
-**Paket Adi:** `com.trustedgelabs.trustguard`
-**Versiyon:** 3.0.0 (versionCode: 14)
+**Developer:** TrustEdge Labs
+**Package Name:** `com.trustedgelabs.trustguard`
+**Version:** 3.0.0 (versionCode: 14)
 **Platform:** Android
 **Minimum SDK:** 24 (Android 7.0 Nougat)
-**Hedef SDK:** 35 (Android 15)
-**Derleme SDK:** 35
+**Target SDK:** 35 (Android 15)
+**Compile SDK:** 35
+**License:** GNU General Public License v3.0
 
 ---
 
-## Icindekiler
+## Table of Contents
 
-1. [Genel Bakis](#1-genel-bakis)
-2. [Teknoloji Yigini ve Bagimliliklar](#2-teknoloji-yigini-ve-bagimliliklar)
-3. [Mimari Yapi](#3-mimari-yapi)
-4. [Ozellikler ve Ekranlar](#4-ozellikler-ve-ekranlar)
-5. [VPN ve DNS Engelleme Sistemi](#5-vpn-ve-dns-engelleme-sistemi)
-6. [Adware Tespit Motoru](#6-adware-tespit-motoru)
-7. [Izin Siniflandirma ve Risk Analizi](#7-izin-siniflandirma-ve-risk-analizi)
-8. [Dosya Kurtarma Sistemi](#8-dosya-kurtarma-sistemi)
-9. [Optimizasyon Motoru](#9-optimizasyon-motoru)
-10. [Guvenlik Onlemleri](#10-guvenlik-onlemleri)
-13. [Android Izinleri](#13-android-izinleri)
-14. [Yerellesltirme](#14-yerellestirme)
-15. [Tema ve Tasarim Sistemi](#15-tema-ve-tasarim-sistemi)
-16. [Derleme Yapilandirmasi](#16-derleme-yapilandirmasi)
-17. [Kaynak Dosyalari](#17-kaynak-dosyalari)
-18. [Dosya Yapisi](#18-dosya-yapisi)
-
----
-
-## 1. Genel Bakis
-
-TrustGuard, Android cihazlar icin gelistirilmis kapsamli bir gizlilik ve guvenlik uygulamasidir. Kullanicilarin yuklu uygulamalarini tarayarak izin risklerini analiz eder, reklam izleyicileri DNS seviyesinde engeller, adware tespit eder, dosya kurtarma ve cihaz optimizasyonu saglar.
-
-### Temel Deger Onerileri
-
-| Ozellik | Aciklama | Ucretli/Ucretsiz |
-|---------|----------|-------------------|
-| Izin Analizi | Tum uygulamalarin izinlerini tarar ve risk puanlar | Ucretsiz |
-| DNS Engelleme (VPN) | Reklam ve izleyicileri DNS seviyesinde engeller | Ucretsiz |
-| Adware Tespiti | SDK imzalari ve izin kombinasyonlari ile supheli uygulama tespiti | Ucretsiz |
-| Wi-Fi Guvenlik Taramasi | Bagli Wi-Fi aginin guvenlik analizini yapar | Ucretsiz |
-| Pil Saglik Analizi | Pil durumu, sicaklik ve ust tuketicileri gosterir | Ucretsiz |
-| Depolama Analizi | Depolama kullanim dagilimini kategorize eder | Ucretsiz |
-| Dosya Kurtarma | Silinen dosyalari 9 farkli strateji ile kurtarir | Ucretsiz |
-| Cihaz Optimizasyonu | Cop dosya, onbellek, kopya temizligi | Ucretsiz |
-| Uygulama Butunlugu | Yukleme kaynagi dogrulama (Play Store vs Sideload) | Premium |
-| Ag Izleme | Uygulama bazli ag trafik izlemesi | Premium |
-| Aile Kalkani | Cocuklarin cihazlari icin gercek zamanli koruma | Premium |
+1. [Overview](#1-overview)
+2. [Technology Stack and Dependencies](#2-technology-stack-and-dependencies)
+3. [Architecture](#3-architecture)
+4. [Features and Screens](#4-features-and-screens)
+5. [VPN and DNS Blocking System](#5-vpn-and-dns-blocking-system)
+6. [Adware Detection Engine](#6-adware-detection-engine)
+7. [Permission Classification and Risk Analysis](#7-permission-classification-and-risk-analysis)
+8. [File Recovery System](#8-file-recovery-system)
+9. [Optimization Engine](#9-optimization-engine)
+10. [Security Measures](#10-security-measures)
+11. [Android Permissions](#11-android-permissions)
+12. [Localization](#12-localization)
+13. [Theme and Design System](#13-theme-and-design-system)
+14. [Build Configuration](#14-build-configuration)
+15. [Resource Files](#15-resource-files)
+16. [File Structure](#16-file-structure)
 
 ---
 
-## 2. Teknoloji Yigini ve Bagimliliklar
+## 1. Overview
 
-### Cekirdek Teknolojiler
+TrustGuard is a comprehensive privacy and security application for Android devices. It scans installed apps to analyze permission risks, blocks ads and trackers at the DNS level via a local on-device VPN, detects adware, and provides file recovery and device optimization tools.
 
-| Teknoloji | Versiyon | Amac |
-|-----------|----------|------|
-| Kotlin | 2.0.21 | Ana programlama dili |
-| Jetpack Compose | BOM 2024.09.00 | %100 Compose tabanli UI |
-| Material 3 | 1.3.1 | Material Design 3 bilesenleri |
-| Android Gradle Plugin | 8.9.0 | Derleme sistemi |
-| Java Uyumlulugu | VERSION_11 | JVM hedefi |
+TrustGuard is fully free and open source under the GNU GPL v3.0 license. There are no in-app purchases, subscriptions, ads, or remote servers. All processing happens on the user's device.
 
-### AndroidX Kutuphaneleri
+### Core Value Propositions
 
-| Kutuphane | Versiyon | Amac |
-|-----------|----------|------|
-| `androidx.core:core-ktx` | 1.15.0 | Android Core KTX uzantilari |
-| `androidx.lifecycle:lifecycle-runtime-ktx` | 2.8.7 | Yasam dongusu yonetimi |
-| `androidx.activity:activity-compose` | 1.10.1 | Compose Activity entegrasyonu |
-| `androidx.lifecycle:lifecycle-viewmodel-compose` | 2.8.7 | ViewModel Compose entegrasyonu |
-| `androidx.navigation:navigation-compose` | 2.8.8 | Ekran arasi navigasyon |
-| `androidx.compose.material:material-icons-extended` | BOM | Genisletilmis Material ikonlari |
+| Feature | Description |
+|---------|-------------|
+| Permission Analysis | Scans permissions of all installed apps and assigns risk scores |
+| DNS Blocking (VPN) | Blocks ad and tracker domains at the DNS level via a local VPN tunnel |
+| Adware Detection | Detects suspicious apps via SDK signatures and permission combinations |
+| Wi-Fi Security Scan | Analyzes the security of the connected Wi-Fi network |
+| Battery Health Analysis | Shows battery state, temperature, and top consumers |
+| Storage Analysis | Categorizes storage usage breakdown |
+| File Recovery | Recovers deleted files using 9 different strategies |
+| Device Optimization | Cleans junk files, cache, and duplicates |
+| App Integrity | Verifies install source (Play Store vs sideloaded) |
+| Network Monitor | Per-app network traffic monitoring |
+| Family Shield | Configurable per-profile parental restrictions |
 
-### Ucuncu Parti Kutuphaneler
+---
 
-| Kutuphane | Versiyon | Amac |
-|-----------|----------|------|
-| `io.coil-kt:coil-compose` | 2.6.0 | Goruntu yukleme (uygulama ikonlari) |
-| `io.coil-kt:coil-video` | 2.6.0 | Video thumbnail yukleme |
+## 2. Technology Stack and Dependencies
 
-### Test Kutuphaneleri
+### Core Technologies
 
-| Kutuphane | Versiyon |
-|-----------|----------|
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Kotlin | 2.0.21 | Primary programming language |
+| Jetpack Compose | BOM 2024.09.00 | 100% Compose-based UI |
+| Material 3 | 1.3.1 | Material Design 3 components |
+| Android Gradle Plugin | 8.9.0 | Build system |
+| Java Compatibility | VERSION_11 | JVM target |
+
+### AndroidX Libraries
+
+| Library | Version | Purpose |
+|---------|---------|---------|
+| `androidx.core:core-ktx` | 1.15.0 | Android Core KTX extensions |
+| `androidx.lifecycle:lifecycle-runtime-ktx` | 2.8.7 | Lifecycle management |
+| `androidx.activity:activity-compose` | 1.10.1 | Compose Activity integration |
+| `androidx.lifecycle:lifecycle-viewmodel-compose` | 2.8.7 | ViewModel Compose integration |
+| `androidx.navigation:navigation-compose` | 2.8.8 | Inter-screen navigation |
+| `androidx.compose.material:material-icons-extended` | BOM | Extended Material icons |
+
+### Third-Party Libraries
+
+| Library | Version | Purpose |
+|---------|---------|---------|
+| `io.coil-kt:coil-compose` | 2.6.0 | Image loading (app icons) |
+| `io.coil-kt:coil-video` | 2.6.0 | Video thumbnail loading |
+
+### Test Libraries
+
+| Library | Version |
+|---------|---------|
 | `junit:junit` | 4.13.2 |
 | `androidx.test.ext:junit` | 1.2.1 |
 | `androidx.test.espresso:espresso-core` | 3.6.1 |
@@ -94,47 +97,47 @@ TrustGuard, Android cihazlar icin gelistirilmis kapsamli bir gizlilik ve guvenli
 
 ---
 
-## 3. Mimari Yapi
+## 3. Architecture
 
-### Katmanli MVVM Mimarisi
+### Layered MVVM Architecture
 
 ```
-Sunum Katmani (UI)
-    Compose Ekranlar + Material 3 Bilesenler
-    ViewModel'ler (StateFlow ile reaktif durum yonetimi)
+Presentation Layer (UI)
+    Compose Screens + Material 3 Components
+    ViewModels (reactive state via StateFlow)
         |
-Kullanim Senaryolari (Use Cases)
+Use Cases
     ScanAppsUseCase, AnalyzePermissionsUseCase
         |
-Repository Katmani
+Repository Layer
     AppRepositoryImpl, BlocklistRepositoryImpl, BlockingStatsRepository
         |
-Veri Kaynagi Katmani (Data Sources)
+Data Source Layer
     PackageManagerDataSource, WifiSecurityDataSource, BatteryDataSource,
     StorageDataSource, AppIntegrityDataSource, OptimizationDataSource,
     MediaStoreRecoveryDataSource, BlocklistDataSource
         |
-Alan Mantigi (Domain)
-    AdwareDetector, PermissionClassifier, DailyLimitManager
+Domain Layer
+    AdwareDetector, PermissionClassifier
         |
-Servis Katmani
+Service Layer
     TrustGuardVpnService, NotificationAdDetector, VpnControlManager
         |
-Android Sistem API'leri
+Android System APIs
     PackageManager, VpnService, WifiManager, BatteryManager,
     StorageStatsManager, UsageStatsManager, TrafficStats, MediaStore
 ```
 
-### Durum Yonetimi
+### State Management
 
-- **MutableStateFlow / StateFlow:** Tum ViewModel'lerde reaktif durum yonetimi
-- **collectAsState():** Compose UI'da Flow'lari dinleme
-- **SharedPreferences:** Kalici veri depolama (gunluk limit, VPN filtre ayarlari)
-- **@Volatile:** Thread-safe boolean bayraklari (VPN dongusu)
+- **MutableStateFlow / StateFlow:** Reactive state management across all ViewModels
+- **collectAsState():** Flow consumption in Compose UI
+- **SharedPreferences:** Persistent local storage (VPN filter settings, user preferences)
+- **@Volatile:** Thread-safe boolean flags (VPN loop)
 
-### Navigasyon Yapisi
+### Navigation Structure
 
-`NavGraph.kt` ile 14 ekran arasi navigasyon:
+`NavGraph.kt` defines navigation across the application screens:
 
 ```kotlin
 sealed class Screen(val route: String) {
@@ -144,324 +147,304 @@ sealed class Screen(val route: String) {
     data object DnsBlocking : Screen("dns_blocking")
     data object Recovery : Screen("recovery")
     data object Adware : Screen("adware")
-    data object Premium : Screen("premium")
     data object Optimization : Screen("optimization")
     data object WifiSecurity : Screen("wifi_security")
     data object BatteryHealth : Screen("battery_health")
     data object StorageAnalyzer : Screen("storage_analyzer")
-    data object AppIntegrity : Screen("app_integrity")      // Premium
-    data object NetworkMonitor : Screen("network_monitor")  // Premium
+    data object AppIntegrity : Screen("app_integrity")
+    data object NetworkMonitor : Screen("network_monitor")
     data object Settings : Screen("settings")
 }
 ```
 
-Premium ekranlar (AppIntegrity, NetworkMonitor) `BillingManager.isPremium` kontrolu ile korunur; ucretsiz kullanicilar Premium ekranina yonlendirilir.
+All screens are accessible to all users. There are no paywalls or feature gates.
 
 ---
 
-## 4. Ozellikler ve Ekranlar
+## 4. Features and Screens
 
-### 4.1 Dashboard (Ana Ekran)
+### 4.1 Dashboard
 
-**Dosya:** `ui/screens/dashboard/DashboardScreen.kt`
+**File:** `ui/screens/dashboard/DashboardScreen.kt`
 **ViewModel:** `DashboardViewModel.kt`
 
-Ana kontrol merkezi. Ucretsiz ve Premium kullanicilar farkli gorunumler gorur:
+The main control center.
 
-**Ucretsiz Kullanicilar:**
-- Guvenlik Puan Arki (0-100 animasyonlu yay)
-- Kalan tarama hakki gostergesi
-- Trafik Isigi Satiri (Kirmizi/Sari/Yesil risk sayilari)
-- VPN Hizli Aksiyon Cubugu
-- Guvenlik Araclari: Izin Analizi, DNS Engelleme, Adware Tespiti, Wi-Fi Guvenlik
-- Optimizasyon Araclari: Pil, Depolama, Temizlik, Kurtarma
-- Pro Araclari (kilitli onizleme): Uygulama Butunlugu, Ag Izleme
-- En Riskli 3 Uygulama listesi
+- Animated security score arc (0-100)
+- Traffic light row (red/yellow/green risk counts)
+- VPN quick action bar
+- Security Tools: Permission Analysis, DNS Blocking, Adware Detection, Wi-Fi Security
+- Optimization Tools: Battery, Storage, Cleanup, Recovery
+- Advanced Tools: App Integrity, Network Monitor
+- Top 3 risky apps list
 
-**Premium Kullanicilar:**
-- ProDashboardHeader (gradient kart: puan + engellenen tehdit + guvenlik olaylari)
-- Tum araclar acik ve genisletilmis
-- Gelismis Araclar bolumu (kilitli degil)
+**ViewModel responsibilities:**
+- Automatic scan on app launch
+- VPN state observation (StateFlow)
+- Adware scanning
+- Security score computation
 
-**ViewModel Ozellikleri:**
-- Uygulama baslatildiginda otomatik tarama
-- VPN durumu gozleme (StateFlow)
-- Adware tarama
-- Gunluk limit kontrolu ve dialog yonetimi
-- Guvenlik puani hesaplama algoritmasi
+### 4.2 App List
 
-### 4.2 Uygulama Listesi
-
-**Dosya:** `ui/screens/applist/AppListScreen.kt`
+**File:** `ui/screens/applist/AppListScreen.kt`
 **ViewModel:** `AppListViewModel.kt`
 
-- Yuklu uygulamalarin filtrelenebilir listesi
-- Risk filtresi: Tumu / Yuksek / Orta / Dusuk
-- Sistem uygulamalarini goster/gizle secenegi
-- Uygulama adina gore arama
-- Her uygulama icin risk rozeti
+- Filterable list of installed apps
+- Risk filter: All / High / Medium / Low
+- Show/hide system apps toggle
+- Search by app name
+- Risk badge for each app
 
-### 4.3 Uygulama Detay Ekrani
+### 4.3 App Detail Screen
 
-**Dosya:** `ui/screens/detail/DetailScreen.kt`
+**File:** `ui/screens/detail/DetailScreen.kt`
 **ViewModel:** `DetailViewModel.kt`
 
-- Uygulama ikonu, adi ve risk seviyesi rozeti
-- Genel puan ve tehlikeli izin sayisi
-- Izin listesi (gruplu, risk gostergeleri ile)
-- Guvenilir uygulama seffaflik bilgisi (TrustEdge Labs uygulamalari icin)
-- Uygulama boyutu ve yukleme kaynagi
-- Kaldirma ve acma butonlari
+- App icon, name, and risk level badge
+- Overall score and dangerous permission count
+- Permission list (grouped, with risk indicators)
+- Trusted app transparency information (for TrustEdge Labs apps)
+- App size and install source
+- Uninstall and open buttons
 
-### 4.4 DNS Engelleme Ekrani
+### 4.4 DNS Blocking Screen
 
-**Dosya:** `ui/screens/blocking/DnsBlockingScreen.kt`
+**File:** `ui/screens/blocking/DnsBlockingScreen.kt`
 
-- Bugun engellenen toplam sayi
-- Toplam sorgu sayisi ve engelleme yuzdesi
-- En cok engellenen domain listesi
-- VPN acma/kapama kontrolu
-- Engelleme listeleri yonetimi (etkinlestirme/devre disi birakma)
+- Total blocked count for today
+- Total query count and blocking percentage
+- Top blocked domains list
+- VPN on/off toggle
+- Blocklist management (enable/disable lists)
 
-### 4.5 Wi-Fi Guvenlik Taramasi
+### 4.5 Wi-Fi Security Scan
 
-**Dosya:** `ui/screens/wifi/WifiSecurityScreen.kt`
+**File:** `ui/screens/wifi/WifiSecurityScreen.kt`
 
-- 4 durum yonetimi: tarama, konum izni gerekli, hata, bagli degil
-- Bagli Wi-Fi SSID'si
-- Guvenlik protokolu (WPA3/WPA2/WEP/Acik)
-- Guvenlik seviyesi gostergesi (Guvenli/Uyari/Tehlike)
-- Sinyal gucu, IP adresi, Gateway, DNS bilgileri
-- Guvenlik onerileri
+- 4 state handling: scanning, location permission required, error, not connected
+- Connected Wi-Fi SSID
+- Security protocol (WPA3/WPA2/WEP/Open)
+- Security level indicator (Safe/Warning/Danger)
+- Signal strength, IP address, gateway, DNS info
+- Security recommendations
 
-**Veri Kaynagi:** `WifiSecurityDataSource.kt`
-- `WifiManager` ile ag taramasi
-- SecurityException ve genel Exception yakalama
-- Hata durumunda null donusu (cokme onleme)
+**Data Source:** `WifiSecurityDataSource.kt`
+- Network scan via `WifiManager`
+- SecurityException and general Exception handling
+- Returns null on failure (crash prevention)
 
-### 4.6 Pil Saglik Analizi
+### 4.6 Battery Health Analysis
 
-**Dosya:** `ui/screens/battery/BatteryHealthScreen.kt`
+**File:** `ui/screens/battery/BatteryHealthScreen.kt`
 
-- Pil seviyesi dairesi ve sarj durumu
-- Saglik durumu (Iyi/Asiri Isinma/Oldu vs.)
-- Sicaklik ve voltaj bilgileri
-- Son 24 saatte en cok pil tuketen uygulamalar (ilerleme cubugu ile)
-- Pil tasarrufu ipuclari
+- Battery level circle and charging state
+- Health status (Good/Overheating/Dead, etc.)
+- Temperature and voltage info
+- Top battery-consuming apps over the last 24h (with progress bars)
+- Battery saving tips
 
-**Veri Kaynagi:** `BatteryDataSource.kt`
-- `BatteryManager` intent ile pil bilgileri
-- `UsageStatsManager` ile uygulama bazli kullanim
+**Data Source:** `BatteryDataSource.kt`
+- Battery info via `BatteryManager` intent
+- Per-app usage via `UsageStatsManager`
 
-### 4.7 Depolama Analizi
+### 4.7 Storage Analysis
 
-**Dosya:** `ui/screens/storage/StorageAnalyzerScreen.kt`
+**File:** `ui/screens/storage/StorageAnalyzerScreen.kt`
 
-- Donut grafik ile depolama dagilimi
-- Kullanim cubugu
-- Kategori bazli dagılım (Fotoğraflar, Videolar, Ses, Belgeler, Uygulamalar)
-- Bos alan, kullanilan alan, toplam alan
+- Donut chart for storage breakdown
+- Usage progress bar
+- Per-category breakdown (Photos, Videos, Audio, Documents, Apps)
+- Free, used, and total space
 
-**Veri Kaynagi:** `StorageDataSource.kt`
-- `StatFs` ile gercek depolama istatistikleri
-- Medya turune gore boyut hesaplama
-- `StorageStatsManager` ile uygulama depolama bilgisi
+**Data Source:** `StorageDataSource.kt`
+- Real storage statistics via `StatFs`
+- Size computation by media type
+- App storage info via `StorageStatsManager`
 
-### 4.8 Adware Tespit Ekrani
+### 4.8 Adware Detection Screen
 
-**Dosya:** `ui/screens/adware/AdwareScreen.kt`
+**File:** `ui/screens/adware/AdwareScreen.kt`
 **ViewModel:** `AdwareViewModel.kt`
 
-- Supheli uygulamalar listesi (suphe puani ile)
-- Sebep kartlari: overlay reklamlar, otomatik baslama, bilinen SDK, agresif arka plan
-- Her uygulama icin risk gostergesi ve kaldirma butonu
+- Suspicious apps list (with suspicion score)
+- Reason cards: overlay ads, autostart, known SDK, aggressive background
+- Risk indicator and uninstall button per app
 
-### 4.9 Dosya Kurtarma Ekrani
+### 4.9 File Recovery Screen
 
-**Dosya:** `ui/screens/recovery/RecoveryScreen.kt`
+**File:** `ui/screens/recovery/RecoveryScreen.kt`
 **ViewModel:** `RecoveryViewModel.kt`
 
-- 3 tarama modu: Hizli / Derin / Root
-- Tarama ilerleme gostergesi
-- Kurtarilabilir dosyalar listesi (ture gore gruplu: Foto/Video/Ses/Belge)
-- Secili dosyalari kurtarma
-- Varsayilan kurtarma dizini: `Pictures/TrustGuard_Recovered`
+- 3 scan modes: Quick / Deep / Root
+- Scan progress indicator
+- Recoverable file list (grouped by type: Photo/Video/Audio/Document)
+- Recover selected files
+- Default recovery directory: `Pictures/TrustGuard_Recovered`
 
-### 4.10 Optimizasyon Ekrani
+### 4.10 Optimization Screen
 
-**Dosya:** `ui/screens/optimization/OptimizationScreen.kt`
+**File:** `ui/screens/optimization/OptimizationScreen.kt`
 **ViewModel:** `OptimizationViewModel.kt`
 
-- Tarama turleri: Sistem Cop, Kopya Fotograflar, Buyuk Dosyalar, Uygulama Onbellegi, E-posta Onbellegi
-- Ilerleme gostergesi
-- Kategoriye gore gruplu dosyalar
-- Hizli silme ve alan tasarrufu tahmini
+- Scan types: System Junk, Duplicate Photos, Large Files, App Cache, Email Cache
+- Progress indicator
+- Files grouped by category
+- Quick deletion and space-saving estimate
 
-### 4.11 Uygulama Butunlugu (Premium)
+### 4.11 App Integrity
 
-**Dosya:** `ui/screens/integrity/AppIntegrityScreen.kt`
+**File:** `ui/screens/integrity/AppIntegrityScreen.kt`
 **ViewModel:** `AppIntegrityViewModel.kt`
 
-- Tum uygulamalarin yukleme kaynagini tarar
-- Play Store, Sideloaded, System, Unknown olarak siniflandirir
-- Sideloaded uygulamalar basta siralama
-- Yukleme kaynagi rozeti
+- Scans install sources of all apps
+- Classifies as Play Store, Sideloaded, System, or Unknown
+- Sideloaded apps shown first
+- Install source badge
 
-**Veri Kaynagi:** `AppIntegrityDataSource.kt`
-- `PackageManager.getInstallSourceInfo` ile kaynak tespiti
+**Data Source:** `AppIntegrityDataSource.kt`
+- Source detection via `PackageManager.getInstallSourceInfo`
 
-### 4.12 Ag Izleme (Premium)
+### 4.12 Network Monitor
 
-**Dosya:** `ui/screens/network/NetworkMonitorScreen.kt`
+**File:** `ui/screens/network/NetworkMonitorScreen.kt`
 
-- Toplam gonderilen/alinan veri kartlari
-- Uygulama bazli veri tuketim listesi (ilerleme cubugu ile)
-- `TrafficStats` API kullanimi
+- Total sent/received data cards
+- Per-app data consumption list (with progress bars)
+- Uses the `TrafficStats` API
 
-### 4.13 Premium Ekrani
+### 4.13 Settings Screen
 
-**Dosya:** `ui/screens/premium/PremiumScreen.kt`
+**File:** `ui/screens/settings/SettingsScreen.kt`
 
-- Play Store'dan dinamik fiyat gosterimi
-- Aile Kalkani duygusal hook bolumu (cocuklarin reklam tiklama senaryosu)
-- Pro ozellik kartlari (ikonlu)
-- 2x2 guven rozeti gridi
-- Kisaltilmis guven mesaji bolumu
-- Fiyat ve satin alma karti
-
-### 4.14 Ayarlar Ekrani
-
-**Dosya:** `ui/screens/settings/SettingsScreen.kt`
-
-- Uygulama filtre modu (Tumu vs Secili)
-- Harici tutulan uygulamalar listesi
-- Hakkinda, Versiyon, Gizlilik Politikasi
-- Gelistirici bilgileri (TrustEdge Labs)
+- App filter mode (All vs Selected)
+- Excluded apps list
+- About, Version, Privacy Policy
+- Developer info (TrustEdge Labs)
 
 ---
 
-## 5. VPN ve DNS Engelleme Sistemi
+## 5. VPN and DNS Blocking System
 
-### 5.1 Genel Mimari
+### 5.1 General Architecture
 
-TrustGuard, Android'in `VpnService` API'sini kullanarak yerel bir DNS filtreleme sistemi uygular. Tum internet trafigini degil, yalnizca DNS sorgularini yakalayarak reklam ve izleyici domainlerini engeller.
+TrustGuard uses Android's `VpnService` API to implement a local on-device DNS filtering system. It does not route all internet traffic — only DNS queries are intercepted, allowing ad and tracker domains to be blocked without exposing user traffic to a remote server.
 
-### 5.2 Servis Uygulamasi
+### 5.2 Service Implementation
 
-**Dosya:** `service/TrustGuardVpnService.kt`
+**File:** `service/TrustGuardVpnService.kt`
 
 ```
-Kullanici DNS sorgusu gonderir
+User sends DNS query
     |
-VPN arabirimi sorguyu yakalar (port 53 UDP)
+VPN interface intercepts query (UDP port 53)
     |
-DNS Paket Ayristirma (DnsPacket.kt)
+DNS Packet Parsing (DnsPacket.kt)
     |
-Domain engelleme listesinde mi?
+Is the domain in the blocklist?
     |
-  EVET --> 0.0.0.0 yaniti dondur (DnsResponseBuilder.kt)
+  YES --> Return 0.0.0.0 response (DnsResponseBuilder.kt)
     |
-  HAYIR --> Gercek DNS sunucusuna ilet
+  NO  --> Forward to upstream DNS resolver
 ```
 
-**Teknik Detaylar:**
-- Sahte DNS sunucu IP'leri kullanir: `198.18.0.1`, `198.18.0.2` (yonlendirilemez adres araligi)
-- Sadece bu IP'leri VPN tunelinden gecirerek tum trafigi yakalamaktan kacinir
-- Ozel paket isleme thread'i: `TrustGuard-VPN-Loop`
-- `@Volatile` bayragi ile thread-safe `isRunning` durumu
-- Foreground servis zorunlulugu (Android 14+: 5 saniye icinde `startForeground()` cagrisi)
-- TrustGuard uygulamasini kendi VPN'inden haric tutar (sonsuz dongu onleme)
-- `protect(socket)` cagrisi DNS iletme isteklerinin VPN'den gecmesini onler
+**Technical Details:**
+- Uses fake DNS server IPs: `198.18.0.1`, `198.18.0.2` (non-routable address range)
+- Only routes these IPs through the VPN tunnel — does not capture all device traffic
+- Dedicated packet processing thread: `TrustGuard-VPN-Loop`
+- Thread-safe `isRunning` state via `@Volatile` flag
+- Foreground service requirement (Android 14+: `startForeground()` must be called within 5 seconds)
+- TrustGuard itself is excluded from its own VPN (prevents infinite loops)
+- `protect(socket)` ensures DNS forwarding requests do not pass through the VPN
 
-### 5.3 DNS Paket Isleme
+### 5.3 DNS Packet Processing
 
-**Dosyalar:**
-- `data/dns/DnsPacket.kt` - DNS sorgu ayristirma
-- `data/dns/DnsResponseBuilder.kt` - Engelleme yaniti olusturma
-- `data/dns/IpPacketBuilder.kt` - IP/UDP paket insasi
+**Files:**
+- `data/dns/DnsPacket.kt` — DNS query parsing
+- `data/dns/DnsResponseBuilder.kt` — Block response construction
+- `data/dns/IpPacketBuilder.kt` — IP/UDP packet building
 
-**DNS Sorgu Ayristirma:**
-- Ham baytlardan DNS paketlerini ayristirir
-- Transaction ID, bayraklar, soru sayisi cikarir
-- Domain adini label'lar halinde (uzunluk-on-ekli) ozyinelemeli ayristirir
-- Domain'leri kucuk harfe normalize eder
-- Bozuk paketlerde `null` dondurur
-- Minimum paket boyutu dogrulamasi: 12 bayt
+**DNS Query Parsing:**
+- Parses DNS packets from raw bytes
+- Extracts transaction ID, flags, question count
+- Recursively parses domain name labels (length-prefixed)
+- Normalizes domains to lowercase
+- Returns `null` on malformed packets
+- Minimum packet size validation: 12 bytes
 
-**Engelleme Yaniti:**
-- A-tipi sorgular icin 0.0.0.0 IP adresi dondurur
-- Orjinal sorgudan Transaction ID ve bayraklari kopyalar
-- QR=1 (yanit), AA=1 (yetkili), RD=1 (ozyineleme istegi) ayarlar
-- TTL: 300 saniye
-- DNS isaretci sikistirmasi kullanir (0xC0 0x0C)
+**Block Response:**
+- Returns 0.0.0.0 IP address for A-type queries
+- Copies transaction ID and flags from the original query
+- Sets QR=1 (response), AA=1 (authoritative), RD=1 (recursion desired)
+- TTL: 300 seconds
+- Uses DNS pointer compression (0xC0 0x0C)
 
-**IP Paket Insasi:**
-- Kaynak/hedef IP adreslerini degistirir
-- Dogru IP baslik checksum hesaplar (16-bit one's complement)
-- UDP kaynak/hedef portlarini degistirir
-- TTL: 64, Don't Fragment bayragi
-- IPv4 UDP checksum: 0 (IPv4 icin istege bagli)
+**IP Packet Construction:**
+- Swaps source/destination IP addresses
+- Computes correct IP header checksum (16-bit one's complement)
+- Swaps UDP source/destination ports
+- TTL: 64, Don't Fragment flag set
+- IPv4 UDP checksum: 0 (optional for IPv4)
 
-### 5.4 Engelleme Listeleri
+### 5.4 Blocklists
 
-**Dosya:** `data/datasource/BlocklistDataSource.kt`
+**File:** `data/datasource/BlocklistDataSource.kt`
 
-3 yerlesik engelleme listesi (assets klasorunde):
-1. **adware** - Reklam domain'leri
-2. **trackers** (Premium) - Izleyici domain'leri
-3. **inapp_ads** - Uygulama ici reklam domain'leri
+3 built-in blocklists (in the assets folder):
+1. **adware** — Ad domains
+2. **trackers** — Tracker domains
+3. **inapp_ads** — In-app advertising domains
 
-**Domain Eslestirme Mantigi:**
-- Domain'leri normalize eder (kucuk harf, www. onekini kaldirir)
-- Sorgu domain'ini VE tum ust domain'leri kontrol eder
-  - Ornek: `tracker.example.com` → `example.com` → `com`
+**Domain Matching Logic:**
+- Normalizes domains (lowercase, strips `www.` prefix)
+- Checks the queried domain AND all parent domains
+  - Example: `tracker.example.com` → `example.com` → `com`
 
-### 5.5 Uygulama Bazli Filtreleme
+### 5.5 Per-App Filtering
 
-**Dosya:** `service/AppFilterManager.kt`
+**File:** `service/AppFilterManager.kt`
 
-- `FilterMode`: ALL_APPS (varsayilan) veya SELECTED_APPS
-- Kullanici uygulama bazinda VPN filtresi acabilir/kapatabilir
-- `SharedPreferences` ile kalici depolama
-- `getInstalledUserApps()` ile haric tutma durumlu uygulama listesi
+- `FilterMode`: ALL_APPS (default) or SELECTED_APPS
+- Users can toggle the VPN filter on a per-app basis
+- Persistent storage via `SharedPreferences`
+- `getInstalledUserApps()` returns the app list with exclusion state
 
-### 5.6 VPN Durum Yonetimi
+### 5.6 VPN State Management
 
-**Dosya:** `service/VpnControlManager.kt`
+**File:** `service/VpnControlManager.kt`
 
 ```kotlin
 object VpnControlManager {
-    val isVpnActive: StateFlow<Boolean>     // VPN aktif/pasif durumu
-    val blockingStats: StateFlow<BlockingStats>  // Engelleme istatistikleri
+    val isVpnActive: StateFlow<Boolean>           // VPN active/inactive state
+    val blockingStats: StateFlow<BlockingStats>   // Blocking statistics
 
-    fun startVpn(context)   // Servisi baslat (Android 8+ icin startForegroundService)
-    fun stopVpn(context)    // Servisi durdur
+    fun startVpn(context)   // Start service (uses startForegroundService on Android 8+)
+    fun stopVpn(context)    // Stop service
 }
 ```
 
-- Singleton pattern ile global erisim
-- StateFlow ile reaktif durum guncellemesi
-- Her 10 engellemede bildirim guncelleme
+- Singleton pattern for global access
+- Reactive state updates via StateFlow
+- Notification update every 10 blocked queries
 
 ---
 
-## 6. Adware Tespit Motoru
+## 6. Adware Detection Engine
 
-**Dosya:** `domain/AdwareDetector.kt`
+**File:** `domain/AdwareDetector.kt`
 
-### Tespit Yontemleri ve Puanlama
+### Detection Methods and Scoring
 
-| Tespit | Puan | Kosul |
-|--------|------|-------|
-| Overlay Reklam Yetenegii | 30 | SYSTEM_ALERT_WINDOW + INTERNET |
-| Otomatik Baslama | 20 | BOOT_COMPLETED + INTERNET + OVERLAY |
-| Bilinen Reklam SDK'lari | 25x (maks 50) | 27+ bilinen SDK imzasi |
-| Agresif Arka Plan | 15 | WAKE_LOCK + FOREGROUND_SERVICE + BATTERY_OPT + INTERNET + BOOT |
-| Uygulama Yukleme Yetenegii | 20 | REQUEST_INSTALL_PACKAGES + INTERNET |
-| Bilinen Adware Paketleri | 25 | Paket oneki eslesmesi |
-| Supheli Izin Kombinasyonu | 15 | 4+ supheli izin bir arada |
+| Detection | Score | Condition |
+|-----------|-------|-----------|
+| Overlay Ad Capability | 30 | SYSTEM_ALERT_WINDOW + INTERNET |
+| Autostart | 20 | BOOT_COMPLETED + INTERNET + OVERLAY |
+| Known Ad SDKs | 25x (max 50) | 27+ known SDK signatures |
+| Aggressive Background | 15 | WAKE_LOCK + FOREGROUND_SERVICE + BATTERY_OPT + INTERNET + BOOT |
+| App Install Capability | 20 | REQUEST_INSTALL_PACKAGES + INTERNET |
+| Known Adware Packages | 25 | Package prefix match |
+| Suspicious Permission Combo | 15 | 4+ suspicious permissions together |
 
-### Bilinen Adware SDK Imzalari (27+)
+### Known Adware SDK Signatures (27+)
 
 ```
 com.startapp, com.airpush, com.leadbolt, com.appnext,
@@ -474,32 +457,32 @@ com.bytedance.sdk.openadsdk, com.baidu.mobads,
 com.qq.e.ads, com.tencent.gdt, com.smaato, com.ogury
 ```
 
-### Bilinen Adware Paket Onekleri
+### Known Adware Package Prefixes
 
 ```
 com.cleanmaster, com.ksmobile, com.nqmobile, com.apus,
 com.uc.browser, com.dianxinos, com.duapps, com.dolphin
 ```
 
-### Suphe Esigi
+### Suspicion Threshold
 
-- `suspicionScore >= 40` → Supheli
-- `suspicionScore >= 70` → Yuksek derecede supheli
+- `suspicionScore >= 40` → Suspicious
+- `suspicionScore >= 70` → Highly suspicious
 
-### Guvenlik Notlari
+### Safety Notes
 
-- Uygulamalari "adware" veya "malware" olarak ETIKETLEMEZ (hukuki risk)
-- Tarafsiz dil kullanir: "supheli reklam davranisi tespit edildi"
-- Guvenilir uygulamalari atlar (`PermissionClassifier.isTrustedApp()`)
-- Sistem uygulamalarini atlar
+- Apps are NEVER labeled as "adware" or "malware" (legal risk)
+- Uses neutral language: "suspicious advertising behavior detected"
+- Trusted apps are skipped (`PermissionClassifier.isTrustedApp()`)
+- System apps are skipped
 
 ---
 
-## 7. Izin Siniflandirma ve Risk Analizi
+## 7. Permission Classification and Risk Analysis
 
-**Dosya:** `domain/PermissionClassifier.kt`
+**File:** `domain/PermissionClassifier.kt`
 
-### Yuksek Riskli Izinler (31 adet, Puan: 3)
+### High-Risk Permissions (31 total, Score: 3)
 
 ```
 CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION,
@@ -513,7 +496,7 @@ ACCESS_BACKGROUND_LOCATION, PROCESS_OUTGOING_CALLS,
 ANSWER_PHONE_CALLS, ADD_VOICEMAIL, USE_SIP, ACCEPT_HANDOVER
 ```
 
-### Orta Riskli Izinler (33 adet, Puan: 1)
+### Medium-Risk Permissions (33 total, Score: 1)
 
 ```
 INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE,
@@ -529,30 +512,21 @@ SCHEDULE_EXACT_ALARM, USE_EXACT_ALARM,
 REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, QUERY_ALL_PACKAGES
 ```
 
-### Guvenilir Uygulama Beyaz Listesi
+### Trusted App Whitelist
 
-**Tam Esleme:**
-```
-com.trustedgelabs.trustguard, com.trustedgelabs.ibans,
-com.trustedgelabs.ghostnotify, com.cihan.ghostnotify, com.cihan.ibans
-```
+Used internally by TrustGuard to mark its own package as trusted. The whitelist is hard-coded in `PermissionClassifier`.
 
-**Onek Eslesmesi:**
-```
-com.trustedgelabs.*, com.cihan.*
-```
+Trusted apps always receive `RiskLevel.TRUSTED` and a score of 0.
 
-Guvenilir uygulamalar her zaman `RiskLevel.TRUSTED` ve 0 puan alir.
-
-### Uygulama Risk Siniflandirmasi
+### App Risk Classification
 
 ```
-Herhangi bir YUKSEK risk izni varsa → RiskLevel.HIGH
-Aksi halde ORTA risk izni varsa    → RiskLevel.MEDIUM
-Aksi halde                         → RiskLevel.LOW
+If any HIGH-risk permission is present  → RiskLevel.HIGH
+Else if a MEDIUM-risk permission is present → RiskLevel.MEDIUM
+Else                                   → RiskLevel.LOW
 ```
 
-### Guvenlik Puani Hesaplama (Dashboard)
+### Security Score Calculation (Dashboard)
 
 ```kotlin
 fun calculateSecurityScore(apps: List<AppInfo>): Int {
@@ -573,317 +547,307 @@ fun calculateSecurityScore(apps: List<AppInfo>): Int {
 
 ---
 
-## 8. Dosya Kurtarma Sistemi
+## 8. File Recovery System
 
-**Dosya:** `data/datasource/MediaStoreRecoveryDataSource.kt`
+**File:** `data/datasource/MediaStoreRecoveryDataSource.kt`
 
-### 9 Kurtarma Stratejisi
+### 9 Recovery Strategies
 
-| # | Strateji | Aciklama | Android Surumu |
-|---|----------|----------|----------------|
-| 1 | MediaStore IS_TRASHED | Cop kutusundaki dosyalar | Android 11+ |
-| 2 | Dosya Sistemi Cop Dizinleri | Fiziksel cop klasorleri | Tumu |
-| 3 | MediaStore Yol-Tabanli Sorgular | Silinen yollardaki dosyalar | Tumu |
-| 4 | .trashed- / .pending- Onekli | Gecici silme isaretli dosyalar | Tumu |
-| 5 | Kucuk Resim Avciligi | Silinen fotograflarin thumbnail'lari | Tumu |
-| 6 | .nomedia Gizli Dizinler | Galeriden gizlenmis dosyalar | Tumu |
-| 7 | Uygulama Onbellek Medyasi | WhatsApp, Telegram, Signal, Instagram vs. | Tumu |
-| 8 | Mesajlasma Uygulamasi Medyasi | Mesajlasma uygulamalarindaki medya | Tumu |
-| 9 | Root Derin Tarama | Root erisimli dosya sistemi taramasi | Root gerekli |
+| # | Strategy | Description | Android Version |
+|---|----------|-------------|-----------------|
+| 1 | MediaStore IS_TRASHED | Files in trash bin | Android 11+ |
+| 2 | File System Trash Dirs | Physical trash folders | All |
+| 3 | MediaStore Path-Based Queries | Files at deleted paths | All |
+| 4 | .trashed- / .pending- Prefixed | Files marked for deletion | All |
+| 5 | Thumbnail Hunting | Thumbnails of deleted photos | All |
+| 6 | .nomedia Hidden Dirs | Files hidden from gallery | All |
+| 7 | App Cache Media | WhatsApp, Telegram, Signal, Instagram, etc. | All |
+| 8 | Messaging App Media | Media in messaging apps | All |
+| 9 | Root Deep Scan | Root-access filesystem scan | Root required |
 
-### Tarama Modlari
+### Scan Modes
 
-- **Hizli (QUICK):** Strateji 1-4
-- **Derin (DEEP):** Strateji 1-8
-- **Root (ROOT):** Strateji 1-9 (root erisim gerektirir)
+- **Quick (QUICK):** Strategies 1-4
+- **Deep (DEEP):** Strategies 1-8
+- **Root (ROOT):** Strategies 1-9 (requires root access)
 
-### Kurtarma Yontemleri
+### Recovery Methods
 
-- MediaStore guncelleme (IS_TRASHED=0)
-- Dosya sistemi kopyalama
-- Root kopyalama (`su` komutu ile)
-- Varsayilan hedef: `Pictures/TrustGuard_Recovered`
+- MediaStore update (IS_TRASHED=0)
+- File system copy
+- Root copy (via `su` command)
+- Default destination: `Pictures/TrustGuard_Recovered`
 
-### Desteklenen Dosya Turleri
+### Supported File Types
 
-- **Foto:** JPEG, PNG, GIF, BMP, WebP
+- **Photo:** JPEG, PNG, GIF, BMP, WebP
 - **Video:** MP4, AVI, MKV, MOV, 3GP
-- **Ses:** MP3, WAV, OGG, FLAC, AAC
-- **Belge:** PDF, DOC, DOCX, TXT, XLS
+- **Audio:** MP3, WAV, OGG, FLAC, AAC
+- **Document:** PDF, DOC, DOCX, TXT, XLS
 
 ---
 
-## 9. Optimizasyon Motoru
+## 9. Optimization Engine
 
-**Dosya:** `data/datasource/OptimizationDataSource.kt`
+**File:** `data/datasource/OptimizationDataSource.kt`
 
-### Tarama Kategorileri
+### Scan Categories
 
-| Kategori | Aciklama |
-|----------|----------|
-| SYSTEM_CACHE | Sistem onbellek dosyalari |
-| APP_CACHE | Uygulama bazli onbellek |
-| TEMP_FILES | Gecici dosyalar |
-| APK_FILES | Indirilen APK dosyalari |
-| THUMBNAILS | Kucuk resim onbellegi |
-| EMPTY_FOLDERS | Bos klasorler |
-| LARGE_FILE | 100MB ustu dosyalar |
-| DUPLICATE_PHOTO | MD5 hash tabanli kopya fotograflar |
-| EMAIL_CACHE | E-posta uygulama onbellekleri (Gmail, Outlook, Yahoo Mail) |
+| Category | Description |
+|----------|-------------|
+| SYSTEM_CACHE | System cache files |
+| APP_CACHE | Per-app cache |
+| TEMP_FILES | Temporary files |
+| APK_FILES | Downloaded APK files |
+| THUMBNAILS | Thumbnail cache |
+| EMPTY_FOLDERS | Empty folders |
+| LARGE_FILE | Files larger than 100 MB |
+| DUPLICATE_PHOTO | MD5-based duplicate photo detection |
+| EMAIL_CACHE | Email app caches (Gmail, Outlook, Yahoo Mail) |
 
-### Kopya Fotograf Tespiti
+### Duplicate Photo Detection
 
-- Her dosyanin ilk 8KB + son 8KB + boyut ile MD5 hash olusturur
-- Ayni hash'e sahip dosyalari gruplar
-- Performans icin tam dosya hash'i yerine kismi hash kullanir
+- Computes MD5 hash from first 8KB + last 8KB + file size
+- Groups files with the same hash
+- Uses partial hashing (rather than full file hash) for performance
 
-### Ilerleme Geri Bildirimi
+### Progress Feedback
 
-- `onScanProgress` callback ile gercek zamanli ilerleme guncelleme
+- `onScanProgress` callback for real-time progress updates
 
 ---
 
-## 10. Guvenlik Onlemleri
+## 10. Security Measures
 
-### 12.1 Istisna Yonetimi Desenleri
+### 10.1 Exception Handling Patterns
 
-**Sessiz Yakalama (Kritik Olmayan):**
+**Silent Catch (non-critical):**
 ```kotlin
 try { builder.addDisallowedApplication(excluded) }
 catch (_: Exception) {}
 ```
 
-**Loglu Yakalama (Kritik):**
+**Logged Catch (critical):**
 ```kotlin
 catch (e: Exception) {
     Log.e("TrustGuardVPN", "Failed to establish VPN", e)
 }
 ```
 
-**Yedek Degerlli Yakalama:**
+**Fallback Catch:**
 ```kotlin
 val appName = try {
     pm.getApplicationLabel(pm.getApplicationInfo(packageName, 0)).toString()
 } catch (_: Exception) { packageName }
 ```
 
-Tum yeni ekranlar (Wi-Fi, Pil, Depolama, Butunluk, Ag) try-catch ile sarilmistir. Hicbir ekran dogrudan cokme uretmez; kullaniciya basit aciklamalar gosterilir.
+All new screens (Wi-Fi, Battery, Storage, Integrity, Network) are wrapped in try-catch. No screen produces a direct crash; users see plain-language explanations on failure.
 
-### 12.2 Esitlesme (Concurrency) Guvenligi
+### 10.2 Concurrency Safety
 
-| Desen | Kullanim | Dosya |
-|-------|----------|-------|
-| `@Volatile` | Thread-safe boolean bayraklar | TrustGuardVpnService.kt |
-| `synchronized` | Paylasilan kaynak korumasi | VPN cikis akimi yazimi |
-| `MutableStateFlow` | Thread-safe gozlemlenebilir durum | VpnControlManager.kt |
-| `SupervisorJob + Dispatchers.IO` | Coroutine yasam dongusu | TrustGuardVpnService.kt |
-| `serviceScope.cancel()` | Temiz kaynak serbest birakma | onDestroy() |
+| Pattern | Usage | File |
+|---------|-------|------|
+| `@Volatile` | Thread-safe boolean flags | TrustGuardVpnService.kt |
+| `synchronized` | Shared resource protection | VPN egress write |
+| `MutableStateFlow` | Thread-safe observable state | VpnControlManager.kt |
+| `SupervisorJob + Dispatchers.IO` | Coroutine lifecycle | TrustGuardVpnService.kt |
+| `serviceScope.cancel()` | Clean resource release | onDestroy() |
 
-### 12.3 Veri Dogrulama
+### 10.3 Data Validation
 
-**DNS Paket Dogrulama:**
-- Minimum paket boyutu: 12 bayt
-- Soru sayisi kontrolu: >= 1
-- Offset sinir kontrolu: `offset + 4 > data.size`
-- Label uzunluk kontrolu: `offset + labelLength + 1 > data.size`
+**DNS Packet Validation:**
+- Minimum packet size: 12 bytes
+- Question count check: >= 1
+- Offset bounds check: `offset + 4 > data.size`
+- Label length check: `offset + labelLength + 1 > data.size`
 
-**IP Paket Baslik Dogrulama:**
-- IP surumu kontrolu: sadece IPv4 (version == 4)
-- Protokol kontrolu: sadece UDP (protocol == 17)
-- Port kontrolu: sadece DNS (destPort == 53)
+**IP Packet Header Validation:**
+- IP version check: IPv4 only (version == 4)
+- Protocol check: UDP only (protocol == 17)
+- Port check: DNS only (destPort == 53)
 
-**Girdi Temizleme:**
-- Domain normalizasyonu: `lowercase().removePrefix("www.")`
-- SharedPreferences deger dogrulama: `valueOf()` ile try-catch
-- JSON ayristirma: `JSONObject` ile try-catch ve bos liste yedegi
+**Input Sanitization:**
+- Domain normalization: `lowercase().removePrefix("www.")`
+- SharedPreferences value validation: `valueOf()` with try-catch
+- JSON parsing: `JSONObject` with try-catch and empty-list fallback
 
-### 12.4 Veri Koruma
+### 10.4 Data Protection
 
 **backup_rules.xml:**
-- Bulut yedekleme icerik kurallari (bos - yedekleme devre disi)
+- Cloud backup content rules (empty — backup disabled)
 
 **data_extraction_rules.xml:**
-- Bulut yedekleme dislamalari: kok domain haric
-- Cihaz aktarim dislamalari: kok domain haric
-- Hassas uygulama verilerini bulut senkronizasyonundan korur
+- Cloud backup exclusions: root domain excluded
+- Device transfer exclusions: root domain excluded
+- Protects sensitive app data from cloud sync
 
-### 12.5 R8/ProGuard Kurallari
+### 10.5 R8/ProGuard Rules
 
-- Tum Compose siniflarini korur
-- Material Icons Extended siniflarini korur
-- Google Play Billing siniflarini korur
-- Veri modelleri ve VPN Servis uygulamasini korur
-- Kotlin Coroutines'i korur
-- Release derlemelerinde log ciktilarini kaldirir (`Log.v`, `Log.d`, `Log.i`)
-- Annotation attribute'larini ve ic siniflari korur
+- Preserves all Compose classes
+- Preserves Material Icons Extended classes
+- Preserves data models and the VPN Service implementation
+- Preserves Kotlin Coroutines
+- Strips log output in release builds (`Log.v`, `Log.d`, `Log.i`)
+- Preserves annotation attributes and inner classes
 
 ---
 
-## 13. Android Izinleri
+## 11. Android Permissions
 
-### Uygulama/Paket Tarama
+### App / Package Scanning
 
-| Izin | Amac | Tehlike Seviyesi |
-|------|------|-----------------|
-| `QUERY_ALL_PACKAGES` | Android 11+ tum yuklu uygulamalari taramak icin | Ozel |
+| Permission | Purpose | Risk Level |
+|------------|---------|------------|
+| `QUERY_ALL_PACKAGES` | Required to scan all installed apps on Android 11+ | Special |
 
-### Wi-Fi ve Ag
+### Wi-Fi and Network
 
-| Izin | Amac |
-|------|------|
-| `ACCESS_WIFI_STATE` | Wi-Fi baglanti durumunu okuma |
-| `ACCESS_NETWORK_STATE` | Ag baglanti durumunu okuma |
-| `ACCESS_FINE_LOCATION` | Wi-Fi SSID okumak icin (Android 8.1+) |
-| `ACCESS_COARSE_LOCATION` | Wi-Fi SSID okumak icin yedek |
-| `INTERNET` | DNS sorgulari icin ag erisimi |
+| Permission | Purpose |
+|------------|---------|
+| `ACCESS_WIFI_STATE` | Read Wi-Fi connection state |
+| `ACCESS_NETWORK_STATE` | Read network connection state |
+| `ACCESS_FINE_LOCATION` | Read Wi-Fi SSID (Android 8.1+) |
+| `ACCESS_COARSE_LOCATION` | Wi-Fi SSID fallback |
+| `INTERNET` | Network access for upstream DNS query forwarding |
 
-### On Plan Servisleri
+### Foreground Services
 
-| Izin | Amac |
-|------|------|
-| `FOREGROUND_SERVICE` | VPN servisi icin on plan bildirimi |
-| `FOREGROUND_SERVICE_SPECIAL_USE` | Android 14+ ozel kullanim tipi |
-| `POST_NOTIFICATIONS` | Kullaniciya bildirim gonderme |
+| Permission | Purpose |
+|------------|---------|
+| `FOREGROUND_SERVICE` | Foreground notification for the VPN service |
+| `FOREGROUND_SERVICE_SPECIAL_USE` | Android 14+ special-use type |
+| `POST_NOTIFICATIONS` | Send notifications to the user |
 
-### Uygulama Aktivite Izleme
+### App Activity Monitoring
 
-| Izin | Amac |
-|------|------|
-| `PACKAGE_USAGE_STATS` | Uygulama ag aktivitesini izleme (Korunmus) |
+| Permission | Purpose |
+|------------|---------|
+| `PACKAGE_USAGE_STATS` | Monitor per-app activity (protected) |
 
-### Dosya Kurtarma
+### File Recovery
 
-| Izin | Amac | Android Surumu |
-|------|------|----------------|
-| `MANAGE_EXTERNAL_STORAGE` | Genis dosya erisimi | Android 11+ |
-| `READ_MEDIA_IMAGES` | Goruntu dosyalarina erisim | Android 13+ |
-| `READ_MEDIA_VIDEO` | Video dosyalarina erisim | Android 13+ |
-| `READ_MEDIA_AUDIO` | Ses dosyalarina erisim | Android 13+ |
-| `READ_EXTERNAL_STORAGE` | Eski depolama erisimi | maxSdkVersion=32 |
+| Permission | Purpose | Android Version |
+|------------|---------|-----------------|
+| `MANAGE_EXTERNAL_STORAGE` | Broad file access | Android 11+ |
+| `READ_MEDIA_IMAGES` | Access image files | Android 13+ |
+| `READ_MEDIA_VIDEO` | Access video files | Android 13+ |
+| `READ_MEDIA_AUDIO` | Access audio files | Android 13+ |
+| `READ_EXTERNAL_STORAGE` | Legacy storage access | maxSdkVersion=32 |
 
-### Manifest Bilesenleri
+### Manifest Components
 
-| Bilesen | Tur | Izin | Ozellikler |
-|---------|-----|------|------------|
+| Component | Type | Permission | Properties |
+|-----------|------|------------|------------|
 | `MainActivity` | Activity | - | exported=true, portrait, LAUNCHER |
-| `TrustGuardVpnService` | Service | BIND_VPN_SERVICE | exported=false, specialUse, always-on destekli |
+| `TrustGuardVpnService` | Service | BIND_VPN_SERVICE | exported=false, specialUse, always-on supported |
 | `NotificationAdDetector` | Service | BIND_NOTIFICATION_LISTENER_SERVICE | exported=false |
 
 ---
 
-## 14. Yerellestirme
+## 12. Localization
 
-### Desteklenen Diller
+### Supported Languages
 
-| Dil | Klasor | String Sayisi |
-|-----|--------|---------------|
-| Ingilizce (varsayilan) | `values/strings.xml` | ~423 |
-| Turkce | `values-tr/strings.xml` | ~423 (tam eslik) |
+| Language | Folder | String Count |
+|----------|--------|--------------|
+| English (default) | `values/strings.xml` | ~423 |
+| Turkish | `values-tr/strings.xml` | ~423 (full parity) |
 
-### String Kategorileri (28 kategori)
+### String Categories
 
-1. Uygulama (3) - app_name, company_name, by_company
-2. Dashboard (5) - bolum basliklari
-3. Trafik Isigi/Risk (4) - high_risk, medium_risk, safe, trusted
-4. Uygulama Listesi (6)
-5. Uygulama Karti (3)
-6. Detay Ekrani (9)
-7. Tarama (1)
-8. Ayarlar (9)
-9. DNS Engelleme (27)
-10. Uygulama Bazli Filtreleme (7)
-11. Bildirim Reklam Tespiti (6)
-12. Dosya Kurtarma (35)
-13. Kurtarma Tarama Modlari (6)
-14. Kurtarma Kaynaklari (5)
-15. Tarama Istatistikleri (5)
-16. Adware Tespiti (13)
-17. Premium Abonelik (25)
-18. Optimizasyon (16)
-19. Cop Kategorisi (5)
-20. Kopyalar (3)
-21. Buyuk Dosyalar (3)
-22. Uygulama Onbellek (4)
-23. E-posta (4)
-24. Guvenilir Uygulama Seffafligi (11)
-25. Uygulama Aktivite Izleme (14)
-26. Wi-Fi Guvenlik (29)
-27. Pil Analizi (25)
-28. Depolama / Butunluk / Ag / Gunluk Limit / Premium V2 / Aile Kalkani (50+)
+The application uses categorized string resources covering:
 
-### Yerel Ayar Yonetimi
+- App identifiers (app_name, company_name, by_company)
+- Dashboard sections
+- Risk traffic light (high_risk, medium_risk, safe, trusted)
+- App list filtering
+- App card labels
+- Detail screen
+- Settings
+- DNS blocking
+- Per-app filtering
+- Notification ad detection
+- File recovery (modes, sources, scan stats)
+- Adware detection
+- Optimization (junk categories, duplicates, large files, app cache, email cache)
+- Trusted app transparency
+- Per-app activity monitoring
+- Wi-Fi security
+- Battery analysis
+- Storage / Integrity / Network / Family Shield
 
-- `LocaleManager` sinifi ile dil degistirme
-- `MainActivity` ve `TrustGuardApp`'da `attachBaseContext` ile uygulama
+### Locale Management
+
+- `LocaleManager` class handles language switching
+- Applied via `attachBaseContext` in `MainActivity` and `TrustGuardApp`
 
 ---
 
-## 15. Tema ve Tasarim Sistemi
+## 13. Theme and Design System
 
-### Renk Paleti
+### Color Palette
 
-**Birincil Renkler:**
-| Renk | Hex | Kullanim |
-|------|-----|----------|
-| TrustGreen | #00E676 | Ana vurgu, guvenli durum |
-| TrustTeal | #00BFA5 | Ikincil vurgu |
+**Primary Colors:**
+| Color | Hex | Usage |
+|-------|-----|-------|
+| TrustGreen | #00E676 | Primary accent, safe state |
+| TrustTeal | #00BFA5 | Secondary accent |
 
-**Risk Trafik Isigi:**
-| Renk | Hex | Kullanim |
-|------|-----|----------|
-| RiskRed | #FF1744 | Yuksek risk |
-| RiskYellow | #FFD600 | Orta risk |
-| RiskGreen | #00E676 | Dusuk risk |
-| TrustedBlue | #448AFF | Guvenilir |
+**Risk Traffic Light:**
+| Color | Hex | Usage |
+|-------|-----|-------|
+| RiskRed | #FF1744 | High risk |
+| RiskYellow | #FFD600 | Medium risk |
+| RiskGreen | #00E676 | Low risk |
+| TrustedBlue | #448AFF | Trusted |
 
-**Karanlik Tema:**
-| Renk | Hex | Kullanim |
-|------|-----|----------|
-| DarkBackground | #0A0E14 | Ana arka plan |
-| DarkSurface | #131A24 | Yuzey |
-| DarkCard | #1E2A3A | Kart arka plani |
+**Dark Theme:**
+| Color | Hex | Usage |
+|-------|-----|-------|
+| DarkBackground | #0A0E14 | Main background |
+| DarkSurface | #131A24 | Surface |
+| DarkCard | #1E2A3A | Card background |
 
-**Ozellik Renkleri:**
-| Renk | Hex | Kullanim |
-|------|-----|----------|
-| SecurityBlue | - | Guvenlik araclari |
-| WifiPurple | - | Wi-Fi ozelllikleri |
-| BatteryGreen | - | Pil ozellikleri |
-| StorageCyan | - | Depolama ozellikleri |
-| IntegrityIndigo | - | Butunluk ozellikleri |
-| NetworkTeal | - | Ag ozellikleri |
-| OptimizationOrange | - | Optimizasyon ozellikleri |
-| ProGold | #FFD700 | Premium/Pro rozetler |
+**Feature Colors:**
+| Color | Usage |
+|-------|-------|
+| SecurityBlue | Security tools |
+| WifiPurple | Wi-Fi features |
+| BatteryGreen | Battery features |
+| StorageCyan | Storage features |
+| IntegrityIndigo | Integrity features |
+| NetworkTeal | Network features |
+| OptimizationOrange | Optimization features |
 
-**Metin Renkleri:**
-| Renk | Hex | Kullanim |
-|------|-----|----------|
-| TextPrimary | #E8EAED | Birincil metin |
-| TextSecondary | #9AA0A6 | Ikincil metin |
+**Text Colors:**
+| Color | Hex | Usage |
+|-------|-----|-------|
+| TextPrimary | #E8EAED | Primary text |
+| TextSecondary | #9AA0A6 | Secondary text |
 
-### Material 3 Entegrasyonu
+### Material 3 Integration
 
-- %100 karanlik tema
-- Her ozellik kategorisi icin ozel vurgu renkleri
-- `Theme.TrustGuard`: Material NoActionBar temasi
+- 100% dark theme
+- Per-feature accent colors
+- `Theme.TrustGuard`: Material NoActionBar theme
 
 ---
 
-## 16. Derleme Yapilandirmasi
+## 14. Build Configuration
 
-### build.gradle.kts (Uygulama)
+### build.gradle.kts (App)
 
 ```
 compileSdk = 35
 minSdk = 24
 targetSdk = 35
-versionCode = 5
-versionName = "1.2.0"
+versionCode = 14
+versionName = "3.0.0"
 applicationId = "com.trustedgelabs.trustguard"
 
-// Release derleme
-isMinifyEnabled = true    // R8 kucultme aktif
-isShrinkResources = true  // Kaynak daraltma aktif
+// Release build
+isMinifyEnabled = true    // R8 shrinking enabled
+isShrinkResources = true  // Resource shrinking enabled
 proguardFiles = [proguard-android-optimize.txt, proguard-rules.pro]
 
 // Java/Kotlin
@@ -895,177 +859,155 @@ kotlinCompilerExtensionVersion = Kotlin 2.0.21
 ### gradle.properties
 
 ```
-JVM Argumanlari: -Xmx2048m
-Dosya Kodlamasi: UTF-8
-AndroidX: Aktif
-Kotlin Kod Stili: Resmi
-Gecissiz R Sinifi: Aktif
+JVM Arguments: -Xmx2048m
+File Encoding: UTF-8
+AndroidX: Enabled
+Kotlin Code Style: Official
+Non-transitive R Class: Enabled
 ```
 
-### Imzalama Yapilandirmasi (Release)
+### Signing Configuration (Release)
 
-- Anahtar Deposu: `release-key.jks`
-- Anahtar Takma Adi: `trustguard`
-
----
-
-## 17. Kaynak Dosyalari
-
-### Cizimler (drawable/)
-
-| Dosya | Aciklama |
-|-------|----------|
-| `ic_launcher_background.xml` | Gradyan arka plan (koyu lacivert) + tekno desen |
-| `ic_launcher_foreground.xml` | Kalkan ikonu (yesil) |
-| `ic_shield.xml` | Alternatif kalkan varyanti |
-
-### Uyarlanabilir Ikonlar (mipmap-anydpi-v26/)
-
-| Dosya | Aciklama |
-|-------|----------|
-| `ic_launcher.xml` | Uyarlanabilir ikon tanimi |
-| `ic_launcher_round.xml` | Yuvarlak varyant |
-
-### XML Yapilandirmalar (xml/)
-
-| Dosya | Aciklama |
-|-------|----------|
-| `backup_rules.xml` | Bulut yedekleme devre disi |
-| `data_extraction_rules.xml` | Veri cikarma kurallari (kok domain haric) |
+- Keystore: `release-key.jks` (not committed; see `local.properties.example`)
+- Key alias: `trustguard`
+- Credentials are read from `local.properties` (gitignored)
 
 ---
 
-## 18. Dosya Yapisi
+## 15. Resource Files
+
+### Drawables (drawable/)
+
+| File | Description |
+|------|-------------|
+| `ic_launcher_background.xml` | Gradient background (dark navy) + tech pattern |
+| `ic_launcher_foreground.xml` | Shield icon (green) |
+| `ic_shield.xml` | Alternative shield variant |
+
+### Adaptive Icons (mipmap-anydpi-v26/)
+
+| File | Description |
+|------|-------------|
+| `ic_launcher.xml` | Adaptive icon definition |
+| `ic_launcher_round.xml` | Round variant |
+
+### XML Configurations (xml/)
+
+| File | Description |
+|------|-------------|
+| `backup_rules.xml` | Cloud backup disabled |
+| `data_extraction_rules.xml` | Data extraction rules (root domain excluded) |
+
+---
+
+## 16. File Structure
 
 ```
 app/src/main/java/com/trustedgelabs/trustguard/
 |
-├── TrustGuardApp.kt                    # Application sinifi
-├── MainActivity.kt                      # Ana Activity
+├── TrustGuardApp.kt                    # Application class
+├── MainActivity.kt                     # Main Activity
 |
 ├── billing/
-│   └── BillingManager.kt               # Stub - tum ozellikler ucretsiz
+│   └── BillingManager.kt               # Stub - all features are free
 |
 ├── data/
 │   ├── datasource/
-│   │   ├── PackageManagerDataSource.kt  # Uygulama tarama
-│   │   ├── WifiSecurityDataSource.kt    # Wi-Fi guvenlik taramasi
-│   │   ├── BatteryDataSource.kt         # Pil bilgileri
-│   │   ├── StorageDataSource.kt         # Depolama analizi
-│   │   ├── AppIntegrityDataSource.kt    # Yukleme kaynagi tespiti
-│   │   ├── BlocklistDataSource.kt       # DNS engelleme listesi yukleme
-│   │   ├── OptimizationDataSource.kt    # Cop dosya tarama motoru
-│   │   └── MediaStoreRecoveryDataSource.kt  # 9 stratejili dosya kurtarma
+│   │   ├── PackageManagerDataSource.kt
+│   │   ├── WifiSecurityDataSource.kt
+│   │   ├── BatteryDataSource.kt
+│   │   ├── StorageDataSource.kt
+│   │   ├── AppIntegrityDataSource.kt
+│   │   ├── BlocklistDataSource.kt
+│   │   ├── OptimizationDataSource.kt
+│   │   └── MediaStoreRecoveryDataSource.kt
 │   │
 │   ├── dns/
-│   │   ├── DnsPacket.kt                 # DNS sorgu ayristirma
-│   │   ├── DnsResponseBuilder.kt        # Engelleme yaniti olusturma
-│   │   └── IpPacketBuilder.kt           # IP/UDP paket insasi
+│   │   ├── DnsPacket.kt
+│   │   ├── DnsResponseBuilder.kt
+│   │   └── IpPacketBuilder.kt
 │   │
 │   ├── model/
-│   │   ├── AppInfo.kt                   # Uygulama veri modeli
-│   │   ├── PermissionInfo.kt            # Izin modeli
-│   │   ├── RiskLevel.kt                 # Risk seviyesi enum
-│   │   ├── BatteryInfo.kt               # Pil bilgi modeli
-│   │   ├── StorageInfo.kt               # Depolama modeli
-│   │   ├── WifiSecurityInfo.kt          # Wi-Fi guvenlik modeli
-│   │   ├── AppIntegrityInfo.kt          # Uygulama butunlugu modeli
-│   │   ├── BlockingStats.kt             # Engelleme istatistikleri
-│   │   ├── BlocklistInfo.kt             # Engelleme listesi metadata
-│   │   ├── RecoverableFile.kt           # Kurtarilabilir dosya modeli
-│   │   ├── CleanableFile.kt             # Temizlenebilir dosya modeli
-│   │   └── JunkScanResult.kt            # Cop tarama sonucu
+│   │   ├── AppInfo.kt
+│   │   ├── PermissionInfo.kt
+│   │   ├── RiskLevel.kt
+│   │   ├── BatteryInfo.kt
+│   │   ├── StorageInfo.kt
+│   │   ├── WifiSecurityInfo.kt
+│   │   ├── AppIntegrityInfo.kt
+│   │   ├── BlockingStats.kt
+│   │   ├── BlocklistInfo.kt
+│   │   ├── RecoverableFile.kt
+│   │   ├── CleanableFile.kt
+│   │   └── JunkScanResult.kt
 │   │
 │   └── repository/
-│       ├── AppRepositoryImpl.kt         # Uygulama veri deposu
-│       ├── BlocklistRepositoryImpl.kt   # Domain engelleme yonetimi
-│       └── BlockingStatsRepository.kt   # Engelleme istatistik deposu
+│       ├── AppRepositoryImpl.kt
+│       ├── BlocklistRepositoryImpl.kt
+│       └── BlockingStatsRepository.kt
 |
 ├── domain/
-│   ├── AdwareDetector.kt                # Adware tespit motoru
-│   ├── PermissionClassifier.kt          # Izin risk siniflandirma
-│   ├── TrustedAppTransparency.kt        # Guvenilir uygulama seffafligi
+│   ├── AdwareDetector.kt
+│   ├── PermissionClassifier.kt
+│   ├── TrustedAppTransparency.kt
 │   └── usecase/
-│       ├── ScanAppsUseCase.kt           # Uygulama tarama kullanim senaryosu
-│       └── AnalyzePermissionsUseCase.kt # Izin analizi kullanim senaryosu
+│       ├── ScanAppsUseCase.kt
+│       └── AnalyzePermissionsUseCase.kt
 |
 ├── service/
-│   ├── TrustGuardVpnService.kt          # VPN servisi (DNS engelleme)
-│   ├── VpnControlManager.kt             # VPN durum yonetimi
-│   ├── VpnNotificationManager.kt        # VPN bildirimi
-│   ├── AppFilterManager.kt              # Uygulama bazli filtreleme
-│   └── NotificationAdDetector.kt        # Bildirim reklam tespiti
+│   ├── TrustGuardVpnService.kt         # VPN service (DNS blocking)
+│   ├── VpnControlManager.kt            # VPN state management
+│   ├── VpnNotificationManager.kt       # VPN notification
+│   ├── AppFilterManager.kt             # Per-app filtering
+│   └── NotificationAdDetector.kt       # Notification ad detection
 |
 ├── ui/
 │   ├── components/
-│   │   ├── SecurityScoreArc.kt          # Animasyonlu guvenlik puani arki
-│   │   ├── TrafficLightRow.kt           # Risk trafik isigi satiri
-│   │   ├── ScanProgressIndicator.kt     # Tarama ilerleme gostergesi
-│   │   ├── AppCard.kt                   # Uygulama karti bileseni
-│   │   ├── RiskBadge.kt                 # Risk rozeti
-│   │   ├── ToolCard.kt                  # Arac karti + Grid + SectionHeader
-│   │   ├── VpnStatusCard.kt             # VPN durum karti
-│   │   ├── ProStatusBar.kt              # Pro baslik + QuickActionBar
-│   │   └── DailyLimitDialog.kt          # Gunluk limit dialog
+│   │   ├── SecurityScoreArc.kt
+│   │   ├── TrafficLightRow.kt
+│   │   ├── ScanProgressIndicator.kt
+│   │   ├── AppCard.kt
+│   │   ├── RiskBadge.kt
+│   │   ├── ToolCard.kt
+│   │   ├── VpnStatusCard.kt
+│   │   └── ProStatusBar.kt
 │   │
 │   ├── navigation/
-│   │   ├── Screen.kt                    # Ekran rotalari (sealed class)
-│   │   └── NavGraph.kt                  # Navigasyon grafigi
+│   │   ├── Screen.kt
+│   │   └── NavGraph.kt
 │   │
 │   ├── screens/
 │   │   ├── dashboard/
-│   │   │   ├── DashboardScreen.kt       # Ana ekran
-│   │   │   └── DashboardViewModel.kt    # Ana ekran ViewModel
 │   │   ├── applist/
-│   │   │   ├── AppListScreen.kt
-│   │   │   └── AppListViewModel.kt
 │   │   ├── detail/
-│   │   │   ├── DetailScreen.kt
-│   │   │   └── DetailViewModel.kt
 │   │   ├── blocking/
-│   │   │   └── DnsBlockingScreen.kt
 │   │   ├── recovery/
-│   │   │   ├── RecoveryScreen.kt
-│   │   │   └── RecoveryViewModel.kt
 │   │   ├── adware/
-│   │   │   ├── AdwareScreen.kt
-│   │   │   └── AdwareViewModel.kt
 │   │   ├── optimization/
-│   │   │   ├── OptimizationScreen.kt
-│   │   │   └── OptimizationViewModel.kt
 │   │   ├── wifi/
-│   │   │   └── WifiSecurityScreen.kt
 │   │   ├── battery/
-│   │   │   └── BatteryHealthScreen.kt
 │   │   ├── storage/
-│   │   │   └── StorageAnalyzerScreen.kt
 │   │   ├── integrity/
-│   │   │   └── AppIntegrityScreen.kt
 │   │   ├── network/
-│   │   │   └── NetworkMonitorScreen.kt
-│   │   ├── premium/
-│   │   │   └── PremiumScreen.kt
 │   │   └── settings/
-│   │       └── SettingsScreen.kt
 │   │
 │   └── theme/
-│       ├── Color.kt                     # Renk tanimlari
-│       ├── Theme.kt                     # Material 3 tema
-│       └── Type.kt                      # Tipografi
+│       ├── Color.kt
+│       ├── Theme.kt
+│       └── Type.kt
 |
 └── util/
-    ├── DailyLimitManager.kt             # Gunluk limit yonetimi
-    ├── RootDetector.kt                  # Root tespit + komut calistirma
-    ├── PermissionDescriptions.kt        # Izin aciklamalari (EN/TR)
-    ├── AppIconLoader.kt                 # Uygulama ikonu Compose donusturucu
-    └── LocaleManager.kt                 # Dil yonetimi
+    ├── RootDetector.kt                 # Root detection + command execution
+    ├── PermissionDescriptions.kt       # Permission descriptions (EN/TR)
+    ├── AppIconLoader.kt                # App icon Compose converter
+    └── LocaleManager.kt                # Language management
 ```
 
 ---
 
-## Belge Bilgileri
+## Document Information
 
-- **Olusturma Tarihi:** 29 Mart 2026
-- **Uygulama Versiyonu:** 1.2.0
-- **Gelistirici:** TrustEdge Labs
-- **Belgeyi Olusturan:** TrustEdge Labs
+- **Application Version:** 3.0.0 (versionCode 14)
+- **License:** GNU General Public License v3.0
+- **Developer:** TrustEdge Labs
+- **Repository:** https://github.com/trustedgelabs-dev/TrustGuard

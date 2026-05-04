@@ -6,10 +6,10 @@ Thank you for your interest in contributing. TrustGuard is an open-source privac
 
 ## Getting Started
 
-1. Fork the repository
-2. Clone your fork:
+1. Fork the repository at https://github.com/trustedgelabs-dev/TrustGuard
+2. Clone your fork (replace `<your-github-username>` with your GitHub handle):
    ```bash
-   git clone https://github.com/YOUR_USERNAME/TrustGuard.git
+   git clone https://github.com/<your-github-username>/TrustGuard.git
    cd TrustGuard
    ```
 3. Copy the properties template:

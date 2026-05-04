@@ -45,7 +45,7 @@ No bug bounty or financial reward is currently offered. We are an open-source pr
 
 ## Security Design Notes
 
-- TrustGuard does not communicate with any remote server during normal operation.
-- The VPN service operates entirely on-device.
-- No user data is collected, stored remotely, or transmitted.
+- TrustGuard does not send personal data, analytics, telemetry, or usage history to TrustEdge Labs servers.
+- The VPN service operates entirely on-device. DNS filtering may forward DNS queries to the configured upstream resolver (e.g. Cloudflare 1.1.1.1) as required for normal internet resolution.
+- No user data is collected, stored remotely, or transmitted to TrustEdge Labs.
 - The app does not have a backend infrastructure to exploit.
