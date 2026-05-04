@@ -80,7 +80,6 @@ TrustGuard, Android cihazlar icin gelistirilmis kapsamli bir gizlilik ve guvenli
 
 | Kutuphane | Versiyon | Amac |
 |-----------|----------|------|
-| `com.android.billingclient:billing-ktx` | 7.1.1 | Google Play faturalandirma (abonelik) |
 | `io.coil-kt:coil-compose` | 2.6.0 | Goruntu yukleme (uygulama ikonlari) |
 | `io.coil-kt:coil-video` | 2.6.0 | Video thumbnail yukleme |
 
@@ -945,7 +944,7 @@ app/src/main/java/com/trustedgelabs/trustguard/
 ├── MainActivity.kt                      # Ana Activity
 |
 ├── billing/
-│   └── BillingManager.kt               # Google Play faturalandirma
+│   └── BillingManager.kt               # Stub - tum ozellikler ucretsiz
 |
 ├── data/
 │   ├── datasource/
@@ -1055,7 +1054,7 @@ app/src/main/java/com/trustedgelabs/trustguard/
 │       └── Type.kt                      # Tipografi
 |
 └── util/
-    ├── DailyLimitManager.kt             # Anti-tamper gunluk limit
+    ├── DailyLimitManager.kt             # Gunluk limit yonetimi
     ├── RootDetector.kt                  # Root tespit + komut calistirma
     ├── PermissionDescriptions.kt        # Izin aciklamalari (EN/TR)
     ├── AppIconLoader.kt                 # Uygulama ikonu Compose donusturucu
