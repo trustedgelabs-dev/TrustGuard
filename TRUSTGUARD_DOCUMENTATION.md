@@ -1199,4 +1199,4 @@ app/src/main/java/com/trustedgelabs/trustguard/
 - **Olusturma Tarihi:** 29 Mart 2026
 - **Uygulama Versiyonu:** 1.2.0
 - **Gelistirici:** TrustEdge Labs
-- **Belgeyi Olusturan:** Claude (Anthropic)
+- **Belgeyi Olusturan:** TrustEdge Labs
