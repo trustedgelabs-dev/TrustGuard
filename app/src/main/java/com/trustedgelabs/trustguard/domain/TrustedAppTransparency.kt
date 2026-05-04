@@ -60,13 +60,13 @@ object TrustedAppTransparency {
     private fun getTrustGuardInfo(isTr: Boolean): AppTransparencyInfo {
         return if (isTr) AppTransparencyInfo(
             developerName = "TrustEdge Labs",
-            privacyGuarantee = "TrustGuard, TrustEdge Labs tarafından geliştirilmiştir. Verileriniz hiçbir zaman dış sunuculara gönderilmez. Tüm analizler tamamen cihazınızda gerçekleşir. İnternet bağlantısı yalnızca abonelik yönetimi ve DNS engelleme için kullanılır.",
+            privacyGuarantee = "TrustGuard, TrustEdge Labs tarafından geliştirilmiştir. Verileriniz hiçbir zaman dış sunuculara gönderilmez. Tüm analizler tamamen cihazınızda gerçekleşir. İnternet bağlantısı yalnızca DNS engelleme için kullanılır.",
             permissionExplanations = mapOf(
                 "android.permission.MANAGE_EXTERNAL_STORAGE" to "Silinen dosyaları taramak ve kurtarmak için gereklidir. Dosyalarınız asla dışarı aktarılmaz.",
                 "android.permission.READ_MEDIA_IMAGES" to "Silinen fotoğrafları bulup kurtarmak için kullanılır.",
                 "android.permission.READ_MEDIA_VIDEO" to "Silinen videoları bulup kurtarmak için kullanılır.",
                 "android.permission.READ_MEDIA_AUDIO" to "Silinen ses dosyalarını bulup kurtarmak için kullanılır.",
-                "android.permission.INTERNET" to "Yalnızca Google Play abonelik sistemi ve DNS engelleme (reklam/takipçi engelleme) için kullanılır. Hiçbir kişisel veri dışarı gönderilmez.",
+                "android.permission.INTERNET" to "Yalnızca DNS engelleme (reklam/takipçi engelleme) için kullanılır. Hiçbir kişisel veri dışarı gönderilmez.",
                 "android.permission.FOREGROUND_SERVICE" to "VPN tabanlı reklam engelleme servisini arka planda çalıştırmak için gereklidir.",
                 "android.permission.POST_NOTIFICATIONS" to "VPN koruma durumunu ve engelleme istatistiklerini bildirim olarak göstermek için kullanılır.",
                 "android.permission.QUERY_ALL_PACKAGES" to "Yüklü uygulamaların izinlerini analiz edebilmek için gereklidir. Uygulama listeniz asla dışarı aktarılmaz.",
@@ -74,11 +74,6 @@ object TrustedAppTransparency {
                 "android.permission.READ_EXTERNAL_STORAGE" to "Android 12 ve altı cihazlarda dosya kurtarma için gereklidir."
             ),
             networkConnections = listOf(
-                NetworkConnection(
-                    host = "play.googleapis.com",
-                    purpose = "Google Play abonelik doğrulama",
-                    dataTransferred = "Yalnızca abonelik durumu bilgisi"
-                ),
                 NetworkConnection(
                     host = "1.1.1.1 (Cloudflare DNS)",
                     purpose = "Engellenmemiş DNS sorgularını yönlendirme",
@@ -88,13 +83,13 @@ object TrustedAppTransparency {
             dataPolicy = "Tüm veriler cihazınızda kalır. Uygulama izin analizi, dosya tarama sonuçları ve engelleme istatistikleri yalnızca cihazınızın yerel depolama alanında (SharedPreferences) saklanır. Hiçbir veri uzak sunuculara gönderilmez."
         ) else AppTransparencyInfo(
             developerName = "TrustEdge Labs",
-            privacyGuarantee = "TrustGuard is developed by TrustEdge Labs. Your data is never sent to external servers. All analysis is performed entirely on your device. Internet connection is only used for subscription management and DNS blocking.",
+            privacyGuarantee = "TrustGuard is developed by TrustEdge Labs. Your data is never sent to external servers. All analysis is performed entirely on your device. Internet connection is only used for DNS blocking.",
             permissionExplanations = mapOf(
                 "android.permission.MANAGE_EXTERNAL_STORAGE" to "Required to scan and recover deleted files. Your files are never exported.",
                 "android.permission.READ_MEDIA_IMAGES" to "Used to find and recover deleted photos.",
                 "android.permission.READ_MEDIA_VIDEO" to "Used to find and recover deleted videos.",
                 "android.permission.READ_MEDIA_AUDIO" to "Used to find and recover deleted audio files.",
-                "android.permission.INTERNET" to "Only used for Google Play subscription system and DNS blocking (ad/tracker blocking). No personal data is ever sent externally.",
+                "android.permission.INTERNET" to "Only used for DNS blocking (ad/tracker blocking). No personal data is ever sent externally.",
                 "android.permission.FOREGROUND_SERVICE" to "Required to run the VPN-based ad blocking service in the background.",
                 "android.permission.POST_NOTIFICATIONS" to "Used to display VPN protection status and blocking statistics as notifications.",
                 "android.permission.QUERY_ALL_PACKAGES" to "Required to analyze permissions of installed apps. Your app list is never exported.",
@@ -102,11 +97,6 @@ object TrustedAppTransparency {
                 "android.permission.READ_EXTERNAL_STORAGE" to "Required for file recovery on Android 12 and below devices."
             ),
             networkConnections = listOf(
-                NetworkConnection(
-                    host = "play.googleapis.com",
-                    purpose = "Google Play subscription verification",
-                    dataTransferred = "Subscription status only"
-                ),
                 NetworkConnection(
                     host = "1.1.1.1 (Cloudflare DNS)",
                     purpose = "Forward non-blocked DNS queries",

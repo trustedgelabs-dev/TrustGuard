@@ -4,7 +4,6 @@ import android.app.Application
 import android.text.format.Formatter
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.trustedgelabs.trustguard.billing.BillingManager
 import com.trustedgelabs.trustguard.data.datasource.OptimizationDataSource
 import com.trustedgelabs.trustguard.data.model.CleanableFile
 import com.trustedgelabs.trustguard.data.model.DuplicateGroup
@@ -17,8 +16,6 @@ import kotlinx.coroutines.launch
 data class OptimizationUiState(
     // General
     val activeTab: OptimizationTab = OptimizationTab.JUNK,
-    val isPremium: Boolean = false,
-    val showPremiumDialog: Boolean = false,
 
     // Junk scan
     val isJunkScanning: Boolean = false,
@@ -68,9 +65,7 @@ class OptimizationViewModel(application: Application) : AndroidViewModel(applica
 
     private val dataSource = OptimizationDataSource(application)
 
-    private val _uiState = MutableStateFlow(OptimizationUiState(
-        isPremium = true
-    ))
+    private val _uiState = MutableStateFlow(OptimizationUiState())
     val uiState: StateFlow<OptimizationUiState> = _uiState.asStateFlow()
 
     fun setTab(tab: OptimizationTab) {
@@ -202,10 +197,9 @@ class OptimizationViewModel(application: Application) : AndroidViewModel(applica
         }
     }
 
-    // ═══ CLEANING ACTIONS (Premium) ═══
+    // ═══ CLEANING ACTIONS ═══
 
     fun cleanJunk() {
-        if (!checkPremium()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCleaning = true)
             val allFiles = _uiState.value.junkResults.flatMap { it.files }
@@ -221,7 +215,7 @@ class OptimizationViewModel(application: Application) : AndroidViewModel(applica
     }
 
     fun cleanDuplicates() {
-        if (!checkPremium()) return
+
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCleaning = true)
             val deleted = dataSource.deleteDuplicates(_uiState.value.duplicateGroups)
@@ -236,7 +230,7 @@ class OptimizationViewModel(application: Application) : AndroidViewModel(applica
     }
 
     fun deleteLargeFiles(files: List<CleanableFile>) {
-        if (!checkPremium()) return
+
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCleaning = true)
             val deleted = dataSource.deleteFiles(files)
@@ -251,7 +245,7 @@ class OptimizationViewModel(application: Application) : AndroidViewModel(applica
     }
 
     fun cleanEmailCaches() {
-        if (!checkPremium()) return
+
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCleaning = true)
             val deleted = dataSource.deleteFiles(_uiState.value.emailCacheFiles)
@@ -263,14 +257,6 @@ class OptimizationViewModel(application: Application) : AndroidViewModel(applica
                 totalEmailCacheSize = 0
             )
         }
-    }
-
-    private fun checkPremium(): Boolean {
-        return true
-    }
-
-    fun dismissPremiumDialog() {
-        _uiState.value = _uiState.value.copy(showPremiumDialog = false)
     }
 
     fun clearResultMessage() {

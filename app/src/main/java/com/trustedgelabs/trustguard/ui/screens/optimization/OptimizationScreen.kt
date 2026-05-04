@@ -102,30 +102,6 @@ fun OptimizationScreen(
         }
     }
 
-    // Premium dialog
-    if (state.showPremiumDialog) {
-        AlertDialog(
-            onDismissRequest = { viewModel.dismissPremiumDialog() },
-            title = { Text(stringResource(R.string.premium_required), fontWeight = FontWeight.Bold) },
-            text = { Text(stringResource(R.string.optimize_premium_message)) },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        viewModel.dismissPremiumDialog()
-                        onNavigateToPremium()
-                    },
-                    colors = ButtonDefaults.buttonColors(containerColor = TrustGreen)
-                ) { Text(stringResource(R.string.upgrade_premium)) }
-            },
-            dismissButton = {
-                TextButton(onClick = { viewModel.dismissPremiumDialog() }) {
-                    Text(stringResource(R.string.back))
-                }
-            },
-            containerColor = DarkCard
-        )
-    }
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -240,7 +216,7 @@ private fun JunkTabContent(state: OptimizationUiState, viewModel: OptimizationVi
                         size = Formatter.formatShortFileSize(context, state.totalJunkSize),
                         count = state.junkResults.sumOf { it.files.size },
                         color = Color(0xFFFF9100),
-                        isPremium = state.isPremium,
+
                         isCleaning = state.isCleaning,
                         onClean = { viewModel.cleanJunk() }
                     )
@@ -336,7 +312,7 @@ private fun DuplicateTabContent(state: OptimizationUiState, viewModel: Optimizat
                         size = Formatter.formatShortFileSize(context, state.totalDuplicateWaste),
                         count = state.duplicateGroups.sumOf { it.files.size },
                         color = Color(0xFF448AFF),
-                        isPremium = state.isPremium,
+
                         isCleaning = state.isCleaning,
                         onClean = { viewModel.cleanDuplicates() },
                         cleanLabel = stringResource(R.string.optimize_delete_duplicates)
@@ -451,7 +427,7 @@ private fun LargeFilesTabContent(state: OptimizationUiState, viewModel: Optimiza
                         size = Formatter.formatShortFileSize(context, state.totalLargeFileSize),
                         count = state.largeFiles.size,
                         color = Color(0xFFAB47BC),
-                        isPremium = state.isPremium,
+
                         isCleaning = state.isCleaning,
                         onClean = { viewModel.deleteLargeFiles(state.largeFiles) },
                         cleanLabel = stringResource(R.string.optimize_delete_selected)
@@ -647,7 +623,7 @@ private fun EmailTabContent(state: OptimizationUiState, viewModel: OptimizationV
                         size = Formatter.formatShortFileSize(context, state.totalEmailCacheSize),
                         count = state.emailCacheFiles.size,
                         color = Color(0xFFFF1744),
-                        isPremium = state.isPremium,
+
                         isCleaning = state.isCleaning,
                         onClean = { viewModel.cleanEmailCaches() },
                         cleanLabel = stringResource(R.string.optimize_clean_email)
@@ -801,7 +777,6 @@ private fun ScanSummaryCard(
     size: String,
     count: Int,
     color: Color,
-    isPremium: Boolean,
     isCleaning: Boolean,
     onClean: () -> Unit,
     cleanLabel: String = stringResource(R.string.optimize_clean_all)
@@ -827,12 +802,9 @@ private fun ScanSummaryCard(
             if (isCleaning) {
                 CircularProgressIndicator(color = DarkBackground, modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
                 Spacer(Modifier.width(8.dp))
-            } else if (!isPremium) {
-                Icon(Icons.Default.Lock, null, modifier = Modifier.size(16.dp))
-                Spacer(Modifier.width(6.dp))
             }
             Text(
-                text = if (!isPremium) stringResource(R.string.optimize_premium_clean) else cleanLabel,
+                text = cleanLabel,
                 fontWeight = FontWeight.Bold,
                 color = DarkBackground
             )

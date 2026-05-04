@@ -2,7 +2,7 @@
 
 **Gelistirici:** TrustEdge Labs
 **Paket Adi:** `com.trustedgelabs.trustguard`
-**Versiyon:** 1.2.0 (versionCode: 5)
+**Versiyon:** 3.0.0 (versionCode: 14)
 **Platform:** Android
 **Minimum SDK:** 24 (Android 7.0 Nougat)
 **Hedef SDK:** 35 (Android 15)
