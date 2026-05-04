@@ -1,0 +1,23 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+app/google-services.json
+
+# Signing keystores - never commit these
+*.jks
+*.keystore
+
+# Build outputs
+*.apk
+*.aab
+app/release/
+
+# Claude Code settings
+.claude/

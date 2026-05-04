@@ -1,0 +1,112 @@
+═══════════════════════════════════════════════════════════════
+                    TRUSTGUARD - PLAY STORE LİSTESİ (TÜRKÇE)
+                         by TrustEdge Labs
+═══════════════════════════════════════════════════════════════
+
+───────────────────────────────
+  UYGULAMA ADI (max 30 karakter)
+───────────────────────────────
+TrustGuard - Gizlilik Kalkanı
+
+
+───────────────────────────────
+  KISA AÇIKLAMA (max 80 karakter)
+───────────────────────────────
+Uygulama izinlerini analiz et, takipçileri engelle, silinen dosyaları kurtar.
+
+
+───────────────────────────────
+  TAM AÇIKLAMA (max 4000 karakter)
+───────────────────────────────
+🛡️ TrustGuard — Eksiksiz Gizlilik ve Güvenlik Asistanınız
+
+Dijital gizliliğinizin kontrolünü elinize alın. TrustGuard cihazınızdaki tüm uygulamaları analiz eder, gizli izinleri ortaya çıkarır, reklamları ve takipçileri engeller, reklam virüslerini tespit eder ve silinen dosyalarınızı kurtarır — hepsi tek bir şık panelden.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 İZİN ANALİZİ
+• Tüm yüklü uygulamaları tarar ve izinlerini sınıflandırır
+• Renk kodlu risk seviyeleri: Hassas, Orta, Güvenli
+• Her uygulamanın cihazınızda nelere erişebildiğini görün
+• Gizlilik Puanı ile genel cihaz güvenliğinizi ölçün
+• Güvenilir geliştirici doğrulaması ile şeffaf uygulamalar
+
+📊 UYGULAMA AKTİVİTE TAKİBİ
+• Ön plan ve arka plan kullanım süresini izleyin (24 saat)
+• Uygulama başına gönderilen ve alınan ağ verilerini takip edin
+• Kamera, mikrofon ve konum erişim geçmişini görün
+• Şüpheli arka plan aktivite kalıplarını tespit edin
+• Kullanım Erişimi izni gerektirir (Ayarlar'dan verilir)
+
+🚫 REKLAM VE TAKİPÇİ ENGELLEME
+• Yerel DNS tabanlı koruma — hiçbir veri cihazınızdan çıkmaz
+• Reklam, takipçi ve analitik alan adlarını engelleyin
+• Gerçek zamanlı engelleme sayacı ve istatistikler
+• Çoklu engelleme listeleri: Reklam + Takipçi alan adları
+• Özel engelleme listeleri desteği (Premium)
+
+🔎 REKLAM TEHDİDİ TESPİTİ
+• 7 noktalı davranışsal analiz ile şüpheli uygulama tespiti
+• Ekran katmanı kötüye kullanımı, agresif reklam SDK'ları, otomatik başlatma tespiti
+• Kurulum başına ödeme ve sessiz yükleyici davranışı tespiti
+• Uygulanabilir ipuçları: kaldır, izinleri geri al, arka planı kısıtla
+• Gizli reklam tehditlerine karşı koruma
+
+📁 DOSYA KURTARMA
+• Silinen fotoğraf, video, ses dosyası ve belgeleri kurtarın
+• Hızlı Tarama: Çöp kutusu ve yakın zamanda silinenler
+• Derin Tarama: Küçük resimler, önbellekler, gizli klasörler (Premium)
+• Tam Root Taraması: Maksimum dosya sistemi kurtarma (Premium, Root)
+• Kaynak rozetleri her dosyanın nereden bulunduğunu gösterir
+
+👁️ GELİŞTİRİCİ ŞEFFAFLIĞI
+• Güvenilir uygulamalar için doğrulanmış geliştirici bilgisi
+• Her iznin neden istendiğini tam olarak görün
+• Ağ bağlantı detayları: hangi sunucular, ne tür veriler
+• Sorumlu geliştiriciler için veri politikası şeffaflığı
+
+💎 PREMİUM ÖZELLİKLER
+• Sınırsız dosya kurtarma (ücretsiz: 3 dosya)
+• Derin Tarama ve Root Tarama ile dosya kurtarma
+• Özel alan adı engelleme listeleri
+• Gelişmiş tehdit algılama
+• Fiyat bölgenize göre belirlenir — güncel fiyat için uygulamayı kontrol edin
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 GİZLİLİK SÖZÜMÜz
+TrustGuard hiçbir kişisel veriyi toplamaz, depolamaz veya iletmez. Tüm analizler cihazınızda yerel olarak gerçekleşir. İnternet erişimi yalnızca Google Play üzerinden abonelik yönetimi için kullanılır. Harici sunucu yok. Takip yok. Nokta.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TrustEdge Labs tarafından geliştirilmiştir — Şeffaflık yoluyla güven inşa ediyoruz.
+
+
+───────────────────────────────
+  KATEGORİ
+───────────────────────────────
+Araçlar
+
+
+───────────────────────────────
+  ETİKETLER / ANAHTAR KELİMELER
+───────────────────────────────
+gizlilik, güvenlik, izinler, takipçi engelleyici, reklam engelleyici, dosya kurtarma, reklam virüsü, uygulama tarayıcı, izin yöneticisi, gizlilik koruması
+
+
+───────────────────────────────
+  İÇERİK DERECELENDİRMESİ
+───────────────────────────────
+Herkes
+
+
+───────────────────────────────
+  İLETİŞİM E-POSTASI
+───────────────────────────────
+(Play Console'dan ayarlayın)
+
+
+───────────────────────────────
+  GİZLİLİK POLİTİKASI URL
+───────────────────────────────
+(Gerekli — bir gizlilik politikası sayfası oluşturup yayınlayın)

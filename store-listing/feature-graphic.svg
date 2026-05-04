@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1B2A"/>
+      <stop offset="50%" style="stop-color:#0A1628"/>
+      <stop offset="100%" style="stop-color:#060E18"/>
+    </linearGradient>
+
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF"/>
+      <stop offset="50%" style="stop-color:#00BFA5"/>
+      <stop offset="100%" style="stop-color:#00E676"/>
+    </linearGradient>
+
+    <!-- Inner shield gradient -->
+    <linearGradient id="innerShieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D2137"/>
+      <stop offset="100%" style="stop-color:#071420"/>
+    </linearGradient>
+
+    <!-- Eye gradient -->
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF"/>
+      <stop offset="100%" style="stop-color:#00E676"/>
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00E5FF"/>
+      <stop offset="100%" style="stop-color:#00E676"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03" stroke="#FFFFFF" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1024" y2="100"/>
+    <line x1="0" y1="200" x2="1024" y2="200"/>
+    <line x1="0" y1="300" x2="1024" y2="300"/>
+    <line x1="0" y1="400" x2="1024" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+  </g>
+
+  <!-- Background glow circle -->
+  <circle cx="300" cy="250" r="180" fill="#00E676" opacity="0.04" filter="url(#softGlow)"/>
+
+  <!-- ═══ SHIELD ICON (left side) ═══ -->
+  <g transform="translate(180, 90) scale(2.6)">
+    <!-- Main shield -->
+    <path d="M54,22L30,32v15c0,16.65 11.52,32.22 24,34.8 12.48,-2.58 24,-18.15 24,-34.8V32L54,22z"
+          fill="url(#shieldGrad)" filter="url(#glow)"/>
+
+    <!-- Inner shield -->
+    <path d="M54,26L34,34.5v12.5c0,13.85 9.6,26.85 20,29 10.4,-2.15 20,-15.15 20,-29V34.5L54,26z"
+          fill="url(#innerShieldGrad)"/>
+
+    <!-- Eye shape -->
+    <path d="M54,44c-8.8,0 -16.4,5 -20,12 3.6,7 11.2,12 20,12 8.8,0 16.4,-5 20,-12 -3.6,-7 -11.2,-12 -20,-12zM54,64c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+          fill="#00E676"/>
+
+    <!-- Pupil -->
+    <circle cx="54" cy="56" r="5" fill="url(#eyeGrad)"/>
+
+    <!-- Light reflection -->
+    <circle cx="52" cy="54" r="1.5" fill="white" opacity="0.7"/>
+
+    <!-- Shield highlight -->
+    <path d="M54,22L30,32v3l24,-10 24,10v-3L54,22z" fill="white" opacity="0.2"/>
+  </g>
+
+  <!-- ═══ TEXT (right side) ═══ -->
+
+  <!-- App name -->
+  <text x="520" y="195" font-family="'Segoe UI', 'Roboto', Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#textGrad)">TrustGuard</text>
+
+  <!-- Tagline -->
+  <text x="520" y="245" font-family="'Segoe UI', 'Roboto', Arial, sans-serif" font-size="26" fill="#9AA0A6">Privacy &amp; Security Assistant</text>
+
+  <!-- Divider line -->
+  <line x1="520" y1="270" x2="720" y2="270" stroke="url(#textGrad)" stroke-width="2" opacity="0.5"/>
+
+  <!-- Feature bullets -->
+  <g font-family="'Segoe UI', 'Roboto', Arial, sans-serif" font-size="20" fill="#E8EAED">
+    <!-- Permission Analysis -->
+    <circle cx="530" cy="305" r="4" fill="#00E676"/>
+    <text x="545" y="311">Permission Analysis</text>
+
+    <!-- Ad & Tracker Blocking -->
+    <circle cx="530" cy="340" r="4" fill="#00BFA5"/>
+    <text x="545" y="346">Ad &amp; Tracker Blocking</text>
+
+    <!-- File Recovery -->
+    <circle cx="530" cy="375" r="4" fill="#00E5FF"/>
+    <text x="545" y="381">File Recovery</text>
+
+    <!-- Adware Detection -->
+    <circle cx="745" cy="305" r="4" fill="#FF9800"/>
+    <text x="760" y="311">Adware Detection</text>
+
+    <!-- Activity Monitoring -->
+    <circle cx="745" cy="340" r="4" fill="#7C4DFF"/>
+    <text x="760" y="346">Activity Monitoring</text>
+
+    <!-- Developer Transparency -->
+    <circle cx="745" cy="375" r="4" fill="#FFD600"/>
+    <text x="760" y="381">Developer Transparency</text>
+  </g>
+
+  <!-- Developer name -->
+  <text x="520" y="435" font-family="'Segoe UI', 'Roboto', Arial, sans-serif" font-size="16" fill="#9AA0A6" opacity="0.6">by TrustEdge Labs</text>
+
+</svg>

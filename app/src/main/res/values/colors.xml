@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="trust_green">#FF00E676</color>
+    <color name="trust_teal">#FF00BFA5</color>
+    <color name="risk_red">#FFFF1744</color>
+    <color name="risk_yellow">#FFFFD600</color>
+    <color name="risk_green">#FF00E676</color>
+    <color name="dark_background">#FF0A0E14</color>
+    <color name="dark_surface">#FF131A24</color>
+    <color name="dark_card">#FF1E2A3A</color>
+    <color name="text_primary">#FFE8EAED</color>
+    <color name="text_secondary">#FF9AA0A6</color>
+</resources>

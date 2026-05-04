@@ -1,0 +1,112 @@
+═══════════════════════════════════════════════════════════════
+                    TRUSTGUARD - PLAY STORE LISTING (ENGLISH)
+                         by TrustEdge Labs
+═══════════════════════════════════════════════════════════════
+
+───────────────────────────────
+  APP NAME (max 30 chars)
+───────────────────────────────
+TrustGuard - Privacy Shield
+
+
+───────────────────────────────
+  SHORT DESCRIPTION (max 80 chars)
+───────────────────────────────
+Analyze app permissions, block trackers, recover deleted files & detect adware.
+
+
+───────────────────────────────
+  FULL DESCRIPTION (max 4000 chars)
+───────────────────────────────
+🛡️ TrustGuard — Your Complete Privacy & Security Assistant
+
+Take control of your digital privacy. TrustGuard analyzes every app on your device, reveals hidden permissions, blocks ads & trackers, detects adware threats, and recovers your deleted files — all from one beautiful dashboard.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 PERMISSION ANALYSIS
+• Scans all installed apps and categorizes their permissions
+• Color-coded risk levels: Sensitive, Moderate, Safe
+• See exactly what each app can access on your device
+• Privacy Score calculates your overall device security
+• Trusted developer verification for transparent apps
+
+📊 APP ACTIVITY MONITORING
+• Track foreground & background usage time (24h)
+• Monitor network data sent and received per app
+• See camera, microphone, and location access history
+• Detect suspicious background activity patterns
+• Requires Usage Access permission (granted in Settings)
+
+🚫 AD & TRACKER BLOCKING
+• Local DNS-based protection — no data leaves your device
+• Block ads, trackers, and analytics domains
+• Real-time blocking counter and statistics
+• Multiple blocklists: Ad domains + Tracker domains
+• Custom blocklists support (Premium)
+
+🔎 ADWARE THREAT DETECTION
+• 7-point behavioral analysis for suspicious apps
+• Detects overlay abuse, aggressive ad SDKs, auto-start patterns
+• Identifies pay-per-install and silent installer behavior
+• Actionable tips: uninstall, revoke permissions, restrict background
+• Protects against hidden advertising threats
+
+📁 FILE RECOVERY
+• Recover deleted photos, videos, audio files, and documents
+• Quick Scan: Check trash & recently deleted
+• Deep Scan: Thumbnails, caches, hidden folders (Premium)
+• Full Root Scan: Maximum filesystem recovery (Premium, Root)
+• Source badges show where each file was found
+
+👁️ DEVELOPER TRANSPARENCY
+• Verified developer information for trusted apps
+• See exactly why each permission is requested
+• Network connection details: which servers, what data
+• Data policy transparency for responsible developers
+
+💎 PREMIUM FEATURES
+• Unlimited file recovery (free: 3 files)
+• Deep Scan & Root Scan file recovery
+• Custom domain blocklists
+• Advanced threat detection
+• Price set by region — check the app for current pricing
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 PRIVACY PROMISE
+TrustGuard does NOT collect, store, or transmit any personal data. All analysis happens locally on your device. Internet access is used exclusively for subscription management via Google Play. No external servers. No tracking. Period.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Developed by TrustEdge Labs — Building trust through transparency.
+
+
+───────────────────────────────
+  CATEGORY
+───────────────────────────────
+Tools
+
+
+───────────────────────────────
+  TAGS / KEYWORDS
+───────────────────────────────
+privacy, security, permissions, tracker blocker, ad blocker, file recovery, adware, app scanner, permission manager, privacy guard
+
+
+───────────────────────────────
+  CONTENT RATING
+───────────────────────────────
+Everyone
+
+
+───────────────────────────────
+  CONTACT EMAIL
+───────────────────────────────
+(Set in Play Console)
+
+
+───────────────────────────────
+  PRIVACY POLICY URL
+───────────────────────────────
+(Required — create and host a privacy policy page)

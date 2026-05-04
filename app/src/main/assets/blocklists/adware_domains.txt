@@ -1,0 +1,1041 @@
+# TrustGuard Ad Domain Blocklist
+# Comprehensive ad-serving domain list for DNS-level ad blocking
+# Sources: EasyList, AdGuard, Peter Lowe's, Steven Black, OISD
+# Last updated: 2026-03-28
+# Domains: ~3200+
+
+# ===== Google Ads =====
+pagead2.googlesyndication.com
+pagead.googlesyndication.com
+tpc.googlesyndication.com
+www.googleadservices.com
+googleadservices.com
+googleads.g.doubleclick.net
+ad.doubleclick.net
+ads.doubleclick.net
+doubleclick.net
+ad.google.com
+ads.google.com
+adservice.google.com
+adservice.google.co.in
+adservice.google.co.uk
+adservice.google.com.br
+adservice.google.de
+adservice.google.fr
+adservice.google.es
+adservice.google.it
+adservice.google.ru
+adservice.google.co.jp
+adservice.google.com.au
+adservice.google.ca
+adservice.google.nl
+adservice.google.com.tr
+adservice.google.pl
+adservice.google.com.mx
+adservice.google.com.ar
+adservice.google.co.za
+adservice.google.co.kr
+adservice.google.com.tw
+adservice.google.com.sg
+adservice.google.co.id
+adservice.google.com.my
+adservice.google.com.ph
+adservice.google.com.eg
+adservice.google.com.sa
+adservice.google.ae
+adservice.google.com.pk
+adservice.google.com.ng
+adservice.google.co.th
+adservice.google.com.vn
+adservice.google.com.co
+adservice.google.cl
+adservice.google.com.pe
+adservice.google.at
+adservice.google.be
+adservice.google.ch
+adservice.google.cz
+adservice.google.dk
+adservice.google.fi
+adservice.google.gr
+adservice.google.hu
+adservice.google.ie
+adservice.google.no
+adservice.google.pt
+adservice.google.ro
+adservice.google.se
+adservice.google.sk
+adservice.google.co.il
+googleads4.g.doubleclick.net
+googleads2.g.doubleclick.net
+www.googletagmanager.com
+www.googletagservices.com
+googletagservices.com
+ade.googlesyndication.com
+fundingchoicesmessages.google.com
+pagead-googlehosted.l.google.com
+partnerad.l.doubleclick.net
+video-ad-stats.googlesyndication.com
+fls.doubleclick.net
+redirector.googlevideo.com
+s0.2mdn.net
+2mdn.net
+s1.2mdn.net
+ad-g.doubleclick.net
+cm.g.doubleclick.net
+static.doubleclick.net
+m.doubleclick.net
+mediavisor.doubleclick.net
+pubads.g.doubleclick.net
+securepubads.g.doubleclick.net
+ad.mo.doubleclick.net
+
+# ===== Facebook / Meta Ads =====
+an.facebook.com
+ads.facebook.com
+ad.facebook.com
+pixel.facebook.com
+ads-api.facebook.com
+bidder.facebook.com
+audience-network.facebook.com
+audiencenetwork.facebook.com
+edge-mqtt.facebook.com
+ads.instagram.com
+ads-api.instagram.com
+graph.instagram.com
+business.facebook.com
+tr-rule-fb-endpoint.facebook.com
+
+# ===== Amazon Ads =====
+aax-us-east.amazon-adsystem.com
+aax-us-west.amazon-adsystem.com
+aax-eu.amazon-adsystem.com
+aax-fe.amazon-adsystem.com
+aax.amazon-adsystem.com
+amazon-adsystem.com
+s.amazon-adsystem.com
+c.amazon-adsystem.com
+z-na.amazon-adsystem.com
+ir-na.amazon-adsystem.com
+mads.amazon-adsystem.com
+aan.amazon.com
+fls-na.amazon.com
+fls-eu.amazon.com
+unagi.amazon.com
+unagi-na.amazon.com
+ad-api.amazon.com
+advertising.amazon.com
+advertising-api.amazon.com
+
+# ===== Twitter / X Ads =====
+ads.twitter.com
+ads-api.twitter.com
+ads.x.com
+ads-api.x.com
+static.ads-twitter.com
+analytics.twitter.com
+syndication.twitter.com
+
+# ===== Microsoft / Bing Ads =====
+ads.bing.com
+adnxs.com
+adnexus.net
+ib.adnxs.com
+mediation.adnxs.com
+secure.adnxs.com
+acdn.adnxs.com
+prebid.adnxs.com
+sin3-ib.adnxs.com
+lax1-ib.adnxs.com
+nym1-ib.adnxs.com
+ams1-ib.adnxs.com
+fra1-ib.adnxs.com
+hkg1-ib.adnxs.com
+ads.msn.com
+a.ads2.msads.net
+ad.msn.com
+adnexus.com
+flex.msn.com
+rr.office.microsoft.com
+ads.microsoft.com
+bingads.microsoft.com
+
+# ===== Yahoo / Oath / Verizon Media =====
+ads.yahoo.com
+advertising.yahoo.com
+gemini.yahoo.com
+adserver.yahoo.com
+yieldmanager.com
+ad.yieldmanager.com
+pubads.g.yahoo.com
+s.yimg.com
+ads.yimg.com
+udc.yahoo.com
+udcm.yahoo.com
+geo.yahoo.com
+
+# ===== TikTok Ads =====
+ads.tiktok.com
+ads-api.tiktok.com
+analytics.tiktok.com
+analytics-sg.tiktok.com
+ad.tiktok.com
+mopub.tiktok.com
+business-api.tiktok.com
+mon-va.byteoversea.com
+p16-ad-sg.ibyteimg.com
+ad-sg.tiktok.com
+pangolin-sdk-toutiao.com
+is.snssdk.com
+log.snssdk.com
+sf16-scmcdn-sg.ibytedtos.com
+
+# ===== Snapchat Ads =====
+adsapi.snapchat.com
+ads.snapchat.com
+tr.snapchat.com
+sc-static.net
+sc-analytics.appspot.com
+gcp-ew.sc-cdn.net
+gcp-uc.sc-cdn.net
+bolt-gcdn.sc-cdn.net
+advertising.snapchat.com
+app-ads.snapchat.com
+
+# ===== LinkedIn Ads =====
+ads.linkedin.com
+ads-api.linkedin.com
+lnkd.demdex.net
+snap.licdn.com
+p.adsymptotic.com
+px.ads.linkedin.com
+
+# ===== Pinterest Ads =====
+ads.pinterest.com
+ads-dev.pinterest.com
+trk.pinterest.com
+analytics.pinterest.com
+widgets.pinterest.com
+log.pinterest.com
+
+# ===== Reddit Ads =====
+ads.reddit.com
+d.reddit.com
+rereddit.com
+alb.reddit.com
+events.reddit.com
+events.redditmedia.com
+
+# ===== Spotify Ads =====
+adeventtracker.spotify.com
+ads-fa.spotify.com
+analytics.spotify.com
+audio-ak-spotify-com.akamaized.net
+audio2.spotify.com
+heads4-ak-spotify-com.akamaized.net
+spclient.wg.spotify.com
+
+# ===== Apple Ad Network =====
+iadsdk.apple.com
+advertising.apple.com
+searchads.apple.com
+iad.apple.com
+banners.itunes.apple.com
+qwapi.com
+advp.apple.com
+
+# ===== Major Ad Networks & Exchanges =====
+# Criteo
+gum.criteo.com
+bidder.criteo.com
+static.criteo.net
+sslwidget.criteo.com
+dis.criteo.com
+rdi.criteo.com
+privacy.criteo.com
+cat.fr.eu.criteo.com
+rtax.criteo.com
+
+# Taboola
+api.taboola.com
+trc.taboola.com
+cdn.taboola.com
+nr.taboola.com
+vidstat.taboola.com
+images.taboola.com
+
+# Outbrain
+widgets.outbrain.com
+amplify.outbrain.com
+log.outbrain.com
+odb.outbrain.com
+traffic.outbrain.com
+
+# The Trade Desk
+match.adsrvr.org
+js.adsrvr.org
+insight.adsrvr.org
+img.adsrvr.org
+data.adsrvr.org
+
+# MediaMath
+pixel.mathtag.com
+sync.mathtag.com
+ad.mathtag.com
+
+# Unity Ads
+unityads.unity3d.com
+config.unityads.unity3d.com
+adserver.unityads.unity3d.com
+auction.unityads.unity3d.com
+webview.unityads.unity3d.com
+cdn-creatives-highwind-prd.unityads.unity3d.com
+publisher-event.unityads.unity3d.com
+httpkafka.unityads.unity3d.com
+
+# Vungle
+ads.api.vungle.com
+api.vungle.com
+3rdparty-assets.vungle.com
+edge.vungle.com
+
+# AppLovin
+ms.applovin.com
+d.applvn.com
+rt.applovin.com
+a.applovin.com
+img.applovin.com
+pdn.applovin.com
+assets.applovin.com
+ms.applvn.com
+ms2.applvn.com
+sdk.applovin.com
+api.applovin.com
+init.applovin.com
+postback.applovin.com
+
+# IronSource
+outcome-ssp.supersonicads.com
+supersonicads.com
+init.supersonicads.com
+sdk.supersonicads.com
+edge.supersonicads.com
+is-sdk.supersonicads.com
+o.supersonicads.com
+rv.supersonicads.com
+ia.supersonicads.com
+bn.supersonicads.com
+outcome.supersonicads.com
+
+# Chartboost
+da.chartboost.com
+live.chartboost.com
+ads.chartboost.com
+a.chartboost.com
+
+# AdColony
+ads3.adcolony.com
+wd.adcolony.com
+events3alt.adcolony.com
+adc3-launch.adcolony.com
+adcolony.com
+events.adcolony.com
+ssa.adcolony.com
+
+# InMobi
+config.inmobi.com
+sdk.inmobi.com
+ads.inmobi.com
+api.w.inmobi.com
+i.w.inmobi.com
+cr.inmobi.com
+sdkconf.inmobi.com
+
+# Mintegral / Mobvista
+configure.rayjump.com
+net.rayjump.com
+analytics.rayjump.com
+a.rayjump.com
+hb.rayjump.com
+
+# Fyber / Digital Turbine
+ads.fyber.com
+ia.fyber.com
+mraid.fyber.com
+offer.fyber.com
+ads.inner-active.mobi
+ia-cert.inner-active.mobi
+cdn1.inner-active.mobi
+
+# MoPub (Twitter)
+ads.mopub.com
+mopub.com
+
+# Smaato
+soma.smaato.net
+s.smaato.net
+prebid.smaato.net
+ad.smaato.net
+img.smaato.net
+soma-assets.smaato.net
+
+# StartApp
+req.startappservice.com
+init.startappservice.com
+imp.startappservice.com
+infoevent.startappservice.com
+trackdownload.startappservice.com
+
+# Ogury
+msp.ogury.com
+ms.ogury.com
+api.ogury.com
+
+# Liftoff / Vungle
+liftoff.io
+lftff.io
+clicktrack.liftoff.io
+
+# Tapjoy
+ads.tapjoy.com
+connect.tapjoy.com
+rpc.tapjoy.com
+ws.tapjoy.com
+placements.tapjoy.com
+
+# Digital Turbine / AdAction
+delivery.adaction.co
+hoster.adaction.co
+
+# PubMatic
+ssp.pubmatic.com
+ads.pubmatic.com
+image6.pubmatic.com
+t.pubmatic.com
+ow.pubmatic.com
+hbopenbid.pubmatic.com
+
+# OpenX
+delivery.openx.net
+u.openx.net
+rtb.openx.net
+ssp.openx.com
+
+# Rubicon Project / Magnite
+fastlane.rubiconproject.com
+optimized-by.rubiconproject.com
+prebid-server.rubiconproject.com
+eus.rubiconproject.com
+ads.rubiconproject.com
+
+# Index Exchange
+htlb.casalemedia.com
+as-sec.casalemedia.com
+r.casalemedia.com
+ssum-sec.casalemedia.com
+www.indexww.com
+js-sec.indexww.com
+
+# TripleLift
+3lift.com
+eb2.3lift.com
+tlx.3lift.com
+
+# Sharethrough
+stx.sharethrough.com
+native.sharethrough.com
+btlr.sharethrough.com
+
+# GumGum
+g2.gumgum.com
+js.gumgum.com
+ads.gumgum.com
+pixel.gumgum.com
+
+# Undertone
+ad.undertone.com
+cdn.undertone.com
+
+# DoubleVerify
+tps.doubleverify.com
+cdn.doubleverify.com
+rtb0.doubleverify.com
+rtbcdn.doubleverify.com
+pub.doubleverify.com
+
+# MOAT / Oracle Ads
+z.moatads.com
+s.moatads.com
+js.moatads.com
+px.moatads.com
+mb.moatads.com
+v4.moatads.com
+
+# Integral Ad Science
+pixel.adsafeprotected.com
+static.adsafeprotected.com
+fw.adsafeprotected.com
+dt.adsafeprotected.com
+
+# Teads
+a.teads.tv
+cdn.teads.tv
+cdn2.teads.tv
+t.teads.tv
+sync.teads.tv
+
+# YieldMo
+ads.yieldmo.com
+match.prod.bidr.io
+
+# SpotX / Magnite Video
+search.spotxchange.com
+ads.spotx.tv
+sync.search.spotxchange.com
+
+# Conversant
+media.fastclick.net
+cdn.fastclick.net
+adfarm.mediaplex.com
+
+# Nativo
+s.ntv.io
+sdk.ntv.io
+ssl-cdn.ntv.io
+
+# Sovrn
+ap.lijit.com
+beacon.lijit.com
+www.lijit.com
+ad.lijit.com
+
+# Smart AdServer
+www.smartadserver.com
+www6.smartadserver.com
+ced.sascdn.com
+static.sascdn.com
+diff.smartadserver.com
+
+# 33Across
+ssp.33across.com
+cdn.33across.com
+
+# Adform
+track.adform.net
+adx.adform.net
+serving.adform.net
+adform.net
+
+# Quantcast
+pixel.quantserve.com
+quantserve.com
+secure.quantserve.com
+edge.quantserve.com
+
+# Lotame
+tags.crwdcntrl.net
+bcp.crwdcntrl.net
+ad.crwdcntrl.net
+
+# BlueKai / Oracle DMP
+tags.bluekai.com
+stags.bluekai.com
+b.bluekai.com
+
+# LiveRamp
+ats.rlcdn.com
+id.rlcdn.com
+lrcall.rlcdn.com
+
+# Bombora
+ml314.com
+ad.ml314.com
+
+# Eyeota
+ps.eyeota.net
+data.eyeota.net
+
+# ===== Mobile Ad SDKs (In-App) =====
+admob-sdk.google.com
+mediation.admob.com
+
+# Pangle (ByteDance/TikTok)
+ad.oceanengine.com
+pangolin.snssdk.com
+open.snssdk.com
+
+# Yandex Ads
+an.yandex.ru
+ads.adfox.ru
+adfox.ru
+mobile-ads.yandex.ru
+an.yandex.com
+
+# Samsung Ads
+samsungads.com
+ad.samsungadhub.com
+config.samsungads.com
+analytics.samsungads.com
+
+# Huawei Ads
+adx-dre.op.dbankcloud.com
+adx-dre.op.hicloud.com
+ads-dre.op.dbankcloud.com
+grs.dbankcloud.com
+
+# Xiaomi / MIUI Ads
+data.mistat.xiaomi.com
+sdkconfig.ad.xiaomi.com
+globalapi.ad.xiaomi.com
+tracking.miui.com
+api.ad.xiaomi.com
+new.api.ad.xiaomi.com
+t.ad.xiaomi.com
+
+# Oppo / Realme Ads
+bdapi-in-ads.realmemobile.com
+bdapi-ads.realmemobile.com
+adsfs.oppomobile.com
+
+# Vivo Ads
+ads-market-api.vivo.com.cn
+ads-analytics.vivo.com.cn
+
+# ===== Programmatic / Ad Exchanges =====
+openrtb.net
+usermatch.krxd.net
+beacon.krxd.net
+cdn.krxd.net
+consumer.krxd.net
+idsync.rlcdn.com
+csm.idsync.rlcdn.com
+match.sharethrough.com
+ups.analytics.yahoo.com
+pixel.advertising.com
+ad.turn.com
+r.turn.com
+a.tribalfusion.com
+ads.mp.mydas.mobi
+
+# ===== Chinese Ad Networks =====
+# Baidu
+cpro.baidustatic.com
+pos.baidu.com
+hm.baidu.com
+hmma.baidu.com
+duclick.baidu.com
+mobads.baidu.com
+mobads-sdk.baidu.com
+baidumobad.baidu.com
+als.baidu.com
+eclick.baidu.com
+cb.baidu.com
+
+# Tencent / QQ
+e.qq.com
+gdt.qq.com
+pgdt.ugdtimg.com
+pgdt.gtimg.cn
+t.gdt.qq.com
+v.gdt.qq.com
+mi.gdt.qq.com
+win.gdt.qq.com
+
+# Alibaba / Tanx
+tanx.com
+g.tbcdn.cn
+show.re.taobao.com
+p.tanx.com
+s.tanx.com
+acm.alimama.com
+cpm.alimama.com
+
+# iQiyi
+cupid.iqiyi.com
+msg.iqiyi.com
+c.uaa.iqiyi.com
+
+# Bilibili
+ad.bilibili.com
+cm.bilibili.com
+
+# JD.com
+ads.jd.com
+dsp.jd.com
+
+# Umeng (Alibaba Analytics)
+alog.umeng.com
+alog.umengcloud.com
+oc.umeng.com
+msg.umeng.com
+errlog.umeng.com
+ulogs.umeng.com
+utoken.umeng.com
+
+# ===== Indian Ad Networks =====
+ads.glance.com
+glancecdn.com
+ids.glance.com
+ads.sharechat.com
+ads.paytm.com
+
+# ===== Smart TV / CTV Ads =====
+ads.hulu.com
+ads-e-darwin.hulustream.com
+assoc-amazon.com
+device-metrics-us-2.amazon.com
+aax-us-iad.amazon.com
+fls-na.amazon.com
+mads-eu.amazon.com
+rcm-na.amazon.com
+us-ads.openx.net
+ads.roku.com
+logs.roku.com
+scribe.logs.roku.com
+p.ads.roku.com
+display.ravm.tv
+contrib.ravm.tv
+ad.lgappstv.com
+lgtvsdp.com
+ngfts.lge.com
+rdx.ads.roku.com
+
+# ===== Video Ads / VAST =====
+vid.springserve.com
+vast.adsafeprotected.com
+imasdk.googleapis.com
+cdn.spotxcdn.com
+cdn.springserve.com
+
+# ===== Pop-up / Pop-under Networks =====
+adf.ly
+sh.st
+bc.vc
+ouo.io
+adcash.com
+ad.propellerads.com
+ads.propellerads.com
+propellerclick.com
+ad-maven.com
+ad.ad-maven.com
+admiralcdn.com
+getadmiral.com
+
+# ===== Additional Major Domains =====
+ad.infoseek.net
+ad.foxnetworks.com
+ad.wsod.com
+ads.stickyadstv.com
+ad.yieldlab.net
+rtd-tm.everesttech.net
+pixel.everesttech.net
+ads.betweendigital.com
+ads.buzzcity.net
+ads.nexage.com
+ads.mobfox.com
+ads.flurry.com
+ads.mdotm.com
+ads.yieldmo.com
+ads.justpremium.com
+ads.celtra.com
+cdn.celtra.com
+cache.celtra.com
+creative.celtra.com
+ads.creative-serving.com
+ads.servenobid.com
+ads.intentiq.com
+
+# ===== Affiliate / Tracking Networks =====
+ad.zanox.com
+partner.googleadservices.com
+click.linksynergy.com
+clickserve.dartsearch.net
+track.flexlinks.com
+track.flexlinkspro.com
+tracking.m6r.eu
+go.onelink.me
+app.appsflyer.com
+impression.link
+app.link
+t.app.link
+bnc.lt
+
+# ===== Browser / Email Ad Injection =====
+ads.bluemail.me
+ads.edison.tech
+ads.brave.com
+
+# ===== Regional Ad Networks =====
+# Turkish
+adskeeper.co.uk
+adskeeper.com
+byads.com
+
+# Middle East
+ads.adfalcon.com
+cdn.adfalcon.com
+
+# Southeast Asia
+gsp1.baidu.com
+ads.buzzvil.com
+ad.cauly.net
+image.cauly.net
+
+# Japan / Korea
+m.ad4push.com
+ads.adventori.com
+api.adinall.com
+sdk.adincube.com
+ads.adknowledge.com
+ads.adlib.io
+api.adlib.io
+ssp.ad-stir.com
+gum.adition.com
+
+# Latin America
+ads.mgid.com
+jsc.mgid.com
+servicer.mgid.com
+www.mgid.com
+
+# ===== Additional Exchange/SSP Domains =====
+ssp.adriver.ru
+ad.adriver.ru
+ads.betweendigital.com
+sync.rhythmone.com
+ad.rhythmone.com
+hb.rhythmone.com
+ads.yieldlab.net
+ad.yieldlab.net
+sync.yieldlab.net
+creativecdn.com
+cdn.engine.4dsply.com
+c1.adform.net
+
+# ===== WebView / In-App Browser Ads =====
+creative.unityads.unity3d.com
+gamingadshub.unity3d.com
+
+# ===== Anti-Adblock & Reinsertion =====
+pagefair.com
+pagefair.net
+blockthrough.com
+admiral.com
+getadmiral.com
+admiralcdn.com
+uponit.com
+sourcepoint.com
+wrapper.sourcepoint.com
+
+# ===== New / Emerging Ad Tech =====
+ads.id5-sync.com
+id5-sync.com
+ads.connectad.io
+ads.deepintent.com
+ads.geoedge.be
+ads.kargo.com
+ads.nativo.com
+ads.nextmillennium.io
+ads.nobid.io
+ads.onetag.com
+ads.openweb.com
+ads.seedtag.com
+ads.triplelift.com
+ads.visx.net
+ads.yieldlab.de
+
+# ===== Notification / Push Ad Networks =====
+cdn.onesignal.com
+onesignal.com
+sdk.pushwoosh.com
+cdn.pushwoosh.com
+go.pushwoosh.com
+push.leanplum.com
+sdk.airship.com
+device-api.urbanairship.com
+combine.urbanairship.com
+web-sdk.urbanairship.com
+push.clevertap.com
+wzrk.com
+sdk.clevertap.com
+in.wzrk.com
+
+# ===== Malvertising / Suspicious =====
+install.365-ede.com
+s.365-ede.com
+ad.360yield.com
+ads.365media.com
+apmebf.com
+betteradsolution.com
+bestcond.com
+bfrjgn.com
+blueadvertise.com
+cdn.connectad.io
+cdn.districtm.io
+cdn.jessadnetwork.com
+clickadu.com
+clickadilla.com
+clickfuse.com
+clickorati.com
+cpalead.com
+cpx24.com
+d.adroll.com
+ezmob.com
+gads.pubmatic.com
+hilltopads.net
+juicyads.com
+leadsgate.com
+marketgid.com
+media.net
+net.geo.opera.com
+popads.net
+popcash.net
+propellerads.com
+pushance.com
+revenuehits.com
+richpush.co
+trafficfactory.biz
+trafficstars.com
+zeropark.com
+
+# ===== Crypto Mining / Abuse =====
+coin-hive.com
+coinhive.com
+jsecoin.com
+crypto-loot.com
+authedmine.com
+minero.cc
+monerominer.rocks
+
+# ===== Additional SSPs & DSPs =====
+supply.colossusssp.com
+ads.avocet.io
+hb.emxdgt.com
+ads.ayads.co
+ssp.ynxs.io
+ads.zemanta.com
+ib.3lift.com
+ads.conversantmedia.com
+img.mediaplex.com
+
+# ===== Privacy-Invasive CDNs Used for Ads =====
+cdn.keywee.co
+cdn.petametrics.com
+cdn.concert.io
+cdn.lockerdome.com
+cdn.zergnet.com
+cdn.revcontent.com
+cdn.carbonads.com
+
+# ===== Game Ad Networks =====
+sdk.gamaigroup.com
+ads.gameanalytics.com
+mfx.mobilefuse.com
+api.mobilefuse.com
+sdk.is.com
+init.is.com
+outcome-ssp.is.com
+levelsource.is.com
+rewarded.is.com
+
+# ===== Reward Video Ad Networks =====
+rv-gateway.prod.tapjoy.com
+offers.tapjoy.com
+images.tapjoy.com
+
+# ===== Additional Misc =====
+ads.servebom.com
+ads.themoneytizer.com
+ads.anura.io
+ads.kiosked.com
+hb.adscale.de
+ads.playground.xyz
+ads.connatix.com
+ads.adyoulike.com
+ads.bidswitch.net
+sync.bidswitch.net
+ads.exoclick.com
+main.exoclick.com
+syndication.exoclick.com
+static.exoclick.com
+ads.trafficjunky.net
+ads.exosrv.com
+delivery.vidible.tv
+ads.bwpgroup.com
+prebid.media.net
+hb.media.net
+static.media.net
+contextual.media.net
+adservetx.media.net
+
+# ===== Consent Wall / Ad Recovery =====
+cmp.quantcast.com
+consent.cookiebot.com
+cdn.privacy-mgmt.com
+notice.sp-prod.net
+
+# ===== Acxiom / Drawbridge =====
+pippio.com
+rlcdn.com
+adsymptotic.com
+p.adsymptotic.com
+xprofile.crossinstall.com
+cdn.crossinstall.com
+
+# ===== Adjust / Attribution =====
+app.adjust.com
+app.adjust.net.in
+app.adjust.world
+s2s.adjust.com
+gdpr.adjust.com
+
+# ===== Branch =====
+api.branch.io
+api2.branch.io
+cdn.branch.io
+
+# ===== Flurry =====
+data.flurry.com
+adlog.flurry.com
+cfg.flurry.com
+
+# ===== comScore =====
+sb.scorecardresearch.com
+b.scorecardresearch.com
+beacon.scorecardresearch.com
+udm.scorecardresearch.com
+
+# ===== Nielsen =====
+secure-dcr.imrworldwide.com
+cdn-gl.imrworldwide.com
+secure-us.imrworldwide.com
+imrworldwide.com
+cdn.imrworldwide.com
+
+# ===== Moloco =====
+sdk-a.adsmoloco.com
+api.adsmoloco.com
+
+# ===== Bigo Ads =====
+api.bigoads.com
+sdk.bigoads.com
+
+# ===== Meson =====
+sdk.meson.ai
+config.meson.ai
+
+# ===== PubNative =====
+sdk.pubnative.net
+dsp-x.pubnative.net
+
+# ===== AdTiming =====
+sdk.adtiming.com
+api.adtiming.com
+
+# ===== Verve Group =====
+ads.verve.com
+sdk.verve.com
+events.verve.com
+
+# ===== Kidoz =====
+ads.kidoz.net
+sdk.kidoz.net

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Inter', sans-serif;
+    background: #0A0E14;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(244,67,54,0.1) 0%, transparent 60%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 60px;
+  }
+
+  .fire-icon {
+    font-size: 120px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 62px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  h1 .orange { color: #FF5722; }
+
+  .desc {
+    font-size: 30px;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    max-width: 800px;
+  }
+
+  .demo-card {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 36px;
+    margin-bottom: 40px;
+  }
+
+  .demo-title {
+    font-size: 24px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .app-row {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .app-row:last-child { border-bottom: none; }
+
+  .app-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  .app-name {
+    font-size: 28px;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .toggle-group {
+    display: flex;
+    gap: 12px;
+  }
+
+  .toggle-label {
+    font-size: 18px;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+  }
+
+  .toggle {
+    width: 58px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+  }
+  .toggle.on { background: #00E676; }
+  .toggle.off { background: #F44336; }
+
+  .toggle::after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+  }
+  .toggle.on::after { right: 3px; }
+  .toggle.off::after { left: 3px; }
+
+  .toggle-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-mini {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, #00E676, #00C853);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-mini svg { width: 26px; height: 26px; fill: #0A0E14; }
+
+  .bottom-text {
+    font-size: 28px;
+    color: rgba(255,255,255,0.4);
+  }
+  .bottom-text span { color: #00E676; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="content">
+    <div class="fire-icon">&#128293;</div>
+
+    <h1>Hangi Uygulama<br><span class="orange">&#304;nternete &#199;&#305;ks&#305;n?</span></h1>
+
+    <p class="desc">Her uygulaman&#305;n Wi-Fi ve mobil veri eri&#351;imini<br>ayr&#305; ayr&#305; kontrol edin.</p>
+
+    <div class="demo-card">
+      <div class="demo-title">Firewall Kontrol Paneli</div>
+
+      <div style="display:flex; justify-content:flex-end; gap:12px; padding-right:4px; margin-bottom:10px;">
+        <div class="toggle-label" style="width:58px;">Wi-Fi</div>
+        <div class="toggle-label" style="width:58px;">Mobil</div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-icon" style="background: rgba(37,211,102,0.15);">&#128172;</div>
+        <div class="app-name">WhatsApp</div>
+        <div class="toggle-group">
+          <div class="toggle on"></div>
+          <div class="toggle on"></div>
+        </div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-icon" style="background: rgba(66,103,178,0.15);">&#128240;</div>
+        <div class="app-name">Facebook</div>
+        <div class="toggle-group">
+          <div class="toggle off"></div>
+          <div class="toggle off"></div>
+        </div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-icon" style="background: rgba(225,48,108,0.15);">&#128247;</div>
+        <div class="app-name">Instagram</div>
+        <div class="toggle-group">
+          <div class="toggle on"></div>
+          <div class="toggle off"></div>
+        </div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-icon" style="background: rgba(255,0,0,0.15);">&#9654;&#65039;</div>
+        <div class="app-name">YouTube</div>
+        <div class="toggle-group">
+          <div class="toggle on"></div>
+          <div class="toggle on"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="logo-mini">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div class="bottom-text"><span>TrustGuard</span> &#8212; &#220;cretsiz Firewall</div>
+    </div>
+  </div>
+</body>
+</html>

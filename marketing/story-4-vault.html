@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    font-family: 'Inter', sans-serif;
+    background: #0A0E14;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 40%, rgba(156,39,176,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 90%, rgba(0,230,118,0.06) 0%, transparent 40%);
+  }
+
+  .content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 80px 60px;
+  }
+
+  .lock-icon {
+    font-size: 140px;
+    margin-bottom: 40px;
+    filter: drop-shadow(0 0 40px rgba(156,39,176,0.5));
+  }
+
+  h1 {
+    font-size: 68px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  h1 .purple { color: #CE93D8; }
+
+  .sub {
+    font-size: 32px;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 60px;
+    max-width: 800px;
+  }
+
+  .vault-demo {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(156,39,176,0.2);
+    border-radius: 28px;
+    padding: 40px;
+    margin-bottom: 50px;
+  }
+
+  .vault-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .vault-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #CE93D8;
+  }
+
+  .file-row {
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .file-row:last-child { border-bottom: none; }
+
+  .file-icon {
+    font-size: 36px;
+    margin-right: 16px;
+    width: 50px;
+    text-align: center;
+  }
+
+  .file-info { flex: 1; }
+  .file-name { font-size: 28px; font-weight: 600; }
+  .file-size { font-size: 22px; color: rgba(255,255,255,0.4); }
+
+  .encrypted-badge {
+    background: rgba(0,230,118,0.12);
+    border: 1px solid rgba(0,230,118,0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00E676;
+  }
+
+  .specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  .spec-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: center;
+  }
+
+  .spec-value {
+    font-size: 36px;
+    font-weight: 900;
+    color: #CE93D8;
+    margin-bottom: 6px;
+  }
+
+  .spec-label {
+    font-size: 22px;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .dl-btn {
+    background: linear-gradient(135deg, #CE93D8, #AB47BC);
+    border-radius: 50px;
+    padding: 28px 70px;
+    font-size: 34px;
+    font-weight: 800;
+    color: white;
+    margin-top: 40px;
+    box-shadow: 0 10px 40px rgba(156,39,176,0.3);
+  }
+
+  .url {
+    font-size: 24px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="content">
+    <div class="lock-icon">&#128274;</div>
+
+    <h1>Dosyalar&#305;n&#305;<br><span class="purple">&#350;ifrele &amp; Sakla</span></h1>
+
+    <p class="sub">AES-256 askeri s&#305;n&#305;f &#351;ifreleme ile<br>dosyalar&#305;n&#305; hi&#231;bir &#252;&#231;&#252;nc&#252; ki&#351;i a&#231;amaz.</p>
+
+    <div class="vault-demo">
+      <div class="vault-header">
+        <span style="font-size:32px;">&#128274;</span>
+        <span class="vault-title">&#350;ifreli Kasa</span>
+      </div>
+
+      <div class="file-row">
+        <div class="file-icon">&#128196;</div>
+        <div class="file-info">
+          <div class="file-name">s&#246;zle&#351;me.pdf</div>
+          <div class="file-size">2.4 MB</div>
+        </div>
+        <div class="encrypted-badge">&#128274; &#350;ifreli</div>
+      </div>
+
+      <div class="file-row">
+        <div class="file-icon">&#127912;</div>
+        <div class="file-info">
+          <div class="file-name">kimlik_foto.jpg</div>
+          <div class="file-size">1.8 MB</div>
+        </div>
+        <div class="encrypted-badge">&#128274; &#350;ifreli</div>
+      </div>
+
+      <div class="file-row">
+        <div class="file-icon">&#128221;</div>
+        <div class="file-info">
+          <div class="file-name">notlar.txt</div>
+          <div class="file-size">340 KB</div>
+        </div>
+        <div class="encrypted-badge">&#128274; &#350;ifreli</div>
+      </div>
+    </div>
+
+    <div class="specs">
+      <div class="spec-card">
+        <div class="spec-value">AES-256</div>
+        <div class="spec-label">&#350;ifreleme</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-value">PBKDF2</div>
+        <div class="spec-label">Anahtar T&#252;retme</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-value">100K</div>
+        <div class="spec-label">Hash Turu</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-value">GCM</div>
+        <div class="spec-label">Mod</div>
+      </div>
+    </div>
+
+    <div class="dl-btn">&#220;CRETS&#304;Z &#304;ND&#304;R</div>
+    <div class="url">trustedgelabs.dev</div>
+  </div>
+</body>
+</html>

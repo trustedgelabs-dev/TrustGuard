@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Inter', sans-serif;
+    background: #0A0E14;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,193,7,0.1) 0%, transparent 55%);
+  }
+
+  .content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 60px;
+  }
+
+  .family-icon {
+    font-size: 100px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 58px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  h1 .gold { color: #FFC107; }
+
+  .sub {
+    font-size: 28px;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .ctrl-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .ctrl-icon { font-size: 44px; }
+  .ctrl-title { font-size: 24px; font-weight: 700; }
+  .ctrl-desc { font-size: 20px; color: rgba(255,255,255,0.45); line-height: 1.3; }
+
+  .ctrl-card.active {
+    background: rgba(255,193,7,0.08);
+    border-color: rgba(255,193,7,0.3);
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0,230,118,0.08);
+    border: 1px solid rgba(0,230,118,0.2);
+    border-radius: 50px;
+    padding: 16px 32px;
+    margin-bottom: 20px;
+  }
+
+  .badge-icon { font-size: 28px; }
+  .badge-text { font-size: 24px; color: #00E676; font-weight: 600; }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .logo-mini {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, #00E676, #00C853);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-mini svg { width: 26px; height: 26px; fill: #0A0E14; }
+  .bot-text { font-size: 26px; color: rgba(255,255,255,0.4); }
+  .bot-text span { color: #FFC107; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="content">
+    <div class="family-icon">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;</div>
+
+    <h1>&#199;ocu&#287;unuzu<br><span class="gold">Dijitalde Koruyun</span></h1>
+
+    <p class="sub">TrustGuard Ebeveyn Kontrol&#252; ile<br>&#231;ocu&#287;unuzun telefon kullan&#305;m&#305;n&#305; y&#246;netin.</p>
+
+    <div class="controls">
+      <div class="ctrl-card active">
+        <div class="ctrl-icon">&#128683;</div>
+        <div class="ctrl-title">Uygulama Engelleme</div>
+        <div class="ctrl-desc">Sosyal medya, oyun ve taray&#305;c&#305;lar&#305; engelle</div>
+      </div>
+      <div class="ctrl-card active">
+        <div class="ctrl-icon">&#9200;</div>
+        <div class="ctrl-title">Zaman S&#305;n&#305;r&#305;</div>
+        <div class="ctrl-desc">G&#252;nl&#252;k kullan&#305;m s&#252;resi belirle</div>
+      </div>
+      <div class="ctrl-card">
+        <div class="ctrl-icon">&#128205;</div>
+        <div class="ctrl-title">Konum Takibi</div>
+        <div class="ctrl-desc">&#199;ocu&#287;unuzun konumunu g&#246;r&#252;n</div>
+      </div>
+      <div class="ctrl-card">
+        <div class="ctrl-icon">&#128202;</div>
+        <div class="ctrl-title">Kullan&#305;m Raporu</div>
+        <div class="ctrl-desc">Haftal&#305;k detayl&#305; rapor al&#305;n</div>
+      </div>
+    </div>
+
+    <div class="trust-badge">
+      <span class="badge-icon">&#128272;</span>
+      <span class="badge-text">PIN korumal&#305; &#8212; &#231;ocu&#287;unuz kapatamaz</span>
+    </div>
+
+    <div class="bottom">
+      <div class="logo-mini">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div class="bot-text"><span>TrustGuard</span> &#8212; trustedgelabs.dev</div>
+    </div>
+  </div>
+</body>
+</html>

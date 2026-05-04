@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <linearGradient id="storyBg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="40%" stop-color="#0d1f2d"/>
+      <stop offset="100%" stop-color="#081018"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E676" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00E676" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="badgeBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00E676"/>
+      <stop offset="100%" stop-color="#00C853"/>
+    </linearGradient>
+    <linearGradient id="redBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF1744"/>
+      <stop offset="100%" stop-color="#D50000"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#storyBg)"/>
+  <ellipse cx="540" cy="150" rx="500" ry="250" fill="url(#accentGlow)"/>
+
+  <!-- Top: TrustGuard Logo -->
+  <g transform="translate(540, 120)">
+    <g transform="translate(-24, -30) scale(1.8)">
+      <path d="M13.5 2L3 7v5c0 5.55 4.48 10.74 10.5 12 6.02-1.26 10.5-6.45 10.5-12V7L13.5 2z" fill="#00E676" opacity="0.9"/>
+      <path d="M11 12.5l-2-2 1.41-1.41L11 9.67l3.59-3.59L16 7.5l-5 5z" fill="#0d1f2d"/>
+    </g>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="3">TRUSTGUARD</text>
+    <text x="0" y="54" font-family="Arial, sans-serif" font-size="15" fill="#00E676" text-anchor="middle" letter-spacing="4" opacity="0.8">by TrustEdge Labs</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="390" y1="195" x2="690" y2="195" stroke="#00E676" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Section: "Diğerleri" - Red/negative -->
+  <text x="540" y="270" font-family="Arial, sans-serif" font-size="30" fill="#FF1744" text-anchor="middle" font-weight="bold" letter-spacing="2">DİĞER GÜVENLİK UYGULAMALARI</text>
+
+  <!-- Red items -->
+  <g transform="translate(540, 330)">
+    <!-- Item 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#1a1018" stroke="#FF1744" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="0" font-family="Arial, sans-serif" font-size="28" fill="#FF1744">✕</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#cccccc">Seni koruyacağım deyip reklam yağmuruna tutuyor</text>
+    </g>
+    <!-- Item 2 -->
+    <g transform="translate(0, 80)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#1a1018" stroke="#FF1744" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="0" font-family="Arial, sans-serif" font-size="28" fill="#FF1744">✕</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#cccccc">Verilerini dış sunuculara gönderiyor</text>
+    </g>
+    <!-- Item 3 -->
+    <g transform="translate(0, 160)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#1a1018" stroke="#FF1744" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="0" font-family="Arial, sans-serif" font-size="28" fill="#FF1744">✕</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#cccccc">Kamera, mikrofon, konum izni istiyor</text>
+    </g>
+    <!-- Item 4 -->
+    <g transform="translate(0, 240)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#1a1018" stroke="#FF1744" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="0" font-family="Arial, sans-serif" font-size="28" fill="#FF1744">✕</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#cccccc">Hesap oluşturmadan kullanamıyorsun</text>
+    </g>
+    <!-- Item 5 -->
+    <g transform="translate(0, 320)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#1a1018" stroke="#FF1744" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="0" font-family="Arial, sans-serif" font-size="28" fill="#FF1744">✕</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#cccccc">"Güvenlik" adı altında seni izliyor</text>
+    </g>
+  </g>
+
+  <!-- Divider arrow -->
+  <g transform="translate(540, 780)" opacity="0.6">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle">⬇</text>
+  </g>
+
+  <!-- Section: TrustGuard - Green/positive -->
+  <text x="540" y="870" font-family="Arial, sans-serif" font-size="32" fill="#00E676" text-anchor="middle" font-weight="bold" letter-spacing="2">TRUSTGUARD</text>
+
+  <!-- Green items -->
+  <g transform="translate(540, 930)">
+    <!-- Item 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#0a1a10" stroke="#00E676" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="2" font-family="Arial, sans-serif" font-size="28" fill="#00E676">✓</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#e0e0e0">Sıfır reklam — Hiçbir yerde reklam görmezsin</text>
+    </g>
+    <!-- Item 2 -->
+    <g transform="translate(0, 80)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#0a1a10" stroke="#00E676" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="2" font-family="Arial, sans-serif" font-size="28" fill="#00E676">✓</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#e0e0e0">Tüm işlemler cihazında — Verin dışarı çıkmaz</text>
+    </g>
+    <!-- Item 3 -->
+    <g transform="translate(0, 160)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#0a1a10" stroke="#00E676" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="2" font-family="Arial, sans-serif" font-size="28" fill="#00E676">✓</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#e0e0e0">Gereksiz donanım izni istemiyor</text>
+    </g>
+    <!-- Item 4 -->
+    <g transform="translate(0, 240)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#0a1a10" stroke="#00E676" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="2" font-family="Arial, sans-serif" font-size="28" fill="#00E676">✓</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#e0e0e0">Hesap oluşturma yok — Aç ve kullan</text>
+    </g>
+    <!-- Item 5 -->
+    <g transform="translate(0, 320)">
+      <rect x="-430" y="-30" width="860" height="60" rx="12" fill="#0a1a10" stroke="#00E676" stroke-width="1" opacity="0.8"/>
+      <text x="-380" y="2" font-family="Arial, sans-serif" font-size="28" fill="#00E676">✓</text>
+      <text x="-340" y="2" font-family="Arial, sans-serif" font-size="24" fill="#e0e0e0">Açık kaynak ruhu — Şeffaf ve dürüst</text>
+    </g>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="540" y="1450" font-family="Arial, sans-serif" font-size="34" fill="white" text-anchor="middle" font-weight="bold">Gerçek Güvenlik, Gerçek Gizlilik.</text>
+  <text x="540" y="1495" font-family="Arial, sans-serif" font-size="22" fill="#888888" text-anchor="middle">Reklamsız. Sunucusuz. Hesapsız.</text>
+
+  <!-- Play Store badge -->
+  <g transform="translate(540, 1580)">
+    <rect x="-120" y="-22" width="240" height="44" rx="8" fill="none" stroke="white" stroke-width="1.5" opacity="0.7"/>
+    <text x="-10" y="6" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" opacity="0.9">▶  Google Play'de</text>
+  </g>
+
+  <!-- Yakında badge -->
+  <g transform="translate(540, 1640)">
+    <rect x="-80" y="-18" width="160" height="36" rx="18" fill="url(#badgeBg)"/>
+    <text x="0" y="7" font-family="Arial, sans-serif" font-size="18" fill="#0d1f2d" text-anchor="middle" font-weight="bold">YAKINDA</text>
+  </g>
+
+  <!-- Swipe up -->
+  <g transform="translate(540, 1820)" opacity="0.4">
+    <polygon points="0,-12 8,0 -8,0" fill="white"/>
+    <polygon points="0,-24 8,-12 -8,-12" fill="white"/>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">Yukarı Kaydır</text>
+  </g>
+</svg>

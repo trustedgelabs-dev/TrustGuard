@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1B2A"/>
+      <stop offset="100%" style="stop-color:#060E18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00E5FF"/>
+      <stop offset="100%" style="stop-color:#7C4DFF"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="phoneClip">
+      <rect x="90" y="280" width="900" height="1440" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <text x="540" y="120" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="bold" fill="url(#accent)">File Recovery</text>
+  <text x="540" y="175" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="30" fill="#9AA0A6">Recover deleted photos &amp; files</text>
+  <text x="540" y="225" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="26" fill="#6B7280">Silinen fotoğraf ve dosyaları kurtarın</text>
+
+  <rect x="80" y="270" width="920" height="1460" rx="40" fill="#1A1A2E" stroke="#2A3A4A" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="90" y="280" width="900" height="40" fill="#0A0E14"/>
+  <text x="540" y="307" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" fill="#9AA0A6">12:00</text>
+
+  <g clip-path="url(#phoneClip)">
+    <rect x="90" y="320" width="900" height="1400" fill="#0A0E14"/>
+
+    <text x="130" y="375" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" fill="#E8EAED">←</text>
+    <text x="540" y="375" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#E8EAED">File Recovery</text>
+
+    <!-- Scan Mode Selection -->
+    <text x="130" y="430" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#E8EAED">Choose Scan Mode</text>
+
+    <!-- Quick Scan Card -->
+    <rect x="120" y="455" width="840" height="130" rx="16" fill="#1E2A3A" stroke="#00E676" stroke-width="2"/>
+    <circle cx="175" cy="520" r="30" fill="#00E676" opacity="0.15"/>
+    <text x="175" y="528" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28">⚡</text>
+    <text x="225" y="500" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="bold" fill="#00E676">Quick Scan</text>
+    <text x="225" y="528" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" fill="#9AA0A6">Checks trash and recently deleted files</text>
+    <text x="225" y="555" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#00E676">FREE</text>
+
+    <!-- Deep Scan Card -->
+    <rect x="120" y="600" width="840" height="130" rx="16" fill="#1E2A3A" stroke="#7C4DFF" stroke-width="1"/>
+    <circle cx="175" cy="665" r="30" fill="#7C4DFF" opacity="0.15"/>
+    <text x="175" y="673" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28">🔍</text>
+    <text x="225" y="645" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="bold" fill="#7C4DFF">Deep Scan</text>
+    <text x="225" y="673" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" fill="#9AA0A6">Thumbnails, caches, hidden folders and app data</text>
+    <rect x="225" y="688" width="90" height="24" rx="12" fill="#FFD700" opacity="0.2"/>
+    <text x="270" y="705" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FFD700">PREMIUM</text>
+
+    <!-- Root Scan Card -->
+    <rect x="120" y="745" width="840" height="130" rx="16" fill="#1E2A3A" stroke="#FF5722" stroke-width="1"/>
+    <circle cx="175" cy="810" r="30" fill="#FF5722" opacity="0.15"/>
+    <text x="175" y="818" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28">🔓</text>
+    <text x="225" y="790" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="bold" fill="#FF5722">Full Scan (Root)</text>
+    <text x="225" y="818" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" fill="#9AA0A6">Deep filesystem analysis for maximum recovery</text>
+    <rect x="225" y="833" width="90" height="24" rx="12" fill="#FFD700" opacity="0.2"/>
+    <text x="270" y="850" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FFD700">PREMIUM</text>
+    <rect x="325" y="833" width="60" height="24" rx="12" fill="#FF5722" opacity="0.2"/>
+    <text x="355" y="850" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FF5722">ROOT</text>
+
+    <!-- Divider -->
+    <line x1="120" y1="910" x2="960" y2="910" stroke="#1E2A3A" stroke-width="1"/>
+
+    <!-- Scan Results Preview -->
+    <text x="130" y="950" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#E8EAED">12 files found from 3 sources</text>
+
+    <!-- File type tabs -->
+    <rect x="120" y="970" width="80" height="35" rx="17" fill="#00E676" opacity="0.2"/>
+    <text x="160" y="993" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#00E676">All</text>
+    <rect x="215" y="970" width="90" height="35" rx="17" fill="#1E2A3A"/>
+    <text x="260" y="993" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Photos</text>
+    <rect x="320" y="970" width="90" height="35" rx="17" fill="#1E2A3A"/>
+    <text x="365" y="993" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Videos</text>
+    <rect x="425" y="970" width="80" height="35" rx="17" fill="#1E2A3A"/>
+    <text x="465" y="993" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Audio</text>
+
+    <!-- File cards -->
+    <rect x="120" y="1025" width="840" height="90" rx="12" fill="#1E2A3A"/>
+    <rect x="140" y="1040" width="60" height="60" rx="8" fill="#2A3A4A"/>
+    <text x="170" y="1078" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="24">🖼️</text>
+    <text x="220" y="1062" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">IMG_20260315_142055.jpg</text>
+    <text x="220" y="1088" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">2.4 MB • Deleted: 18 Mar 2026</text>
+    <rect x="850" y="1050" width="80" height="28" rx="14" fill="#00E676" opacity="0.2"/>
+    <text x="890" y="1069" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#00E676">Trash</text>
+
+    <rect x="120" y="1130" width="840" height="90" rx="12" fill="#1E2A3A"/>
+    <rect x="140" y="1145" width="60" height="60" rx="8" fill="#2A3A4A"/>
+    <text x="170" y="1183" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="24">🎬</text>
+    <text x="220" y="1167" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">VID_20260312_183200.mp4</text>
+    <text x="220" y="1193" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">48.7 MB • Deleted: 15 Mar 2026</text>
+    <rect x="830" y="1155" width="100" height="28" rx="14" fill="#FF9800" opacity="0.2"/>
+    <text x="880" y="1174" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FF9800">Thumbnail</text>
+
+    <rect x="120" y="1235" width="840" height="90" rx="12" fill="#1E2A3A"/>
+    <rect x="140" y="1250" width="60" height="60" rx="8" fill="#2A3A4A"/>
+    <text x="170" y="1288" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="24">📄</text>
+    <text x="220" y="1272" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">document_report.pdf</text>
+    <text x="220" y="1298" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">1.2 MB • Deleted: 10 Mar 2026</text>
+    <rect x="860" y="1260" width="70" height="28" rx="14" fill="#2196F3" opacity="0.2"/>
+    <text x="895" y="1279" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#2196F3">Cache</text>
+
+    <!-- Recover button -->
+    <rect x="120" y="1370" width="840" height="56" rx="28" fill="#00E676"/>
+    <text x="540" y="1405" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#000">Recover Selected (3)</text>
+
+    <!-- Free counter -->
+    <text x="540" y="1450" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">3 free recoveries left</text>
+  </g>
+
+  <text x="540" y="1810" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#E8EAED">TrustGuard</text>
+  <text x="540" y="1850" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" fill="#9AA0A6">by TrustEdge Labs</text>
+</svg>

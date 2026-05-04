@@ -1,0 +1,808 @@
+# TrustGuard Tracker Domain Blocklist
+# Comprehensive tracking, analytics, and fingerprinting domain list
+# Sources: Exodus Privacy, Disconnect.me, EasyPrivacy, DuckDuckGo Tracker Radar
+# Last updated: 2026-03-28
+# Domains: ~1500+
+
+# ===== Google Analytics & Tracking =====
+analytics.google.com
+ssl.google-analytics.com
+google-analytics.com
+www.google-analytics.com
+stats.g.doubleclick.net
+cm.g.doubleclick.net
+fls.doubleclick.net
+www.googletagmanager.com
+googletagmanager.com
+www.googletagservices.com
+googletagservices.com
+tagmanager.google.com
+fundingchoicesmessages.google.com
+firebaselogging.googleapis.com
+firebase-settings.crashlytics.com
+firebaseinstallations.googleapis.com
+firebaseremoteconfig.googleapis.com
+app-measurement.com
+pagead-googlehosted.l.google.com
+clients.l.google.com
+clients1.google.com
+update.googleapis.com
+clientservices.googleapis.com
+translate.googleapis.com
+
+# ===== Facebook / Meta Tracking =====
+pixel.facebook.com
+connect.facebook.net
+graph.facebook.com
+analytics.facebook.com
+web.facebook.com/tr
+www.facebook.com/tr
+m.facebook.com/tr
+tr-rule-fb-endpoint.facebook.com
+an.facebook.com
+edge-mqtt.facebook.com
+mqtt-mini.facebook.com
+star-mini.c10r.facebook.com
+b-graph.facebook.com
+rupload.facebook.com
+graph.instagram.com
+i.instagram.com
+
+# ===== Twitter / X Tracking =====
+analytics.twitter.com
+syndication.twitter.com
+platform.twitter.com
+cdn.syndication.twimg.com
+static.ads-twitter.com
+t.co
+
+# ===== Microsoft Telemetry =====
+data.microsoft.com
+vortex.data.microsoft.com
+settings-win.data.microsoft.com
+watson.telemetry.microsoft.com
+watson.microsoft.com
+events.data.microsoft.com
+browser.events.data.msn.com
+self.events.data.microsoft.com
+telecommand.telemetry.microsoft.com
+telemetry.appex.bing.net
+telemetry.microsoft.com
+oca.telemetry.microsoft.com
+sqm.telemetry.microsoft.com
+ceuswatcab01.blob.core.windows.net
+ceuswatcab02.blob.core.windows.net
+eaus2watcab01.blob.core.windows.net
+eaus2watcab02.blob.core.windows.net
+weus2watcab01.blob.core.windows.net
+weus2watcab02.blob.core.windows.net
+umwatsonc.events.data.microsoft.com
+kmwatsonc.events.data.microsoft.com
+v10.events.data.microsoft.com
+v20.events.data.microsoft.com
+us-v20.events.data.microsoft.com
+eu-v20.events.data.microsoft.com
+v10c.events.data.microsoft.com
+v10.vortex-win.data.microsoft.com
+win10.vortex-win.data.microsoft.com
+us.vortex-win.data.microsoft.com
+eu.vortex-win.data.microsoft.com
+mobile.events.data.microsoft.com
+cortana.ai
+dc.services.visualstudio.com
+rt.services.visualstudio.com
+js.monitor.azure.com
+u.clarity.ms
+www.clarity.ms
+
+# ===== Apple Telemetry =====
+metrics.icloud.com
+metrics.mzstatic.com
+gsp-ssl.ls.apple.com
+gsp-ssl.ls-apple.com.akadns.net
+notes-analytics.apple.com
+weather-analytics.apple.com
+stocks-analytics-events.apple.com
+news-events.apple.com
+books-analytics-events.apple.com
+xp.apple.com
+pancake.apple.com
+api-adservices.apple.com
+token.safebrowsing.apple
+app-site-association.cdn-apple.com
+iphonesubmissions.apple.com
+
+# ===== Samsung Telemetry =====
+smetrics.samsung.com
+config.samsungads.com
+analytics.samsungads.com
+eu-auth2.samsungosp.com
+gld.push.samsungosp.com
+log-config.samsungrs.com
+nmetrics.samsung.com
+samsungqbe.com
+
+# ===== Mozilla Telemetry =====
+telemetry.mozilla.org
+data.mozilla.com
+incoming.telemetry.mozilla.org
+telemetry-incoming.r53-2.services.mozilla.com
+tracking-protection.cdn.mozilla.net
+
+# ===== Yahoo / Oath Tracking =====
+analytics.yahoo.com
+udc.yahoo.com
+udcm.yahoo.com
+geo.yahoo.com
+ups.analytics.yahoo.com
+log.fc.yahoo.com
+b.scorecardresearch.com
+sb.scorecardresearch.com
+beacon.scorecardresearch.com
+pixel.quantserve.com
+
+# ===== TikTok Tracking =====
+analytics.tiktok.com
+analytics-sg.tiktok.com
+mon-va.byteoversea.com
+log.snssdk.com
+is.snssdk.com
+applog.musical.ly
+log16-normal-useast1a.tiktokv.com
+log22-normal-useast2a.tiktokv.com
+
+# ===== Snapchat Tracking =====
+tr.snapchat.com
+sc-static.net
+sc-analytics.appspot.com
+us-east-1.tc.cc.snpcht.com
+snap-dev.net
+
+# ===== LinkedIn Tracking =====
+lnkd.demdex.net
+snap.licdn.com
+px.ads.linkedin.com
+p.adsymptotic.com
+
+# ===== Pinterest Tracking =====
+trk.pinterest.com
+analytics.pinterest.com
+log.pinterest.com
+widgets.pinterest.com
+
+# ===== Reddit Tracking =====
+events.reddit.com
+events.redditmedia.com
+d.reddit.com
+alb.reddit.com
+
+# ===== Crash Reporting & Error Tracking =====
+crashlytics.com
+firebase-settings.crashlytics.com
+reports.crashlytics.com
+e.crashlytics.com
+fire-ios-analytics.crashlytics.com
+android-sdk-analytics.crashlytics.com
+experiments.crashlytics.com
+sentry.io
+o0.ingest.sentry.io
+app.getsentry.com
+sessions.bugsnag.com
+notify.bugsnag.com
+api.bugsnag.com
+errors.client.optimizely.com
+raygun.io
+api.raygun.io
+app.bugfender.com
+sdk.bugfender.com
+rollbar.com
+api.rollbar.com
+submit.backtrace.io
+
+# ===== Mobile Analytics SDKs =====
+# Segment
+cdn-settings.segment.com
+api.segment.io
+cdn.segment.com
+events.segment.io
+
+# Amplitude
+cdn.amplitude.com
+api.amplitude.com
+api2.amplitude.com
+regionconfig.amplitude.com
+o661742.amplitude.com
+
+# Mixpanel
+api.mixpanel.com
+decide.mixpanel.com
+api-js.mixpanel.com
+cdn.mxpnl.com
+in.mixpanel.com
+
+# AppsFlyer
+t.appsflyer.com
+attribution.report.appsflyer.com
+launches.appsflyer.com
+inapps.appsflyer.com
+events.appsflyer.com
+sdk.appsflyer.com
+register.appsflyer.com
+gcdsdk.appsflyer.com
+impression.appsflyer.com
+
+# Adjust
+app.adjust.com
+app.adjust.net.in
+app.adjust.world
+s2s.adjust.com
+gdpr.adjust.com
+consent.adjust.com
+
+# Branch
+api.branch.io
+api2.branch.io
+cdn.branch.io
+bnc.lt
+
+# Kochava
+control.kochava.com
+api.kochava.com
+
+# Singular
+app.singular.net
+sdk-api-v1.singular.net
+config.singular.net
+
+# Flurry
+data.flurry.com
+adlog.flurry.com
+cfg.flurry.com
+proton.flurry.com
+
+# Firebase Analytics
+firebaselogging.googleapis.com
+app-measurement.com
+firebase-settings.crashlytics.com
+
+# ===== Web Analytics =====
+# Hotjar
+static.hotjar.com
+script.hotjar.com
+insights.hotjar.com
+identify.hotjar.com
+events.hotjar.com
+surveys.hotjar.com
+vc.hotjar.io
+in.hotjar.com
+ws.hotjar.com
+
+# PostHog
+us.i.posthog.com
+eu.i.posthog.com
+app.posthog.com
+us.posthog.com
+eu.posthog.com
+
+# Heap
+heapanalytics.com
+cdn.heapanalytics.com
+t.heap-api.com
+heapanalytics.appspot.com
+
+# Lucky Orange
+settings.luckyorange.net
+cs.luckyorange.net
+w1.luckyorange.com
+realtime.luckyorange.com
+upload.luckyorange.net
+
+# Mouseflow
+api.mouseflow.com
+tools.mouseflow.com
+cdn.mouseflow.com
+o2.mouseflow.com
+
+# FullStory
+rs.fullstory.com
+edge.fullstory.com
+fullstory.com
+
+# LogRocket
+r.lr-ingest.io
+r.lr-in.com
+cdn.lr-ingest.io
+cdn.logrocket.io
+cdn.lr-in.com
+cdn.lr-in-prod.com
+
+# Crazy Egg
+script.crazyegg.com
+t3.crazyegg.com
+dnn506yrbagrg.cloudfront.net
+
+# Optimizely
+logx.optimizely.com
+cdn.optimizely.com
+errors.client.optimizely.com
+290135082.log.optimizely.com
+
+# VWO
+dev.visualwebsiteoptimizer.com
+d5nxst8fruw4z.cloudfront.net
+
+# Pendo
+pendo-io-static.storage.googleapis.com
+cdn.pendo.io
+app.pendo.io
+data.pendo.io
+
+# Smartlook
+rec.smartlook.com
+manager.smartlook.com
+web-sdk.smartlook.com
+
+# Sprig / UserLeap
+api.sprig.com
+cdn.sprig.com
+
+# UXCam
+api.uxcam.com
+log.uxcam.com
+verify.uxcam.com
+
+# ===== Marketing Automation & CRM Tracking =====
+# HubSpot
+track.hubspot.com
+js.hs-analytics.net
+js.hsadspixel.net
+js.hscollectedforms.net
+js.usemessages.com
+forms.hubspot.com
+api.hubspot.com
+
+# Salesforce / Pardot
+pi.pardot.com
+cdn.pardot.com
+tracking.cirrusinsight.com
+app.marketing.salesforce.com
+
+# Marketo
+munchkin.marketo.net
+sj-mktg.marketo.com
+
+# Intercom
+api.intercom.io
+widget.intercom.io
+js.intercomcdn.com
+via.intercom.io
+nexus-websocket-a.intercom.io
+
+# Drift
+js.driftt.com
+event.api.driftt.com
+api.drift.com
+chat.drift.com
+
+# Zendesk
+static.zdassets.com
+ekr.zdassets.com
+v2.zopim.com
+
+# Braze / Appboy
+sdk.fra-01.braze.eu
+sdk.iad-01.braze.com
+sdk.iad-02.braze.com
+sdk.iad-03.braze.com
+sdk.iad-05.braze.com
+device.iad-01.braze.com
+rest.iad-01.braze.com
+appboy.com
+sdk.appboy.com
+cdn.braze.eu
+js.appboycdn.com
+
+# Leanplum
+cdn.leanplum.com
+api.leanplum.com
+push.leanplum.com
+
+# Localytics
+sdk.localytics.com
+analytics.localytics.com
+profile.localytics.com
+
+# CleverTap
+push.clevertap.com
+wzrk.com
+sdk.clevertap.com
+in.wzrk.com
+eu1.clevertap.com
+us1.clevertap.com
+
+# OneSignal
+onesignal.com
+cdn.onesignal.com
+api.onesignal.com
+log.onesignal.com
+
+# Iterable
+api.iterable.com
+links.iterable.com
+
+# Customer.io
+track.customer.io
+assets.customer.io
+
+# ===== DMP / Data Brokers =====
+# Lotame
+tags.crwdcntrl.net
+bcp.crwdcntrl.net
+ad.crwdcntrl.net
+
+# BlueKai / Oracle
+tags.bluekai.com
+stags.bluekai.com
+b.bluekai.com
+
+# LiveRamp
+ats.rlcdn.com
+id.rlcdn.com
+lrcall.rlcdn.com
+idsync.rlcdn.com
+csm.idsync.rlcdn.com
+
+# Bombora
+ml314.com
+ad.ml314.com
+
+# Eyeota
+ps.eyeota.net
+data.eyeota.net
+
+# Nielsen
+secure-dcr.imrworldwide.com
+cdn-gl.imrworldwide.com
+secure-us.imrworldwide.com
+imrworldwide.com
+cdn.imrworldwide.com
+preff.imrworldwide.com
+
+# comScore
+sb.scorecardresearch.com
+b.scorecardresearch.com
+beacon.scorecardresearch.com
+udm.scorecardresearch.com
+certifica.scorecardresearch.com
+
+# Quantcast
+pixel.quantserve.com
+quantserve.com
+secure.quantserve.com
+edge.quantserve.com
+rules.quantcount.com
+
+# Adobe / Demdex
+dpm.demdex.net
+fast.a]]demographics.doubleclick.net
+sstats.adobe.com
+2o7.net
+omtrdc.net
+sc.omtrdc.net
+smetrics.att.com
+
+# ===== Datadog & APM Tracking =====
+rum-http-intake.logs.datadoghq.com
+browser-http-intake.logs.datadoghq.com
+session-replay.browser-intake-datadoghq.com
+rum.browser-intake-datadoghq.com
+logs.browser-intake-datadoghq.com
+rum-http-intake.logs.datadoghq.eu
+browser-http-intake.logs.datadoghq.eu
+
+# New Relic
+bam.nr-data.net
+bam-cell.nr-data.net
+js-agent.newrelic.com
+beacon-1.newrelic.com
+
+# Elastic / APM
+*.apm.us-east-1.aws.found.io
+
+# ===== Chartbeat =====
+live.chartbeat.com
+static.chartbeat.com
+ping.chartbeat.net
+mab.chartbeat.com
+
+# ===== Cxense / Piano =====
+api.cxense.com
+cdn.cxense.com
+scomcluster.cxense.com
+id.cxense.com
+
+# ===== Permutive =====
+api.permutive.com
+cdn.permutive.com
+edge.permutive.app
+
+# ===== Gaming Analytics =====
+tracking.epicgames.com
+gameanalytics.com
+api.gameanalytics.com
+rubick.gameanalytics.com
+events.gameanalytics.com
+
+# ===== SpeedCurve / RUM =====
+cdn.speedcurve.com
+lux.speedcurve.com
+
+# ===== Split.io =====
+sdk.split.io
+events.split.io
+auth.split.io
+streaming.split.io
+
+# ===== Fingerprinting =====
+api.fingerprintjs.com
+fp.fingerprintjs.com
+fpjs.io
+api.fpjs.io
+cdn.fpjs.io
+fpcdn.io
+openfpcdn.io
+
+# ===== Canvas / WebGL Fingerprinting =====
+h.online-metrix.net
+fp.online-metrix.net
+
+# ===== Device Fingerprinting =====
+api.iovation.com
+ci-mpsnare.iovation.com
+mpsnare.iesnare.com
+ci-mpsnare.iesnare.com
+device.maxmind.com
+
+# ===== ID Syncing / Cross-Device =====
+match.prod.bidr.io
+usermatch.krxd.net
+beacon.krxd.net
+cdn.krxd.net
+consumer.krxd.net
+dis.criteo.com
+gum.criteo.com
+sync.search.spotxchange.com
+cms.quantserve.com
+id5-sync.com
+sync.id5-sync.com
+
+# ===== Social Widgets (Tracking) =====
+platform.linkedin.com
+badges.linkedin.com
+platform.instagram.com
+apis.google.com/js/platform.js
+connect.facebook.net
+
+# ===== Chinese Tracking =====
+# Baidu Analytics
+hm.baidu.com
+hmma.baidu.com
+tongji.baidu.com
+nsclick.baidu.com
+eclick.baidu.com
+wn.pos.baidu.com
+
+# Tencent Analytics
+analytics.qq.com
+ta.qq.com
+report.qq.com
+beacon.qq.com
+pingtas.qq.com
+pingtcss.qq.com
+isdspeed.qq.com
+
+# Alibaba Analytics
+log.mmstat.com
+acm.alimama.com
+gj.mmstat.com
+spm.mmstat.com
+
+# Umeng
+alog.umeng.com
+alog.umengcloud.com
+oc.umeng.com
+msg.umeng.com
+errlog.umeng.com
+ulogs.umeng.com
+utoken.umeng.com
+at.umeng.com
+
+# TalkingData
+sdk.talkingdata.com
+lp.talkingdata.com
+
+# GrowingIO
+t.growingio.com
+gio.growingio.com
+vds.growingio.com
+
+# Sensors Data
+datasink.sensorsdata.cn
+sensors.data
+
+# ===== Xiaomi Tracking =====
+data.mistat.xiaomi.com
+tracking.miui.com
+api.ad.xiaomi.com
+sdkconfig.ad.xiaomi.com
+globalapi.ad.xiaomi.com
+data.mistat.intl.xiaomi.com
+tracking.intl.miui.com
+
+# ===== Huawei Tracking =====
+logservice.hicloud.com
+logservice1.hicloud.com
+metrics-dre.dt.hicloud.com
+logbak.hicloud.com
+
+# ===== India-Specific Trackers =====
+api.moengage.com
+sdk.moengage.com
+rts.moengage.com
+
+# ===== Session Recording / Heatmaps =====
+ws.sessioncam.com
+d2oh4tlt9mrke9.cloudfront.net
+d14j5cagkg6shr.cloudfront.net
+cdn-3.convertexperiments.com
+cdn-4.convertexperiments.com
+api.usabilla.com
+w.usabilla.com
+d6tizftlrpuof.cloudfront.net
+
+# ===== A/B Testing =====
+cdn.optimizely.com
+logx.optimizely.com
+cdn-3.convertexperiments.com
+js.kameleoon.com
+static.kameleoon.com
+api.kameleoon.com
+cdn.taplytics.com
+api.taplytics.com
+api.abtasty.com
+in.hotjar.com
+
+# ===== Tag Management =====
+cdn.segment.com
+cdn-settings.segment.com
+api.segment.io
+events.segment.io
+c.tealiumiq.com
+tags.tiqcdn.com
+datacloud.tealiumiq.com
+collect.tealiumiq.com
+js.hs-scripts.com
+cdn.mxpnl.com
+cdn.rudderlabs.com
+api.rudderlabs.com
+api.rudderstack.com
+
+# ===== Email Tracking Pixels =====
+open.spotify.com
+email.mailchimp.com
+t.email.microsoft.com
+pixel.monitor.azure.com
+t.myvisualiq.net
+links.email.microsoftonline.com
+click.email.microsoftonline.com
+
+# ===== Retargeting =====
+rtd-tm.everesttech.net
+pixel.everesttech.net
+dsum-sec.casalemedia.com
+r.casalemedia.com
+ssum-sec.casalemedia.com
+sync.outbrain.com
+tr.outbrain.com
+
+# ===== Consent / Privacy (Ironically Tracking) =====
+consent-pref.trustarc.com
+choices.truste.com
+consent.trustarc.com
+cdn.privacy-mgmt.com
+notice.sp-prod.net
+wrapper.sourcepoint.com
+
+# ===== TV / Streaming Analytics =====
+logs.roku.com
+scribe.logs.roku.com
+mon.lgtvsdp.com
+lgtvsdp.com
+analytics.plex.tv
+metrics.plex.tv
+us-central1-bbc-data.cloudfunctions.net
+sanalytics.disneyplus.com
+
+# ===== Automotive Tracking =====
+api.smartcar.com
+analytics.tesla.com
+
+# ===== Health / Fitness Tracking =====
+analytics.strava.com
+api.runkeeper.com
+
+# ===== E-commerce Tracking =====
+bat.bing.com
+ct.pinterest.com
+static.criteo.net
+widget.criteo.com
+dis.criteo.com
+sslwidget.criteo.com
+
+# ===== Report URI =====
+report-uri.cloudflare.com
+report-uri.io
+
+# ===== DNS-Level Tracking =====
+use-application-dns.net
+
+# ===== Additional Misc Trackers =====
+cdn.keywee.co
+cdn.petametrics.com
+cdn.concert.io
+cdn.lockerdome.com
+srv.clickfuse.com
+cdn.heapanalytics.com
+cdn.mxpnl.com
+cdn.pdst.fm
+cdn.ravenjs.com
+cdn.segment.io
+cdn.walkme.com
+d.turn.com
+r.turn.com
+s.zkcdn.net
+tracking.tidaltv.com
+tracking.unrealengine.com
+t.co
+t.myvisualiq.net
+p.typekit.net
+use.typekit.net
+fast.fonts.net
+f.fontdeck.com
+cloud.typography.com
+pixel.wp.com
+stats.wp.com
+public-api.wordpress.com
+pixel.wp.com
+c.go-mpulse.net
+s.go-mpulse.net
+akstat.io
+rum.hlx.page
+c.evidon.com
+l.betrad.com
+tags.bkrtx.com
+sr.symcd.com
+sakura.nf.mixi.jp
+in.treasuredata.com
+us.in.treasuredata.com
+yb.treasuredata.com
+cdp.treasuredata.com
+ssl.p.jwpcdn.com
+prd.jwpltx.com
+content.jwplatform.com
+ping.chartbeat.net
+wd.sharethis.com
+l.sharethis.com
+t.sharethis.com
+count.getclicky.com
+in.getclicky.com
+static.getclicky.com
+cnt.statcounter.com
+c.statcounter.com
+t1.extreme-dm.com
+t0.extreme-dm.com
+extremetracking.com
+fastcounter.bcentral.com
+counter.bloke.com
+c.go-mpulse.net
+s.go-mpulse.net

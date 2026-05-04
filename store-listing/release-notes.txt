@@ -1,0 +1,200 @@
+═══════════════════════════════════════════════════════════════
+                    TRUSTGUARD — RELEASE NOTES
+                         by TrustEdge Labs
+═══════════════════════════════════════════════════════════════
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  v1.1.0 — Bug Fixes & Improvements (March 2026)
+  "What's New" for Play Console
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+───────────────────────────────
+  ENGLISH (max 500 chars)
+───────────────────────────────
+🛡️ TrustGuard v1.1.0 — Stability & Performance Update
+
+🔧 What's improved:
+• Fixed VPN ad blocking — websites now load correctly while ads are blocked
+• Improved DNS filtering with multi-server fallback (Cloudflare, Google, Quad9)
+• Added notification permission request for Android 13+
+• Fixed file recovery storage permission flow on Android 11+
+• Live scan progress indicator with strategy details
+• Enhanced VPN stability with non-blocking packet processing
+
+🔒 100% local — No data leaves your device.
+
+
+───────────────────────────────
+  TÜRKÇE (max 500 chars)
+───────────────────────────────
+🛡️ TrustGuard v1.1.0 — Kararlılık ve Performans Güncellemesi
+
+🔧 Neler iyileştirildi:
+• VPN reklam engelleme düzeltildi — reklamlar engellenirken siteler düzgün açılıyor
+• Çoklu DNS sunucu desteği ile geliştirilmiş DNS filtreleme
+• Android 13+ için bildirim izni eklendi
+• Android 11+ dosya kurtarma depolama izni düzeltildi
+• Canlı tarama ilerleme göstergesi
+• Geliştirilmiş VPN kararlılığı
+
+🔒 %100 yerel — Hiçbir veri cihazınızdan çıkmaz.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  v1.0.0 — Initial Release (March 2026)
+  "What's New" for Play Console (archived)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+───────────────────────────────
+  ENGLISH (max 500 chars)
+───────────────────────────────
+🛡️ TrustGuard v1.0.0 — Your Privacy Guardian is here!
+
+✨ What's included:
+• Privacy Score — See your device's overall security rating
+• Permission Analysis — Scan all apps and reveal sensitive permissions
+• Ad & Tracker Blocking — Local DNS protection blocks ads and trackers
+• Adware Detection — 7-point behavioral analysis finds suspicious apps
+• File Recovery — Recover deleted photos, videos and documents
+• Developer Transparency — Verified info for trusted developers
+• App Activity Monitoring — Track background usage and privacy access
+• Premium — Unlimited recovery, deep scan & custom blocklists
+
+🔒 100% local — No data leaves your device.
+
+
+───────────────────────────────
+  TÜRKÇE (max 500 chars)
+───────────────────────────────
+🛡️ TrustGuard v1.0.0 — Gizlilik Koruyucunuz burada!
+
+✨ Neler var:
+• Gizlilik Puanı — Cihazınızın genel güvenlik değerlendirmesi
+• İzin Analizi — Tüm uygulamaları tarayın, hassas izinleri görün
+• Reklam ve Takipçi Engelleme — Yerel DNS ile reklam ve takipçi engelleme
+• Reklam Tehdit Tespiti — 7 noktalı analiz ile şüpheli uygulamalar
+• Dosya Kurtarma — Silinen fotoğraf, video ve belgeleri kurtarın
+• Geliştirici Şeffaflığı — Güvenilir geliştiriciler için doğrulanmış bilgi
+• Aktivite Takibi — Arka plan kullanımı ve gizlilik erişimi izleme
+• Premium — Sınırsız kurtarma, derin tarama ve özel engel listeleri
+
+🔒 %100 yerel — Hiçbir veri cihazınızdan çıkmaz.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  INTERNAL CHANGELOG (for development reference)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Version 1.0.0 (versionCode: 1)
+Release Date: March 2026
+Min SDK: 24 (Android 7.0)
+Target SDK: 35 (Android 15)
+
+FEATURES:
+─────────
+Phase 1 — Permission Analysis
+  ✅ Full app scanning with PackageManager
+  ✅ Permission classification (Sensitive/Moderate/Safe)
+  ✅ Privacy Score calculation algorithm
+  ✅ Color-coded risk indicators
+  ✅ App detail screen with all permissions listed
+  ✅ Search and filter capabilities
+  ✅ System apps toggle
+  ✅ "Open in Settings" for each app
+  ✅ Educational disclaimer about permission analysis
+
+Phase 2 — Ad & Tracker Blocking
+  ✅ Local VPN-based DNS filtering
+  ✅ Built-in ad domain blocklist (~52K domains)
+  ✅ Built-in tracker domain blocklist (~31K domains)
+  ✅ Real-time blocking statistics
+  ✅ Most blocked domains display
+  ✅ VPN notification with block count
+  ✅ Protection toggle with status indicator
+  ✅ Custom blocklists support (Premium)
+
+Phase 3 — File Recovery
+  ✅ Quick Scan: Trash bin + recently deleted files
+  ✅ Deep Scan: Thumbnails, caches, hidden folders (Premium)
+  ✅ Root Scan: Full filesystem analysis (Premium + Root)
+  ✅ Recovery source badges (Trash/Thumbnail/Cache/Hidden/Root)
+  ✅ File type filtering (Photos/Videos/Audio/Documents)
+  ✅ Freemium model: 3 free recoveries
+  ✅ Root detection (RootDetector utility)
+  ✅ Storage permission handling (Android 11+ compatible)
+
+Phase 4 — Monetization & Advanced Features
+  ✅ Google Play Billing Library 7.1.1 integration
+  ✅ Dynamic pricing from Play Console (never hardcoded)
+  ✅ Premium subscription: trustguard_premium_yearly
+  ✅ Purchase flow, restore purchases, acknowledge
+  ✅ Premium state persistence via SharedPreferences
+
+  ✅ Adware Detection Engine (7-point behavioral analysis)
+    - Overlay + Internet combo detection
+    - Auto-start with boot receiver analysis
+    - 25+ known aggressive ad SDK signatures
+    - Background activity pattern detection
+    - Pay-per-install behavior detection
+    - Known adware package matching
+    - Suspicious permission combination analysis
+
+  ✅ Developer Transparency System
+    - Per-app transparency info for trusted developers
+    - Permission explanation cards
+    - Network connection details (host/purpose/data)
+    - Data policy display
+    - "Verified by TrustGuard" badge
+    - Locale-aware (TR/EN)
+
+  ✅ App Activity Tracking
+    - Foreground/background usage time (UsageStatsManager)
+    - Network data usage per app (NetworkStatsManager)
+    - Camera/microphone/location access detection (AppOpsManager)
+    - Suspicious background activity warning
+    - 24-hour activity window
+
+UI/UX:
+──────
+  ✅ Material Design 3 with dark theme
+  ✅ Adaptive icon with gradient shield + privacy eye
+  ✅ Bottom navigation (Dashboard/Apps/Protection/Settings)
+  ✅ Turkish + English localization (full)
+  ✅ Language selection (System/Turkish/English)
+  ✅ Responsive layouts for all screen sizes
+
+ARCHITECTURE:
+─────────────
+  • MVVM + Clean Architecture
+  • Jetpack Compose (100% Compose UI)
+  • StateFlow for reactive state management
+  • Kotlin Coroutines for async operations
+  • No third-party dependencies except Google Play Billing
+  • R8 minification + resource shrinking enabled
+  • ProGuard rules configured
+
+PERMISSIONS USED:
+─────────────────
+  • QUERY_ALL_PACKAGES — Scan installed apps
+  • INTERNET — Google Play subscription management
+  • FOREGROUND_SERVICE — VPN service
+  • FOREGROUND_SERVICE_SPECIAL_USE — VPN service type
+  • POST_NOTIFICATIONS — VPN status notifications
+  • PACKAGE_USAGE_STATS — App activity monitoring
+  • MANAGE_EXTERNAL_STORAGE — File recovery scanning
+  • READ_MEDIA_IMAGES/VIDEO/AUDIO — Media access (API 33+)
+  • READ_EXTERNAL_STORAGE — Legacy storage (API ≤32)
+
+KNOWN LIMITATIONS:
+──────────────────
+  • Camera/mic/location access counts show permission status
+    rather than exact usage counts (Android restriction for
+    non-system apps — getOpsForPackage is @SystemApi)
+  • File recovery depends on file system state; permanently
+    overwritten files cannot be recovered
+  • Root scan requires rooted device with su binary
+  • VPN-based blocking may conflict with other VPN apps
+  • Billing requires Google Play Services on device

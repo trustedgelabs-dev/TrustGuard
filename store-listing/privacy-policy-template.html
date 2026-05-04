@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustGuard - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+            background: #0A0E14;
+            color: #E8EAED;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #131A24;
+            border-radius: 16px;
+            padding: 48px;
+            border: 1px solid #1E2A3A;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #00E5FF, #00E676);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: #9AA0A6;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #00E676;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #1E2A3A;
+        }
+        p { margin-bottom: 16px; color: #BDC1C6; }
+        ul { margin: 12px 0 16px 24px; }
+        li { margin-bottom: 8px; color: #BDC1C6; }
+        .highlight {
+            background: #1E2A3A;
+            border-left: 3px solid #00E676;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+        }
+        .highlight p { margin: 0; color: #E8EAED; }
+        .badge {
+            display: inline-block;
+            background: rgba(0, 230, 118, 0.15);
+            color: #00E676;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #1E2A3A;
+            color: #9AA0A6;
+            font-size: 13px;
+        }
+        a { color: #00BFA5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ TrustGuard Privacy Policy</h1>
+        <p class="subtitle">Last updated: April 2026</p>
+        <span class="badge">✓ Privacy First</span>
+
+        <h2>1. Overview</h2>
+        <p>TrustGuard ("the App") is developed by TrustEdge Labs. We are committed to protecting your privacy. This Privacy Policy explains how the App handles information when you use our services.</p>
+
+        <div class="highlight">
+            <p><strong>TL;DR:</strong> TrustGuard does not collect personal data. All core features operate locally on your device. We use Firebase Analytics solely to collect anonymous usage statistics to improve the app.</p>
+        </div>
+
+        <h2>2. Information We Do NOT Collect</h2>
+        <p>TrustGuard does not collect any of the following:</p>
+        <ul>
+            <li>Personal identification information (name, email, phone number)</li>
+            <li>Device identifiers or advertising IDs</li>
+            <li>Location data</li>
+            <li>Contacts, messages, or call logs</li>
+            <li>Photos, videos, or files (recovered files stay on your device)</li>
+            <li>Browsing history or DNS query logs</li>
+        </ul>
+
+        <h2>3. How the App Works</h2>
+        <p>All of TrustGuard's features operate entirely on your device:</p>
+        <ul>
+            <li><strong>Permission Analysis:</strong> Reads installed app information using Android's PackageManager API. This data is processed locally and never transmitted.</li>
+            <li><strong>Ad & Tracker Blocking:</strong> Uses a local VPN service to filter DNS requests on your device. No DNS queries are sent to external servers for filtering purposes.</li>
+            <li><strong>File Recovery:</strong> Scans your device's local storage for recoverable files. Recovered files are saved to your device's storage. No file data leaves your device.</li>
+            <li><strong>Adware Detection:</strong> Analyzes installed apps' permissions and metadata locally. No data is sent externally.</li>
+            <li><strong>App Activity Monitoring:</strong> Uses Android's UsageStatsManager to display app activity data that is already available on your device.</li>
+        </ul>
+
+        <h2>4. Analytics Data</h2>
+        <p>TrustGuard uses Google Firebase Analytics to collect anonymous usage statistics for app improvement purposes. The following anonymous data may be collected:</p>
+        <ul>
+            <li>App usage statistics (screen views, session duration)</li>
+            <li>Device information (model, operating system version)</li>
+            <li>Approximate location (country/region level, derived from IP address)</li>
+            <li>App performance data</li>
+        </ul>
+        <p>This data is collected anonymously, is not used to identify you, and is used solely for app development purposes.</p>
+
+        <h2>5. Internet Usage</h2>
+        <p>TrustGuard uses internet access for:</p>
+        <ul>
+            <li><strong>Google Play Billing:</strong> To manage premium subscriptions through Google Play Store's official billing system. This connection is between your device and Google's servers only.</li>
+            <li><strong>DNS Resolution:</strong> The local VPN service resolves DNS queries using Cloudflare (1.1.1.1) or Google (8.8.8.8) DNS servers for legitimate domain resolution.</li>
+            <li><strong>Firebase Analytics:</strong> To send anonymous usage statistics to Google's servers via encrypted connection (HTTPS).</li>
+        </ul>
+        <p>No personal data, app scan results, or device information is transmitted to TrustEdge Labs servers or any third party.</p>
+
+        <h2>6. Permissions Explained</h2>
+        <ul>
+            <li><strong>QUERY_ALL_PACKAGES:</strong> Required to scan and analyze all installed apps on your device.</li>
+            <li><strong>INTERNET:</strong> Required for Google Play subscription management only.</li>
+            <li><strong>VPN Service:</strong> Required to create a local VPN tunnel for DNS-based ad and tracker blocking. No data is routed through external servers.</li>
+            <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Required to scan for and recover deleted files from your device's storage.</li>
+            <li><strong>PACKAGE_USAGE_STATS:</strong> Required to display app activity data (foreground/background time, network usage).</li>
+            <li><strong>POST_NOTIFICATIONS:</strong> Required to show VPN protection status notifications.</li>
+        </ul>
+
+        <h2>7. Third-Party Services</h2>
+        <p>The third-party services used are:</p>
+        <ul>
+            <li><strong>Google Play Billing Library:</strong> For processing premium subscription purchases. Google's privacy policy applies to billing transactions: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+            <li><strong>Google Firebase Analytics:</strong> For collecting anonymous app usage statistics. Google's privacy policy applies: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+        </ul>
+        <p>TrustGuard does NOT use any advertising SDKs, crash reporting services, or social media SDKs.</p>
+
+        <h2>8. Data Storage</h2>
+        <p>TrustGuard stores minimal preference data locally on your device using Android's SharedPreferences:</p>
+        <ul>
+            <li>Language preference</li>
+            <li>Premium subscription status</li>
+            <li>Free recovery count</li>
+            <li>VPN protection toggle state</li>
+        </ul>
+        <p>This data is stored only on your device and is deleted when you uninstall the app.</p>
+
+        <h2>9. Children's Privacy</h2>
+        <p>TrustGuard does not collect any personal information from anyone, including children under the age of 13. The App is safe for users of all ages.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected with an updated "Last updated" date at the top of this page.</p>
+
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> <!-- YOUR EMAIL HERE --> privacy@trustedgelabs.com</p>
+        <p><strong>Developer:</strong> TrustEdge Labs</p>
+
+        <footer>
+            <p>© 2026 TrustEdge Labs. All rights reserved.</p>
+            <p style="margin-top: 8px;">TrustGuard — Building trust through transparency.</p>
+        </footer>
+    </div>
+</body>
+</html>

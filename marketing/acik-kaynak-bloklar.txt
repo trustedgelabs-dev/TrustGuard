@@ -1,0 +1,148 @@
+=====================================================
+BLOK 1: BAGIMLILIKLAR — Izleyici/Analitik YOK
+Baslik: build.gradle.kts (Tum Bagimliliklar)
+=====================================================
+
+dependencies {
+    // Android Jetpack — standart UI kutuphaneleri
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.material.icons.extended)
+
+    // Coil — sadece yerel dosya onizleme
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("io.coil-kt:coil-video:2.6.0")
+
+    // ❌ Google Analytics — YOK
+    // ❌ Firebase — YOK
+    // ❌ Facebook SDK — YOK
+    // ❌ OkHttp/Retrofit — YOK
+    // ❌ Herhangi bir ag istemcisi — YOK
+}
+
+
+=====================================================
+BLOK 2: UYGULAMA BASLANGICI — Telemetri YOK
+Baslik: TrustGuardApp.kt (Application Class)
+=====================================================
+
+class TrustGuardApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        createNotificationChannels()   // Bildirim kanali
+        initBilling()                   // Yerel faturalama
+        ensureFamilyShieldService()     // Ebeveyn kontrolu
+
+        // ❌ initAnalytics() — YOK
+        // ❌ CrashReporter — YOK
+        // ❌ Firebase.initialize() — YOK
+        // ❌ Uzak sunucu baglantisi — YOK
+    }
+}
+
+
+=====================================================
+BLOK 3: VPN DNS ISLEMCI — Yerel Filtreleme
+Baslik: TrustGuardVpnService.kt (DNS Handler)
+=====================================================
+
+// DNS sorgusu isleme — tum islem YEREL
+private fun handleDnsQuery(packet, length, ipHeaderLen, outputStream) {
+    val domain = DnsPacket.parse(dnsPayload).questionDomain
+
+    if (blocklistRepository.isDomainBlocked(domain)) {
+        // ENGELLENDI: Sahte yanit uret (0.0.0.0)
+        // Hicbir yere log gonderilmez
+        val response = DnsResponseBuilder.buildBlockedResponse(dnsPayload, dnsPacket)
+        outputStream.write(IpPacketBuilder.buildResponse(packet, ipHeaderLen, response))
+        statsRepository.recordBlock(domain) // YEREL sayac
+    } else {
+        // IZIN VERILDI: Gercek DNS'e ilet
+        forwardDnsQuery(packet, ipHeaderLen, dnsPayload, outputStream)
+    }
+}
+
+// Kullanilan DNS sunuculari — hepsi herkese acik
+// TrustGuard'a ait HICBIR sunucu yok
+private val dnsServers = listOf(
+    "1.1.1.1",   // Cloudflare
+    "8.8.8.8",   // Google
+    "9.9.9.9"    // Quad9
+)
+
+private fun forwardDnsQuery(...) {
+    for (dns in dnsServers) {
+        val socket = DatagramSocket()
+        protect(socket) // VPN tunelinden cikar
+
+        // DNS sorgusunu DOGRUDAN herkese acik DNS'e gonder
+        // Arada TrustGuard proxy'si YOK
+        socket.send(DatagramPacket(dnsPayload, dnsPayload.size,
+            InetAddress.getByName(dns), 53))
+
+        // Yaniti al ve kullaniciya ilet
+        socket.receive(receivePacket)
+        outputStream.write(responsePacket)
+        return
+    }
+}
+
+
+=====================================================
+BLOK 4: SIFRELI KASA — AES-256-GCM (Yerel)
+Baslik: VaultManager.kt (Sifreleme Motoru)
+=====================================================
+
+class VaultManager(private val context: Context) {
+    companion object {
+        private const val AES_KEY_SIZE = 256          // AES-256
+        private const val GCM_IV_LENGTH = 12          // 96-bit IV
+        private const val GCM_TAG_LENGTH = 128        // 128-bit tag
+        private const val PBKDF2_ITERATIONS = 100_000 // Kaba kuvvet koruma
+    }
+
+    fun encryptAndStore(uri, fileName, mimeType, password): VaultFile? {
+        val key = deriveKey(password, salt)
+        val iv = ByteArray(12).also { SecureRandom().nextBytes(it) }
+
+        // AES-256-GCM ile sifrele
+        val cipher = Cipher.getInstance("AES/GCM/NoPadding")
+        cipher.init(Cipher.ENCRYPT_MODE, key, GCMParameterSpec(128, iv))
+        val encrypted = cipher.doFinal(plainBytes)
+
+        // YEREL dosyaya yaz — buluta YUKLENMEZ
+        FileOutputStream(encFile).use { fos ->
+            fos.write(iv)
+            fos.write(encrypted)
+        }
+    }
+
+    // Anahtar turetme — PBKDF2 100.000 tur
+    private fun deriveKey(password: String, salt: ByteArray): SecretKeySpec {
+        val factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
+        val spec = PBEKeySpec(password.toCharArray(), salt, 100_000, 256)
+        return SecretKeySpec(factory.generateSecret(spec).encoded, "AES")
+    }
+}
+
+
+=====================================================
+BLOK 5: ROOT GRADLE — Eklenti Listesi
+Baslik: build.gradle.kts (Root — Tam Dosya)
+=====================================================
+
+// Hicbir Google Services veya izleyici eklentisi yok
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+
+    // ❌ com.google.gms.google-services — YOK
+    // ❌ com.google.firebase.crashlytics — YOK
+}

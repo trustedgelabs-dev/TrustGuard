@@ -1,0 +1,12 @@
+## This file must *NOT* be checked into Version Control Systems.
+## Copy this file to local.properties and fill in your values.
+
+# Android SDK location
+sdk.dir=/path/to/your/Android/Sdk
+
+# Release signing config
+# Generate your own keystore with: keytool -genkey -v -keystore release-key.jks -alias trustguard -keyalg RSA -keysize 2048 -validity 10000
+RELEASE_STORE_FILE=../release-key.jks
+RELEASE_STORE_PASSWORD=your_store_password
+RELEASE_KEY_ALIAS=trustguard
+RELEASE_KEY_PASSWORD=your_key_password

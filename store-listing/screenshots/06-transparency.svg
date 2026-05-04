@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1B2A"/>
+      <stop offset="100%" style="stop-color:#060E18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BFA5"/>
+      <stop offset="100%" style="stop-color:#00E676"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="phoneClip">
+      <rect x="90" y="280" width="900" height="1440" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <text x="540" y="120" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="bold" fill="url(#accent)">Developer Transparency</text>
+  <text x="540" y="175" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="30" fill="#9AA0A6">Full insight into trusted apps</text>
+  <text x="540" y="225" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="26" fill="#6B7280">Güvenilir uygulamalara tam şeffaflık</text>
+
+  <rect x="80" y="270" width="920" height="1460" rx="40" fill="#1A1A2E" stroke="#2A3A4A" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="90" y="280" width="900" height="40" fill="#0A0E14"/>
+  <text x="540" y="307" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" fill="#9AA0A6">12:00</text>
+
+  <g clip-path="url(#phoneClip)">
+    <rect x="90" y="320" width="900" height="1400" fill="#0A0E14"/>
+
+    <text x="130" y="375" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" fill="#E8EAED">←</text>
+    <text x="540" y="375" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#E8EAED">Permission Analysis</text>
+
+    <!-- Verified Badge Banner -->
+    <rect x="120" y="405" width="840" height="70" rx="16" fill="#00E676" opacity="0.1" stroke="#00E676" stroke-width="1"/>
+    <text x="170" y="447" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" fill="#00E676">✓</text>
+    <text x="200" y="447" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#00E676">Verified by TrustGuard</text>
+    <text x="200" y="465" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA0A6">All permission uses have been verified</text>
+
+    <!-- Developer Transparency Section -->
+    <rect x="120" y="500" width="840" height="580" rx="16" fill="#1E2A3A"/>
+
+    <text x="155" y="540" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#00BFA5">🔍 Developer Transparency</text>
+
+    <!-- Developer -->
+    <text x="155" y="580" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Developer</text>
+    <text x="155" y="605" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#E8EAED">TrustEdge Labs</text>
+
+    <!-- Privacy Guarantee -->
+    <text x="155" y="645" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Privacy Guarantee</text>
+    <text x="155" y="670" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" fill="#E8EAED">No personal data is collected, stored or</text>
+    <text x="155" y="693" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" fill="#E8EAED">transmitted. All analysis runs locally.</text>
+
+    <!-- Permission Explanations -->
+    <text x="155" y="730" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Why These Permissions?</text>
+
+    <rect x="155" y="745" width="775" height="50" rx="8" fill="#0A0E14"/>
+    <text x="175" y="768" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#00E5FF">QUERY_ALL_PACKAGES</text>
+    <text x="175" y="788" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA0A6">Required to scan and analyze installed apps</text>
+
+    <rect x="155" y="805" width="775" height="50" rx="8" fill="#0A0E14"/>
+    <text x="175" y="828" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#00E5FF">INTERNET</text>
+    <text x="175" y="848" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA0A6">Only for Google Play subscription management</text>
+
+    <rect x="155" y="865" width="775" height="50" rx="8" fill="#0A0E14"/>
+    <text x="175" y="888" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#00E5FF">MANAGE_EXTERNAL_STORAGE</text>
+    <text x="175" y="908" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA0A6">Required to scan and recover deleted files</text>
+
+    <!-- Network Connections -->
+    <text x="155" y="950" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Network Connections</text>
+
+    <rect x="155" y="965" width="775" height="50" rx="8" fill="#0A0E14"/>
+    <text x="175" y="988" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#E8EAED">play.googleapis.com</text>
+    <text x="175" y="1008" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA0A6">Subscription verification • No personal data</text>
+
+    <rect x="155" y="1025" width="775" height="50" rx="8" fill="#0A0E14"/>
+    <text x="175" y="1048" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#E8EAED">1.1.1.1 (Cloudflare DNS)</text>
+    <text x="175" y="1068" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA0A6">DNS resolution for ad blocking • DNS queries only</text>
+
+    <!-- No External Data badge -->
+    <rect x="120" y="1105" width="840" height="55" rx="12" fill="#00E676" opacity="0.08"/>
+    <text x="540" y="1140" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#00E676">🔒 No data sent to external servers</text>
+
+    <!-- Activity Section -->
+    <rect x="120" y="1180" width="840" height="280" rx="16" fill="#1E2A3A"/>
+    <text x="155" y="1220" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#7C4DFF">📊 Activity (24h)</text>
+
+    <!-- Foreground / Background -->
+    <rect x="155" y="1240" width="380" height="75" rx="10" fill="#0A0E14"/>
+    <text x="175" y="1268" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Foreground</text>
+    <text x="175" y="1298" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#E8EAED">12m 30s</text>
+
+    <rect x="550" y="1240" width="380" height="75" rx="10" fill="#0A0E14"/>
+    <text x="570" y="1268" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Background</text>
+    <text x="570" y="1298" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#E8EAED">2m 15s</text>
+
+    <!-- Network / Privacy -->
+    <rect x="155" y="1330" width="380" height="75" rx="10" fill="#0A0E14"/>
+    <text x="175" y="1358" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Network Data</text>
+    <text x="175" y="1388" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#E8EAED">3.2 MB</text>
+
+    <rect x="550" y="1330" width="380" height="75" rx="10" fill="#0A0E14"/>
+    <text x="570" y="1358" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Privacy Access</text>
+    <text x="570" y="1380" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">📷 Camera: 0</text>
+    <text x="570" y="1400" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">🎤 Mic: 0  📍 Loc: 0</text>
+  </g>
+
+  <text x="540" y="1810" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#E8EAED">TrustGuard</text>
+  <text x="540" y="1850" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" fill="#9AA0A6">by TrustEdge Labs</text>
+</svg>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    font-family: 'Inter', sans-serif;
+    background: #0A0E14;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(244,67,54,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 80%, rgba(0,230,118,0.08) 0%, transparent 50%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 80px 60px;
+  }
+
+  .warning-icon {
+    font-size: 140px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 30px;
+  }
+
+  h1 .red { color: #F44336; }
+  h1 .white { color: #fff; }
+
+  .subtitle {
+    font-size: 34px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 60px;
+    max-width: 850px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .stat-card {
+    background: rgba(244,67,54,0.08);
+    border: 1px solid rgba(244,67,54,0.2);
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 52px;
+    font-weight: 900;
+    color: #F44336;
+  }
+
+  .stat-label {
+    font-size: 24px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+  }
+
+  .divider {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #00E676, transparent);
+    margin-bottom: 50px;
+  }
+
+  .solution {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .solution-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: #00E676;
+    margin-bottom: 16px;
+  }
+
+  .solution-desc {
+    font-size: 30px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.4;
+  }
+
+  .protection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  .protection-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 30px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .check {
+    width: 48px;
+    height: 48px;
+    background: rgba(0,230,118,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00E676;
+    font-size: 26px;
+    flex-shrink: 0;
+  }
+
+  .download-area {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .dl-btn {
+    background: linear-gradient(135deg, #00E676, #00C853);
+    border-radius: 50px;
+    padding: 26px 70px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #0A0E14;
+    display: inline-block;
+    box-shadow: 0 10px 40px rgba(0,230,118,0.3);
+  }
+
+  .dl-url {
+    font-size: 24px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="content">
+    <div class="warning-icon">&#9888;&#65039;</div>
+
+    <h1>
+      <span class="red">Telefonun Seni</span><br>
+      <span class="white">&#304;zliyor mu?</span>
+    </h1>
+
+    <p class="subtitle">
+      Ortalama bir telefonda y&#252;zlerce izleyici &#231;al&#305;&#351;&#305;r.
+      &#199;o&#287;u uygulama senin haberin olmadan veri toplar.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">73%</div>
+        <div class="stat-label">Uygulama gizli<br>veri toplar</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5.400+</div>
+        <div class="stat-label">G&#252;nl&#252;k izleyici<br>ba&#287;lant&#305;s&#305;</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">89%</div>
+        <div class="stat-label">Ger&#231;ek konum<br>payla&#351;&#305;r</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">2.1 GB</div>
+        <div class="stat-label">Ayl&#305;k izleme<br>trafi&#287;i</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="solution">
+      <div class="solution-title">&#199;&#246;z&#252;m: TrustGuard</div>
+    </div>
+
+    <div class="protection-list">
+      <div class="protection-item">
+        <div class="check">&#10003;</div>
+        <span>T&#252;m reklamlar&#305; ve izleyicileri engelle</span>
+      </div>
+      <div class="protection-item">
+        <div class="check">&#10003;</div>
+        <span>Hangi uygulaman&#305;n ne yapt&#305;&#287;&#305;n&#305; g&#246;r</span>
+      </div>
+      <div class="protection-item">
+        <div class="check">&#10003;</div>
+        <span>Kamera ve mikrofon eri&#351;imini izle</span>
+      </div>
+      <div class="protection-item">
+        <div class="check">&#10003;</div>
+        <span>Veri toplamayan a&#231;&#305;k kaynak yap&#305;</span>
+      </div>
+    </div>
+
+    <div class="download-area">
+      <div class="dl-btn">HEMEN KORU</div>
+      <div class="dl-url">trustedgelabs.dev</div>
+    </div>
+  </div>
+</body>
+</html>

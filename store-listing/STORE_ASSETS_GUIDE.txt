@@ -1,0 +1,165 @@
+═══════════════════════════════════════════════════════════════
+          TRUSTGUARD — PLAY STORE ASSET GUIDE
+═══════════════════════════════════════════════════════════════
+
+This guide explains all required and recommended assets
+for Google Play Store listing.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. APP ICON ✅ (DONE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Size: 512x512 PNG (Play Console uploads)
+• Design: Gradient shield (cyan→teal→green) with privacy
+  eye symbol on dark navy background
+• Files: ic_launcher_foreground.xml + ic_launcher_background.xml
+• Location: app/src/main/res/drawable/
+
+TO EXPORT 512x512 PNG FOR PLAY CONSOLE:
+  Option A: Build the app → Android Studio generates in
+            app/build/outputs/ (or use Image Asset Studio)
+  Option B: Open ic_launcher_foreground.xml in Android Studio
+            → right-click → Export to PNG → 512x512
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. FEATURE GRAPHIC ✅ (DONE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Size: 1024 x 500 px (required by Play Console)
+• File: store-listing/feature-graphic.svg
+• TO CONVERT: Open in browser → screenshot at exact size
+  OR use Inkscape/Figma to export as PNG
+• Design: Dark navy background, shield icon left,
+  app name + features right, gradient accents
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. SCREENSHOTS (REQUIRED: min 2, max 8)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Size: 16:9 or 9:16 (phone screenshots)
+• Recommended: 1080 x 1920 px (portrait)
+
+TAKE THESE 6 SCREENSHOTS FROM THE APP:
+
+  Screenshot 1: SECURITY DASHBOARD
+  → Show the main dashboard with Privacy Score circle,
+     top risks, and feature cards visible
+  → Caption EN: "Your Privacy Score at a Glance"
+  → Caption TR: "Gizlilik Puanınız Bir Bakışta"
+
+  Screenshot 2: APP PERMISSION ANALYSIS
+  → Show the detail screen of a popular app (e.g., Instagram)
+     with permission list and risk indicators
+  → Caption EN: "See What Every App Can Access"
+  → Caption TR: "Her Uygulamanın Nelere Eriştiğini Görün"
+
+  Screenshot 3: AD & TRACKER BLOCKING
+  → Show the DNS blocking screen with protection active,
+     blocked count, and blocklists
+  → Caption EN: "Block Ads & Trackers Automatically"
+  → Caption TR: "Reklamları ve Takipçileri Otomatik Engelle"
+
+  Screenshot 4: ADWARE DETECTION
+  → Show the adware scan results with suspicious apps listed
+  → Caption EN: "Detect Hidden Ad Threats"
+  → Caption TR: "Gizli Reklam Tehditlerini Tespit Et"
+
+  Screenshot 5: FILE RECOVERY
+  → Show the file recovery screen with scan mode selection
+     or recovered files list
+  → Caption EN: "Recover Deleted Photos & Files"
+  → Caption TR: "Silinen Fotoğraf ve Dosyaları Kurtar"
+
+  Screenshot 6: DEVELOPER TRANSPARENCY
+  → Show a trusted app's detail page with transparency
+     section visible (developer info, network connections)
+  → Caption EN: "Full Developer Transparency"
+  → Caption TR: "Tam Geliştirici Şeffaflığı"
+
+TIP: Use a clean device or emulator with several apps
+installed for realistic-looking screenshots.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. PHONE SCREENSHOT FRAMES (OPTIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Use tools like:
+  - shots.so (free online mockup)
+  - Figma device frames
+  - AppMockUp (appmockup.com)
+• Wrap screenshots in a phone frame with captions
+  on a dark gradient background matching the app theme
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. PROMO VIDEO (OPTIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• YouTube URL, 30s-2min
+• Show: Dashboard → Permission scan → Blocking →
+  Adware detection → File recovery
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. PLAY CONSOLE CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Before submitting for closed testing:
+
+  □ App icon (512x512 PNG)
+  □ Feature graphic (1024x500 PNG)
+  □ At least 2 screenshots (recommended 6)
+  □ Short description (EN + TR)
+  □ Full description (EN + TR)
+  □ Privacy policy URL (REQUIRED)
+  □ App category: Tools
+  □ Content rating questionnaire completed
+  □ Target audience declared (13+ or Everyone)
+  □ Data safety form filled out:
+    - Does NOT collect user data
+    - Does NOT share user data
+    - Internet used for: subscription management only
+    - No third-party analytics or tracking SDKs
+  □ Create "trustguard_premium_yearly" subscription
+    product in Play Console → Monetize → Subscriptions
+  □ Set up closed testing track
+  □ Add tester emails to closed test group
+  □ Upload signed AAB (not APK)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7. DATA SAFETY FORM ANSWERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Q: Does your app collect or share any user data?
+A: No — all processing is local. No data collection.
+
+Q: Does your app use encryption?
+A: Yes — HTTPS for Google Play Billing API only.
+
+Q: Is data transferred securely?
+A: Yes — all network communication uses TLS/HTTPS.
+
+Q: Can users request data deletion?
+A: N/A — no user data is stored on any server.
+
+Q: What third-party libraries access user data?
+A: Google Play Billing Library (subscription management only).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8. PRIVACY POLICY TEMPLATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+You MUST have a privacy policy URL. Host it on:
+- GitHub Pages (free)
+- Your own website
+- Google Sites (free)
+
+Key points to include:
+- TrustGuard does not collect personal data
+- All app analysis happens locally on the device
+- Internet is used only for Google Play subscription management
+- No third-party analytics or advertising SDKs
+- DNS blocking is local (no external DNS servers used for filtering)
+- File recovery operates entirely on-device
+- Contact email for privacy inquiries
+
+See: store-listing/privacy-policy-template.html

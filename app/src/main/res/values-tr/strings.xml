@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">TrustGuard</string>
+    <string name="company_name">TrustEdge Labs</string>
+    <string name="by_company">TrustEdge Labs ürünü</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Güvenlik Paneli</string>
+    <string name="security_score">Gizlilik Puanı</string>
+    <string name="apps_scanned">%d uygulama analiz edildi</string>
+    <string name="top_risks">En Çok İzin Talep Edenler</string>
+    <string name="view_all">Tümünü Gör</string>
+    <string name="rescan">Yeniden Tara</string>
+
+    <!-- Traffic Light (izin hassasiyeti, uygulama yargılaması DEĞİL) -->
+    <string name="high_risk">Hassas</string>
+    <string name="medium_risk">Orta</string>
+    <string name="safe">Güvenli</string>
+    <string name="trusted">Güvenilir</string>
+
+    <!-- App List -->
+    <string name="app_list_title">Tüm Uygulamalar</string>
+    <string name="search_apps">Uygulama ara…</string>
+    <string name="filter_all">Tümü</string>
+    <string name="show_system_apps">Sistem Uygulamalarını Göster</string>
+    <string name="apps_count">%d uygulama</string>
+    <string name="back">Geri</string>
+
+    <!-- App Card -->
+    <string name="permissions_count">%d izin</string>
+    <string name="permissions_dangerous">%1$d izin (%2$d hassas)</string>
+    <string name="details">Detaylar</string>
+
+    <!-- Detail Screen -->
+    <string name="detail_title">İzin Analizi</string>
+    <string name="total_permissions">Toplam İzin</string>
+    <string name="dangerous">Hassas</string>
+    <string name="risk_score">İzin Puanı</string>
+    <string name="permissions_header">İzinler (%d)</string>
+    <string name="no_permissions">İzin talep edilmemiş</string>
+    <string name="open_settings">Ayarlarda Aç</string>
+    <string name="system_app">Sistem Uygulaması</string>
+    <string name="disclaimer">Bu analiz yalnızca uygulamanın talep ettiği izinlere dayanmaktadır. Çok sayıda izin talep etmek kötü niyet anlamına gelmez. Birçok izin, uygulamanın normal işlevleri için gereklidir.</string>
+
+    <!-- Scan -->
+    <string name="scanning">Uygulamalar taranıyor…</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="language">Dil</string>
+    <string name="language_system">Sistem Varsayılanı</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_english">English</string>
+    <string name="about">Hakkında</string>
+    <string name="version">Versiyon %s</string>
+    <string name="app_description">Uygulama izinlerini analiz eden, takipçileri engelleyen ve silinen dosyaları kurtaran gizlilik &amp; güvenlik asistanı.</string>
+    <string name="general">Genel</string>
+    <string name="feedback_title">Geri Bildirim &amp; İletişim</string>
+    <string name="feedback_description">Sorularınız, önerileriniz veya sorun bildirimleriniz için bize ulaşın.</string>
+    <string name="feedback_email">E-posta</string>
+
+    <!-- DNS Blocking (Phase 2) -->
+    <string name="dns_blocking_title">Reklam &amp; Takipçi Engelleme</string>
+    <string name="blocked_today">Bugün %d engellendi</string>
+    <string name="blocked_today_label">Bugün Engellenen</string>
+    <string name="total_queries_today">Bugünkü Toplam Sorgu</string>
+    <string name="blocked_all_time">Toplam Engellenen</string>
+    <string name="vpn_enabled">Koruma Aktif</string>
+    <string name="vpn_disabled">Koruma Kapalı</string>
+    <string name="vpn_local_info">Yerel VPN — Trafiğiniz harici sunuculara yönlendirilmez. Tüm filtreleme cihazınızda gerçekleşir.</string>
+    <string name="vpn_enable_prompt">Korumayı Etkinleştir</string>
+    <string name="vpn_permission_required">Reklam ve takipçileri engellemek için VPN izni gereklidir</string>
+    <string name="blocklists">Engel Listeleri</string>
+    <string name="blocklist_ads">Reklam Alanları</string>
+    <string name="blocklist_ads_desc">Bilinen reklam ağlarından gelen reklam alan adlarını engeller</string>
+    <string name="blocklist_trackers">Takipçi Alanları</string>
+    <string name="blocklist_trackers_desc">Takip ve analitik alan adlarını engeller</string>
+    <string name="add_custom_list">Özel Liste Ekle</string>
+    <string name="domains_count">%d alan adı</string>
+    <string name="premium_required">Premium Gerekli</string>
+    <string name="top_blocked">En Çok Engellenen</string>
+    <string name="vpn_notification_title">TrustGuard Koruma Aktif</string>
+    <string name="vpn_notification_text">Bugün %d takipçi engellendi</string>
+    <string name="vpn_notification_channel">VPN Koruması</string>
+    <string name="protection">Koruma</string>
+    <string name="tap_to_manage">Yönetmek için dokunun</string>
+    <string name="blocklist_inapp_ads">Uygulama İçi Reklam SDK</string>
+    <string name="blocklist_inapp_ads_desc">Uygulamalarda kullanılan mobil reklam SDK\'larını engeller (AdMob, Unity, AppLovin vb.)</string>
+
+    <!-- Per-App Filtering -->
+    <string name="per_app_filtering">Uygulama Bazlı Filtreleme</string>
+    <string name="per_app_filtering_desc">Hangi uygulamaların VPN üzerinden filtreleneceğini seçin</string>
+    <string name="app_excluded">Hariç</string>
+    <string name="app_filtered">Filtreleniyor</string>
+    <string name="all_apps_filtered">Tüm uygulamalar filtreleniyor</string>
+    <string name="apps_excluded_count">%d uygulama hariç tutuldu</string>
+    <string name="search_apps_filter">Uygulama ara…</string>
+    <string name="restart_vpn_required">Değişiklikleri uygulamak için VPN\'i yeniden başlatın</string>
+
+    <!-- Notification Ad Detection -->
+    <string name="notification_ads">Bildirim Reklamları</string>
+    <string name="notification_ads_desc">Reklam bildirimi gönderen uygulamaları tespit edin</string>
+    <string name="notification_ads_detected">%d reklam bildirimi tespit edildi</string>
+    <string name="notification_ads_none">Reklam bildirimi tespit edilmedi</string>
+    <string name="notification_access_required">Bildirim erişim izni gerekli</string>
+    <string name="grant_notification_access">Erişim Ver</string>
+    <string name="detected_from">Kaynak: %s</string>
+
+    <!-- File Recovery (Phase 3) -->
+    <string name="recovery_title">Dosya Kurtarma</string>
+    <string name="recovery_description">Silinen fotoğraf, video ve belgeler için cihazınızı tarayın</string>
+    <string name="scan_files">Silinen Dosyaları Tara</string>
+    <string name="scanning_files">Kurtarılabilir dosyalar taranıyor…</string>
+    <string name="photos">Fotoğraflar</string>
+    <string name="videos">Videolar</string>
+    <string name="audio">Ses</string>
+    <string name="documents">Belgeler</string>
+    <string name="all_files">Tüm Dosyalar</string>
+    <string name="files_found">%d dosya bulundu</string>
+    <string name="file_size">%s</string>
+    <string name="deleted_date">Silinme: %s</string>
+    <string name="recover">Kurtar</string>
+    <string name="recover_selected">Seçilenleri Kurtar (%d)</string>
+    <string name="recover_all">Tümünü Kurtar</string>
+    <string name="recovering">Kurtarılıyor…</string>
+    <string name="recovery_success">%d dosya başarıyla kurtarıldı</string>
+    <string name="recovery_failed">Kurtarma başarısız</string>
+    <string name="no_files_found">Kurtarılabilir dosya bulunamadı</string>
+    <string name="free_limit_title">Ücretsiz Sınıra Ulaşıldı</string>
+    <string name="free_limit_message">Ücretsiz sürüm en fazla 3 dosya kurtarmaya izin verir. Sınırsız kurtarma için Premium\'a yükseltin.</string>
+    <string name="upgrade_premium">Premium\'a Yükselt</string>
+    <string name="free_recoveries_left">%d ücretsiz kurtarma hakkı kaldı</string>
+    <string name="select_all">Tümünü Seç</string>
+    <string name="deselect_all">Seçimi Kaldır</string>
+    <string name="storage_permission_required">Silinen dosyaları taramak için depolama izni gereklidir</string>
+    <string name="all_files_access_required">Diğer uygulamalardan silinen dosyaları bulmak için Tüm Dosyalara Erişim izni gereklidir</string>
+    <string name="grant_permission">İzin Ver</string>
+    <string name="open_permission_settings">Ayarları Aç</string>
+    <string name="recovered_to">Kurtarıldı: %s</string>
+    <string name="scanning_trashed">Çöp kutusundaki dosyalar taranıyor…</string>
+    <string name="scanning_filesystem">Dosya sistemi taranıyor…</string>
+    <string name="recovery_card_title">Dosya Kurtarma</string>
+    <string name="recovery_card_subtitle">Silinen fotoğraf ve dosyaları kurtar</string>
+
+    <!-- Recovery Scan Modes -->
+    <string name="quick_scan">Hızlı Tarama</string>
+    <string name="quick_scan_desc">Çöp kutusu ve son silinen dosyaları kontrol eder</string>
+    <string name="deep_scan">Derin Tarama</string>
+    <string name="deep_scan_desc">Küçük resimler, önbellekler, gizli klasörler ve uygulama verileri</string>
+    <string name="root_scan">Tam Tarama (Root)</string>
+    <string name="root_scan_desc">Maksimum kurtarma için derin dosya sistemi analizi</string>
+    <string name="root_required">Root\'lu cihaz gerektirir</string>
+    <string name="root_not_available">Bu cihazda root erişimi mevcut değil</string>
+    <string name="premium_required_for_recovery">Derin taramadan dosya kurtarmak için Premium gerekli</string>
+    <string name="premium_required_for_root">Root tarama için Premium gerekli</string>
+
+    <!-- Recovery Sources -->
+    <string name="source_trash">Çöp Kutusu</string>
+    <string name="source_thumbnail">Küçük Resim</string>
+    <string name="source_cache">Önbellek</string>
+    <string name="source_hidden">Gizli Klasör</string>
+    <string name="source_root">Root Tarama</string>
+
+    <!-- Scan Stats -->
+    <string name="scan_stats">%2$d kaynaktan %1$d dosya bulundu</string>
+    <string name="scanning_thumbnails">Küçük resimler taranıyor…</string>
+    <string name="scanning_caches">Uygulama önbellekleri taranıyor…</string>
+    <string name="scanning_hidden">Gizli klasörler taranıyor…</string>
+    <string name="scanning_root">Root tarama devam ediyor…</string>
+    <string name="device_rooted">Root Algılandı</string>
+    <string name="device_not_rooted">Root Yok</string>
+    <string name="files_found_count">dosya bulundu</string>
+    <string name="recovery_warning_android11">Android 11+ doğrudan dosya erişimini kısıtlar. Kurtarma; çöp kutusu, küçük resimler, önbellekler ve uygulama verileri ile sınırlıdır. Kalıcı olarak silinen dosyalar root erişimi olmadan tam olarak geri yüklenemez.</string>
+    <string name="recovery_warning_android10">Android 10 sınırlı dosya erişimine sahiptir (Scoped Storage). Bazı silinen dosyalar tespit edilemeyebilir. Sonuçlar dosyanın nasıl silindiğine bağlıdır.</string>
+    <string name="recovery_quality_note">Bazı dosyalar düşük kaliteli küçük resimler veya önbellek sürümleri olabilir. Tam çözünürlüklü orijinaller Android 11+ sürümlerinde kurtarılamayabilir.</string>
+
+    <!-- Adware Detection -->
+    <string name="adware_title">Reklam Tehdidi Taraması</string>
+    <string name="adware_card_title">Reklam Tehdidi Tespiti</string>
+    <string name="adware_card_subtitle">Şüpheli reklam davranışı olan uygulamaları tespit et</string>
+    <string name="adware_found">%d şüpheli uygulama bulundu</string>
+    <string name="adware_none_found">Şüpheli uygulama tespit edilmedi</string>
+    <string name="adware_score">Şüphe: %%%d</string>
+    <string name="adware_overlay_ads">Diğer uygulamaların üzerinde reklam gösterebilir (ekran yerleşimi izni kullanıyor)</string>
+    <string name="adware_auto_start">Cihaz açıldığında otomatik başlıyor, internet erişimi ve yerleşim özelliği var</string>
+    <string name="adware_known_sdk">Bilinen agresif reklam SDK\'sı içeriyor</string>
+    <string name="adware_aggressive_bg">Agresif arka plan etkinlik kalıpları gösteriyor</string>
+    <string name="adware_install_apps">Sessizce başka uygulamalar yükleyebilir (yükleme başına ödeme davranışı)</string>
+    <string name="adware_known_package">Bilinen reklam virüsü uygulama kalıbıyla eşleşiyor</string>
+    <string name="adware_suspicious_combo">Şüpheli izin kombinasyonu tespit edildi</string>
+    <string name="adware_what_to_do">Ne yapabilirsiniz?</string>
+    <string name="adware_tip_uninstall">İhtiyacınız yoksa uygulamayı kaldırın</string>
+    <string name="adware_tip_overlay">Ayarlar → Uygulamalar\'dan yerleşim iznini kaldırın</string>
+    <string name="adware_tip_background">Pil ayarlarından arka plan etkinliğini kısıtlayın</string>
+    <string name="adware_scanning">Reklam tehditleri taranıyor…</string>
+    <string name="adware_highly_suspicious">Yüksek Şüpheli</string>
+    <string name="adware_suspicious">Şüpheli</string>
+    <string name="uninstall">Kaldır</string>
+    <string name="app_settings">Uygulama Ayarları</string>
+
+    <!-- Premium Subscription -->
+    <string name="premium_title">TrustGuard Premium</string>
+    <string name="premium_headline">Tam Korumayı Aç</string>
+    <string name="premium_subtitle">Sınırsız dosya kurtarma, derin tarama, root erişimi ve daha fazlası Premium ile.</string>
+    <string name="premium_subscribe">Premium\'a Abone Ol</string>
+    <string name="premium_restore">Satın Almaları Geri Yükle</string>
+    <string name="premium_per_year">yıl</string>
+    <string name="premium_loading_price">Yükleniyor…</string>
+    <string name="premium_price_from_store">Fiyat Play Store\'dan alınıyor</string>
+    <string name="premium_active">Premium Aktif</string>
+    <string name="premium_active_desc">Tüm premium özelliklere erişiminiz var. Desteğiniz için teşekkür ederiz!</string>
+    <string name="premium_feature_recovery">Sınırsız Dosya Kurtarma</string>
+    <string name="premium_feature_recovery_desc">Sınırsız silinen dosya kurtarma (ücretsiz sürüm: 3 dosya)</string>
+    <string name="premium_feature_deep_scan">Derin Tarama Kurtarma</string>
+    <string name="premium_feature_deep_scan_desc">Küçük resimler, önbellekler ve gizli klasörlerden dosya kurtarma</string>
+    <string name="premium_feature_root">Root Tam Tarama</string>
+    <string name="premium_feature_root_desc">Root\'lu cihazlarda tam dosya sistemi taraması</string>
+    <string name="premium_feature_adware">Gelişmiş Tehdit Tespiti</string>
+    <string name="premium_feature_adware_desc">Öncelikli reklam tehdidi taraması ve gerçek zamanlı izleme</string>
+    <string name="premium_feature_blocklist">Özel Engel Listeleri</string>
+    <string name="premium_feature_blocklist_desc">Reklam engelleme için kendi özel alan adı listelerinizi ekleyin</string>
+    <string name="premium_feature_optimize">Cihaz Optimizasyonu</string>
+    <string name="premium_feature_optimize_desc">Çöp dosyaları, kopyaları, uygulama önbelleklerini temizle ve depolama alanı aç</string>
+    <string name="premium_legal">Abonelik, mevcut dönemin bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir. Aboneliğinizi Google Play Store ayarlarından yönetebilir veya iptal edebilirsiniz. Abone olarak Kullanım Şartları ve Gizlilik Politikası\'nı kabul etmiş olursunuz.</string>
+    <string name="premium_card_title">Premium\'a Geç</string>
+    <string name="premium_card_subtitle">Sınırsız kurtarma &amp; gelişmiş özellikleri aç</string>
+
+    <!-- Optimization Tools -->
+    <string name="optimize_title">Optimizasyon</string>
+    <string name="optimize_card_title">Cihaz Optimizasyonu</string>
+    <string name="optimize_card_subtitle">Çöp temizle, kopyaları bul ve alan aç</string>
+    <string name="optimize_tab_junk">Çöp</string>
+    <string name="optimize_tab_duplicates">Kopyalar</string>
+    <string name="optimize_tab_large">Büyük Dosyalar</string>
+    <string name="optimize_tab_cache">Uygulama Önbelleği</string>
+    <string name="optimize_tab_email">E-posta</string>
+    <string name="optimize_scan_now">Şimdi Tara</string>
+    <string name="optimize_scanning">Taranıyor…</string>
+    <string name="optimize_cleaned">öğe temizlendi</string>
+    <string name="optimize_files">dosya</string>
+    <string name="optimize_copies">kopya</string>
+    <string name="optimize_clean_all">Tümünü Temizle</string>
+    <string name="optimize_premium_clean">Temizlemek için Premium\'a Yükselt</string>
+    <string name="optimize_premium_message">Temizleme Premium abonelik gerektirir. Tarama ücretsizdir!</string>
+    <string name="optimize_delete_selected">Seçilenleri Sil</string>
+    <string name="optimize_delete_duplicates">Kopyaları Sil (İlkini Koru)</string>
+    <string name="optimize_clean_email">E-posta Önbelleğini Temizle</string>
+
+    <!-- Junk -->
+    <string name="optimize_junk_title">Sistem Temizliği</string>
+    <string name="optimize_junk_desc">Geçici dosyalar, eski APK\'lar, küçük resim önbellekleri ve boş klasörleri bul</string>
+    <string name="optimize_junk_found">Çöp veri bulundu</string>
+    <string name="optimize_no_junk">Cihazınız temiz!</string>
+    <string name="optimize_cat_temp">Geçici Dosyalar</string>
+    <string name="optimize_cat_apk">İndirilen APK\'lar</string>
+    <string name="optimize_cat_thumbs">Küçük Resim Önbelleği</string>
+    <string name="optimize_cat_system">Sistem Önbelleği</string>
+    <string name="optimize_cat_empty">Boş Klasörler</string>
+
+    <!-- Duplicates -->
+    <string name="optimize_dup_title">Aynı Fotoğraflar</string>
+    <string name="optimize_dup_desc">Depolama alanı kaplayan aynı fotoğrafları bul</string>
+    <string name="optimize_dup_found">%d kopya grubu bulundu</string>
+    <string name="optimize_no_duplicates">Aynı fotoğraf bulunamadı</string>
+
+    <!-- Large Files -->
+    <string name="optimize_large_title">Büyük Dosyalar</string>
+    <string name="optimize_large_desc">İhtiyacınız olmayabilecek 100 MB\'den büyük dosyaları bul</string>
+    <string name="optimize_large_found">Büyük dosyalar bulundu</string>
+    <string name="optimize_no_large">Büyük dosya bulunamadı</string>
+
+    <!-- App Cache -->
+    <string name="optimize_cache_title">Uygulama Önbelleği</string>
+    <string name="optimize_cache_desc">Her uygulamanın ne kadar önbellek kullandığını gör</string>
+    <string name="optimize_cache_total">%d uygulamadan önbellek</string>
+    <string name="optimize_cache_hint">İpucu: Uygulama önbelleklerini Ayarlar → Uygulamalar\'dan tek tek temizleyebilirsiniz</string>
+    <string name="optimize_no_cache">Önemli uygulama önbelleği bulunamadı</string>
+
+    <!-- Email -->
+    <string name="optimize_email_title">E-posta Önbelleği</string>
+    <string name="optimize_email_desc">Önbelleklenmiş e-posta ekleri ve verilerini bul</string>
+    <string name="optimize_email_found">E-posta önbelleği bulundu</string>
+    <string name="optimize_no_email">E-posta önbelleği bulunamadı</string>
+
+    <!-- Trusted App Transparency -->
+    <string name="transparency_title">Geliştirici Şeffaflığı</string>
+    <string name="transparency_developer">Geliştirici</string>
+    <string name="transparency_privacy">Gizlilik Garantisi</string>
+    <string name="transparency_permissions">Bu İzinler Neden İsteniyor?</string>
+    <string name="transparency_network">Ağ Bağlantıları</string>
+    <string name="transparency_network_host">Sunucu</string>
+    <string name="transparency_network_purpose">Amaç</string>
+    <string name="transparency_network_data">Aktarılan Veri</string>
+    <string name="transparency_data_policy">Veri Politikası</string>
+    <string name="transparency_verified">TrustGuard Tarafından Doğrulandı</string>
+    <string name="transparency_badge">Bu uygulama güvenilir bir geliştirici tarafından geliştirilmiştir. Tüm izin kullanımları doğrulanmıştır.</string>
+    <string name="transparency_no_external">Hiçbir veri dış sunuculara gönderilmez</string>
+
+    <!-- App Activity Tracking -->
+    <string name="activity_title">Aktivite (24 saat)</string>
+    <string name="activity_foreground">Ön Plan</string>
+    <string name="activity_background">Arka Plan</string>
+    <string name="activity_last_used">Son Kullanım</string>
+    <string name="activity_network">Ağ Kullanımı</string>
+    <string name="activity_sent">Gönderilen</string>
+    <string name="activity_received">Alınan</string>
+    <string name="activity_total_data">Toplam Veri</string>
+    <string name="activity_privacy">Gizlilik Erişimleri</string>
+    <string name="activity_camera">Kamera</string>
+    <string name="activity_microphone">Mikrofon</string>
+    <string name="activity_location">Konum</string>
+    <string name="activity_times_accessed">%d kez erişildi</string>
+    <string name="activity_last_access">Son: %s</string>
+    <string name="activity_no_access">Erişim tespit edilmedi</string>
+    <string name="activity_suspicious_bg">⚠ Aşırı arka plan etkinliği tespit edildi</string>
+    <string name="activity_no_permission">Kullanım erişimi izni gerekli</string>
+    <string name="activity_grant_permission">Ayarlardan İzin Ver</string>
+    <string name="activity_never">Hiç</string>
+
+    <!-- New Dashboard -->
+    <string name="dashboard_greeting_morning">Günaydın</string>
+    <string name="dashboard_greeting_afternoon">İyi Günler</string>
+    <string name="dashboard_greeting_evening">İyi Akşamlar</string>
+    <string name="dashboard_device_status">Cihaz güvenlik durumunuz</string>
+    <string name="dashboard_section_security">Güvenlik Araçları</string>
+    <string name="dashboard_section_optimization">Optimizasyon</string>
+    <string name="dashboard_section_advanced">Gelişmiş Araçlar</string>
+    <string name="dashboard_section_pro_tools">Pro Araçlar</string>
+    <string name="dashboard_pro_badge">PRO</string>
+    <string name="dashboard_quick_actions">Hızlı İşlemler</string>
+    <string name="dashboard_security_summary">Güvenlik Özeti</string>
+
+    <!-- Wi-Fi Security Scanner -->
+    <string name="wifi_title">Wi-Fi Güvenliği</string>
+    <string name="wifi_card_title">Wi-Fi Güvenliği</string>
+    <string name="wifi_card_subtitle">Ağ güvenliğinizi kontrol edin</string>
+    <string name="wifi_scanning">Ağ güvenliği analiz ediliyor…</string>
+    <string name="wifi_not_connected">Herhangi bir Wi-Fi ağına bağlı değil</string>
+    <string name="wifi_network_name">Ağ Adı</string>
+    <string name="wifi_security_type">Güvenlik Tipi</string>
+    <string name="wifi_signal_strength">Sinyal Gücü</string>
+    <string name="wifi_frequency">Frekans</string>
+    <string name="wifi_ip_address">IP Adresi</string>
+    <string name="wifi_gateway">Ağ Geçidi</string>
+    <string name="wifi_dns">DNS Sunucusu</string>
+    <string name="wifi_speed">Bağlantı Hızı</string>
+    <string name="wifi_secure">Güvenli Ağ</string>
+    <string name="wifi_warning">Güvenlik Uyarısı</string>
+    <string name="wifi_danger">Güvensiz Ağ</string>
+    <string name="wifi_open_network">Açık ağ — şifreleme yok. Verileriniz ele geçirilebilir.</string>
+    <string name="wifi_wep_network">WEP şifreleme eski ve kolayca kırılabilir. Yükseltme düşünün.</string>
+    <string name="wifi_wpa_network">WPA şifreleme tespit edildi. Daha iyi güvenlik için WPA2 veya WPA3 önerilir.</string>
+    <string name="wifi_wpa2_network">WPA2 şifreleme verilerinizi aktarım sırasında korur. Ancak şifreleme tek başına tam ağ güvenliği sağlamaz.</string>
+    <string name="wifi_wpa3_network">WPA3 mevcut en güçlü Wi-Fi şifrelemesini sağlar. Ağ seviyesi riskler yine de geçerli olabilir — aşağıya bakın.</string>
+    <string name="wifi_unknown_security">Güvenlik tipi belirlenemedi. Detaylı analiz için konum servislerinin etkin olması gerekebilir.</string>
+    <string name="wifi_encryption_strong">Güçlü Şifreleme</string>
+    <string name="wifi_encryption_weak">Zayıf Şifreleme</string>
+    <string name="wifi_encryption_none">Şifreleme Yok</string>
+    <string name="wifi_network_risks_title">Ağ Seviyesi Riskler</string>
+    <string name="wifi_network_risks_body">Güçlü şifreleme olsa bile, bağlantınız şu saldırılara karşı savunmasız olabilir:</string>
+    <string name="wifi_risk_dns_hijack">DNS Kaçırma — Saldırgan web trafiğinizi kötü amaçlı sitelere yönlendirir</string>
+    <string name="wifi_risk_mitm">Ortadaki Adam (MITM) — Saldırgan sizinle yönlendirici arasındaki iletişimi yakalar</string>
+    <string name="wifi_risk_rogue_ap">Sahte Erişim Noktası — Güvenilir bir ağı taklit eden sahte Wi-Fi ağı</string>
+    <string name="wifi_tip_vpn">Herkese açık ağlarda VPN kullanın</string>
+    <string name="wifi_tip_https">Sadece HTTPS web sitelerini ziyaret edin</string>
+    <string name="wifi_tip_auto">Açık ağlara otomatik bağlanmayı devre dışı bırakın</string>
+    <string name="wifi_tip_dns">Ekstra koruma için şifreli DNS (DNS-over-HTTPS) kullanın</string>
+    <string name="wifi_security_tips">Güvenlik İpuçları</string>
+    <string name="wifi_signal_excellent">Mükemmel</string>
+    <string name="wifi_signal_good">İyi</string>
+    <string name="wifi_signal_fair">Orta</string>
+    <string name="wifi_signal_weak">Zayıf</string>
+
+    <!-- Battery Analyzer -->
+    <string name="battery_title">Pil Sağlığı</string>
+    <string name="battery_card_title">Pil Sağlığı</string>
+    <string name="battery_card_subtitle">Pil tüketimini analiz et</string>
+    <string name="battery_level">Pil Seviyesi</string>
+    <string name="battery_status">Durum</string>
+    <string name="battery_temperature">Sıcaklık</string>
+    <string name="battery_voltage">Voltaj</string>
+    <string name="battery_technology">Teknoloji</string>
+    <string name="battery_health">Sağlık</string>
+    <string name="battery_charging">Şarj Oluyor</string>
+    <string name="battery_discharging">Şarj Azalıyor</string>
+    <string name="battery_full">Dolu</string>
+    <string name="battery_not_charging">Şarj Olmuyor</string>
+    <string name="battery_health_good">İyi</string>
+    <string name="battery_health_overheat">Aşırı Isınma</string>
+    <string name="battery_health_dead">Ölü</string>
+    <string name="battery_health_unknown">Bilinmiyor</string>
+    <string name="battery_top_drainers">En Çok Pil Tüketenler</string>
+    <string name="battery_usage_percent">%s kullanım</string>
+    <string name="battery_tips">Pil İpuçları</string>
+    <string name="battery_tip_brightness">Ekran parlaklığını düşürün</string>
+    <string name="battery_tip_background">Arka plan uygulamalarını kısıtlayın</string>
+    <string name="battery_tip_location">Gerekmediğinde konumu kapatın</string>
+    <string name="battery_tip_sync">Senkronizasyon sıklığını azaltın</string>
+    <string name="battery_scanning">Pil kullanımı analiz ediliyor…</string>
+
+    <!-- Storage Analyzer -->
+    <string name="storage_title">Depolama Analizi</string>
+    <string name="storage_card_title">Depolama Analizi</string>
+    <string name="storage_card_subtitle">Depolama kullanımını görselleştir</string>
+    <string name="storage_total">Toplam Depolama</string>
+    <string name="storage_used">Kullanılan</string>
+    <string name="storage_free">Kullanılabilir</string>
+    <string name="storage_apps">Uygulamalar</string>
+    <string name="storage_images">Resimler</string>
+    <string name="storage_videos">Videolar</string>
+    <string name="storage_audio">Ses</string>
+    <string name="storage_documents">Belgeler</string>
+    <string name="storage_other">Diğer</string>
+    <string name="storage_system">Sistem</string>
+    <string name="storage_scanning">Depolama analiz ediliyor…</string>
+
+    <!-- App Integrity -->
+    <string name="integrity_title">Uygulama Bütünlüğü</string>
+    <string name="integrity_card_title">Uygulama Bütünlüğü</string>
+    <string name="integrity_card_subtitle">Uygulama imzalarını doğrula</string>
+    <string name="integrity_verified">Doğrulandı</string>
+    <string name="integrity_warning">Uyarı</string>
+    <string name="integrity_play_store">Play Store</string>
+    <string name="integrity_sideloaded">Dışarıdan Yüklendi</string>
+    <string name="integrity_system">Sistem Uygulaması</string>
+    <string name="integrity_unknown_source">Bilinmeyen Kaynak</string>
+    <string name="integrity_scanning">Uygulama bütünlüğü kontrol ediliyor…</string>
+    <string name="integrity_all_safe">Tüm uygulamalar doğrulandı</string>
+    <string name="integrity_sideloaded_count">%d dışarıdan yüklenmiş uygulama tespit edildi</string>
+    <string name="integrity_desc">Play Store dışından yüklenen uygulamalar güvenlik riski oluşturabilir</string>
+
+    <!-- Network Monitor -->
+    <string name="network_title">Ağ Monitörü</string>
+    <string name="network_card_title">Ağ Monitörü</string>
+    <string name="network_card_subtitle">Gerçek zamanlı trafik analizi</string>
+    <string name="network_total_sent">Toplam Gönderilen</string>
+    <string name="network_total_received">Toplam Alınan</string>
+    <string name="network_top_consumers">En Çok Veri Kullananlar</string>
+    <string name="network_mobile_data">Mobil Veri</string>
+    <string name="network_wifi_data">Wi-Fi Verisi</string>
+    <string name="network_scanning">Ağ kullanımı analiz ediliyor…</string>
+
+    <!-- Trust Messaging for Premium -->
+    <string name="trust_headline">Bağımsız Gizliliği Destekleyin</string>
+    <string name="trust_message">TrustEdge Labs verilerinizi satmaz, rahatsız edici reklamlar göstermez veya kişisel bilgilerinizden gelir elde etmez. Daha güçlü, reklamsız gizlilik araçları geliştirmek için yalnızca sizin gibi kullanıcıların desteğine güveniyoruz. Aboneliğiniz doğrudan herkes için daha iyi koruma sağlamaya yatırılır.</string>
+    <string name="trust_badge_no_ads">Asla Reklam Yok</string>
+    <string name="trust_badge_no_data_sale">Sıfır Veri Satışı</string>
+    <string name="trust_badge_local">%%%100 Cihaz Üzerinde</string>
+    <string name="trust_badge_independent">Bağımsız Geliştirici</string>
+    <string name="premium_why_pay">Neden Pro?</string>
+    <string name="premium_trust_title">Gizliliğiniz, Misyonumuz</string>
+    <string name="premium_community">Gizliliğini koruyan %d+ kullanıcıya katılın</string>
+
+    <!-- Pro-only features messaging -->
+    <string name="pro_feature_locked">Pro Özellik</string>
+    <string name="pro_feature_unlock_hint">TrustGuard Pro ile kullanılabilir</string>
+    <string name="pro_feature_discover">Pro\'nun neler açtığını keşfedin</string>
+
+    <!-- Premium screen redesigned -->
+    <string name="premium_section_free">Ücretsiz Dahil</string>
+    <string name="premium_section_pro">Pro\'ya Özel</string>
+    <string name="premium_free_feature_scan">İzin Analizi</string>
+    <string name="premium_free_feature_vpn">Reklam &amp; Takipçi Engelleme</string>
+    <string name="premium_free_feature_wifi">Wi-Fi Güvenlik Tarayıcısı</string>
+    <string name="premium_free_feature_battery">Pil Sağlığı Monitörü</string>
+    <string name="premium_free_feature_storage">Depolama Analizörü</string>
+    <string name="premium_free_feature_basic_recovery">Temel Dosya Kurtarma (3 dosya)</string>
+    <string name="premium_pro_feature_unlimited_recovery">Sınırsız Dosya Kurtarma</string>
+    <string name="premium_pro_feature_deep_scan">Derin &amp; Root Tarama</string>
+    <string name="premium_pro_feature_network_monitor">Gelişmiş Ağ Monitörü</string>
+    <string name="premium_pro_feature_integrity">Uygulama Bütünlük Kontrolü</string>
+    <string name="premium_pro_feature_custom_blocklist">Özel Engel Listeleri</string>
+    <string name="premium_pro_feature_advanced_clean">Gelişmiş Temizleme Araçları</string>
+    <string name="premium_pro_feature_priority">Öncelikli Güncellemeler</string>
+    <string name="premium_pro_feature_export">Güvenlik Raporu Dışa Aktarma</string>
+
+    <!-- Pro Dashboard extras -->
+    <string name="pro_dashboard_realtime">Gerçek Zamanlı İzleme</string>
+    <string name="pro_dashboard_threats_blocked">Engellenen Tehditler</string>
+    <string name="pro_dashboard_data_saved">Tasarruf Edilen Veri</string>
+    <string name="pro_dashboard_security_events">Güvenlik Olayları (24 saat)</string>
+
+    <!-- Family Shield (Pro) -->
+    <string name="family_shield_title">Aile Kalkanı</string>
+    <string name="family_shield_subtitle">Çocuklarınızı zararlı içeriklerden, reklam virüslerinden ve riskli uygulamalardan koruyun</string>
+    <string name="family_shield_scenario_title">Tanıdık Geliyor mu?</string>
+    <string name="family_shield_scenario">Çocuğunuz oyun oynarken aniden bir reklama tıklıyor. Dakikalar sonra telefona garip uygulamalar yükleniyor, bildirimler yağmaya başlıyor ve telefon yavaşlıyor. Ne yüklendiğini veya hangi verilerin paylaşıldığını bilmiyorsunuz.</string>
+    <string name="family_shield_solution">Aile Kalkanı ile TrustGuard çocuğunuzun cihazını gerçek zamanlı izler ve tehditler sorun olmadan önce sizi uyarır.</string>
+    <string name="family_shield_feature_monitor">Gerçek Zamanlı Uygulama İzleme</string>
+    <string name="family_shield_feature_monitor_desc">Riskli uygulamalar yüklendiğinde bildirim alın</string>
+    <string name="family_shield_feature_adblock">Gelişmiş Reklam Koruması</string>
+    <string name="family_shield_feature_adblock_desc">Oyun içi rahatsız edici reklamları ve açılır pencereleri engelleyin</string>
+    <string name="family_shield_feature_scan">Otomatik Tehdit Taraması</string>
+    <string name="family_shield_feature_scan_desc">Yeni tehditlere karşı otomatik arka plan taraması</string>
+    <string name="family_shield_feature_report">Haftalık Güvenlik Raporları</string>
+    <string name="family_shield_feature_report_desc">Çocuğunuzun hangi uygulamaları kullandığını ve hangi risklerin engellendiğini görün</string>
+
+    <!-- Daily Limits -->
+    <string name="daily_limit_title">Günlük Limit Doldu</string>
+    <string name="daily_limit_message">Ücretsiz sürüm günde 1 tam tarama içerir. Sınırsız tarama ve gerçek zamanlı arka plan koruması için Pro\'ya yükseltin.</string>
+    <string name="daily_limit_scans_left">Bugün %d tarama hakkı kaldı</string>
+    <string name="daily_limit_reset">Gece yarısı sıfırlanır</string>
+    <string name="daily_limit_upgrade">Sınırsızı Aç</string>
+
+    <!-- Premium redesigned V2 -->
+    <string name="premium_headline_v2">Siz ve Aileniz İçin Tam Koruma</string>
+    <string name="premium_subtitle_v2">Temel güvenliğin ötesine geçin. Çocuklarınızı koruyun, gerçek zamanlı izleme alın ve TrustGuard\'ın tüm gücünü açın.</string>
+    <string name="premium_pro_feature_family">Aile Kalkanı Modu</string>
+    <string name="premium_pro_feature_family_desc">Çocuklarınızın cihazları için gerçek zamanlı koruma</string>
+    <string name="premium_pro_feature_realtime">Gerçek Zamanlı Arka Plan Koruması</string>
+    <string name="premium_pro_feature_realtime_desc">Otomatik tarama — manuel işlem gerekmez</string>
+    <string name="premium_pro_feature_unlimited_scan">Sınırsız Günlük Tarama</string>
+    <string name="premium_pro_feature_unlimited_scan_desc">Ücretsiz: günde 1 tarama — Pro: istediğin zaman</string>
+    <string name="premium_pro_feature_alerts">Anlık Tehdit Uyarıları</string>
+    <string name="premium_pro_feature_alerts_desc">Riskli uygulama yüklendiği anda bildirim alın</string>
+
+    <!-- Family Shield Feature -->
+    <string name="fs_title">Aile Kalkanı</string>
+    <string name="fs_card_title">Aile Kalkanı</string>
+    <string name="fs_card_subtitle">Ebeveyn kontrolleri ve çocuk koruması</string>
+    <string name="fs_pin_setup_title">Ebeveyn PIN\'i Belirle</string>
+    <string name="fs_pin_setup_desc">Aile Kalkanı ayarlarını korumak için 4–6 haneli bir PIN oluşturun. Yalnızca siz korumayı değiştirebilir veya devre dışı bırakabilirsiniz.</string>
+    <string name="fs_pin_label">PIN</string>
+    <string name="fs_pin_confirm">PIN Onayı</string>
+    <string name="fs_pin_set_button">PIN Belirle</string>
+    <string name="fs_pin_enter_title">Ebeveyn PIN\'ini Girin</string>
+    <string name="fs_pin_enter_desc">Aile Kalkanı ayarlarına erişmek için PIN\'inizi girin.</string>
+    <string name="fs_pin_unlock">Kilidi Aç</string>
+    <string name="fs_setup_title">Aile Kalkanı Kurulumu</string>
+    <string name="fs_setup_desc">Korumayı etkinleştirmek için çocuğunuzun bilgilerini girin.</string>
+    <string name="fs_child_name">Çocuğun Adı</string>
+    <string name="fs_child_age">Çocuğun Yaşı</string>
+    <string name="fs_enable_button">Aile Kalkanını Etkinleştir</string>
+    <string name="fs_active_title">Aile Kalkanı Aktif</string>
+    <string name="fs_protecting">%s korunuyor</string>
+    <string name="fs_blocked_apps">Engellenen Uygulamalar</string>
+    <string name="fs_today_usage">Bugünkü Kullanım</string>
+    <string name="fs_daily_limit_label">Günlük Limit</string>
+    <string name="fs_top_apps_today">Bugün En Çok Kullanılanlar</string>
+    <string name="fs_recent_activity">Son Aktiviteler</string>
+    <string name="fs_clear_log">Günlüğü Temizle</string>
+    <string name="fs_parent_panel">Ebeveyn Paneli</string>
+    <string name="fs_disable_shield">Aile Kalkanını Devre Dışı Bırak</string>
+    <string name="fs_daily_limit_section">Günlük Süre Limiti</string>
+    <string name="fs_protection_section">Koruma Ayarları</string>
+    <string name="fs_age_filter">Yaşa Göre Filtreleme</string>
+    <string name="fs_age_filter_desc">Çocuğunuzun yaşına uygun olmayan uygulamaları otomatik işaretle (arkadaşlık, kumar vb.)</string>
+    <string name="fs_adware_autoblock">Reklam Yazılımını Otomatik Engelle</string>
+    <string name="fs_adware_autoblock_desc">Reklam yazılımı tespit edilen yeni uygulamaları otomatik olarak engelle</string>
+    <string name="fs_install_alerts">Yeni Yükleme Uyarıları</string>
+    <string name="fs_install_alerts_desc">Cihaza yeni uygulama yüklendiğinde bildirim al</string>
+    <string name="fs_blocked_apps_section">Uygulama Engelleme</string>
+    <string name="fs_no_apps">Engellenecek uygulama bulunamadı</string>
+    <string name="fs_unlimited">Sınırsız</string>
+    <string name="fs_minutes">dk</string>
+    <string name="fs_daily_limit_hint">Sınırsız ekran süresi için 0 olarak ayarlayın</string>
+    <string name="fs_notification_channel">Aile Kalkanı Uyarıları</string>
+    <string name="fs_notification_channel_desc">Yeni uygulama yüklemeleri ve Aile Kalkanı olayları için bildirimler</string>
+    <string name="fs_new_app_alert_title">Yeni Uygulama Yüklendi</string>
+    <string name="fs_new_app_alert_body">%s bu cihaza yüklendi</string>
+    <string name="fs_new_app_alert_detail">%1$s (%2$s) yüklendi. İncelemek için Aile Kalkanını açın.</string>
+
+    <!-- Family Shield: Güvenlik Sorusu -->
+    <string name="fs_security_question_title">Güvenlik Sorusu (PIN kurtarma için)</string>
+    <string name="fs_security_q1">Annenizin kızlık soyadı nedir?</string>
+    <string name="fs_security_q2">İlk evcil hayvanınızın adı neydi?</string>
+    <string name="fs_security_q3">Hangi şehirde doğdunuz?</string>
+    <string name="fs_security_q4">En sevdiğiniz renk nedir?</string>
+    <string name="fs_security_q5">Çocukluk arkadaşınızın adı nedir?</string>
+    <string name="fs_security_answer">Cevabınız</string>
+    <string name="fs_forgot_pin">PIN\'imi Unuttum</string>
+    <string name="fs_forgot_pin_title">PIN Sıfırla</string>
+    <string name="fs_forgot_pin_desc">PIN\'inizi sıfırlamak için güvenlik sorusunu cevaplayın.</string>
+    <string name="fs_new_pin">Yeni PIN</string>
+    <string name="fs_reset_pin">PIN\'i Sıfırla</string>
+    <string name="fs_change_pin">PIN Değiştir</string>
+    <string name="fs_current_pin">Mevcut PIN</string>
+    <string name="fs_pin_section">PIN Güvenliği</string>
+
+    <!-- Family Shield: Çoklu Profil -->
+    <string name="fs_active_profile">Aktif Profil</string>
+    <string name="fs_switch_profile">Profil Değiştir</string>
+    <string name="fs_add_profile">Çocuk Profili Ekle</string>
+    <string name="fs_add_profile_confirm">Ekle</string>
+
+    <!-- Family Shield: Kullanım İzni -->
+    <string name="fs_usage_permission_title">Kullanım Erişimi Gerekli</string>
+    <string name="fs_usage_permission_desc">Uygulama kullanım takibi ve engelleme için Kullanım Erişimi iznini vermek üzere dokunun.</string>
+
+    <!-- Family Shield: Uygulama Engelleyici Servisi -->
+    <string name="fs_blocker_service_channel">Aile Kalkanı İzleyici</string>
+    <string name="fs_blocker_service_desc">Kısıtlı uygulamaları izleyen ve engelleyen arka plan servisi</string>
+    <string name="fs_blocker_notification_title">Aile Kalkanı Aktif</string>
+    <string name="fs_blocker_notification_text">Uygulama kullanımı izleniyor ve kısıtlamalar uygulanıyor</string>
+
+    <!-- Family Shield: Engellenen Uygulama Ekranı -->
+    <string name="fs_blocked_app_title">Uygulama Engellendi</string>
+    <string name="fs_blocked_app_message">%s Aile Kalkanı tarafından engellendi. Engeli kaldırmak için ebeveynine sor.</string>
+    <string name="fs_blocked_app_hint">Bu uygulama güvenliğin için ebeveynin tarafından kısıtlandı.</string>
+    <string name="fs_blocked_by_family_shield">Aile Kalkanı ile Korunuyor</string>
+    <string name="fs_go_home">Ana Ekrana Dön</string>
+
+    <!-- Screen Time Limit -->
+    <string name="fs_screen_time_exceeded_title">Ekran Süresi Limiti Doldu</string>
+    <string name="fs_screen_time_exceeded_message">Günlük ekran süresi limitin doldu. Lütfen bir mola ver.</string>
+    <string name="fs_screen_time_exceeded_hint">Ebeveynin güvenliğin için günlük kullanım limiti belirledi.</string>
+    <string name="fs_overlay_permission_required">Uygulama engellemenin çalışması için üzerine çizim izni gereklidir. Lütfen ayarlardan verin.</string>
+
+    <!-- Virus Scanner -->
+    <string name="virus_scan_title">Virüs Tarayıcı</string>
+    <string name="virus_scan_card_title">Virüs Tarayıcı</string>
+    <string name="virus_scan_card_subtitle">Zararlı yazılım ve tehditleri tara</string>
+    <string name="virus_scan_ready_title">Cihaz Güvenlik Taraması</string>
+    <string name="virus_scan_ready_desc">Zararlı yazılım, casus yazılım, truva atı, sahte uygulamalar ve sistem açıklarını kapsamlı olarak tarar. Tamamen çevrimdışı çalışır.</string>
+    <string name="virus_scan_start">Tam Tarama Başlat</string>
+    <string name="virus_scan_scanning">Taranıyor…</string>
+    <string name="virus_scan_phase_apps">Yüklü uygulamalar analiz ediliyor…</string>
+    <string name="virus_scan_phase_perms">İzin kalıpları kontrol ediliyor…</string>
+    <string name="virus_scan_phase_sigs">Uygulama imzaları doğrulanıyor…</string>
+    <string name="virus_scan_phase_system">Sistem güvenliği kontrol ediliyor…</string>
+    <string name="virus_scan_clean">Cihaz Temiz</string>
+    <string name="virus_scan_warnings">Uyarılar Bulundu</string>
+    <string name="virus_scan_threats">Tehditler Tespit Edildi!</string>
+    <string name="virus_scan_critical">Kritik Tehditler!</string>
+    <string name="virus_scan_summary">%1$d uygulama %2$.1f saniyede tarandı</string>
+    <string name="virus_scan_safe">Güvenli</string>
+    <string name="virus_scan_warning_count">Uyarılar</string>
+    <string name="virus_scan_threat_count">Tehditler</string>
+    <string name="virus_scan_threats_title">Tehditler</string>
+    <string name="virus_scan_warnings_title">Uyarılar</string>
+    <string name="virus_scan_system_security">Sistem Güvenliği</string>
+    <string name="virus_scan_uninstall">Uygulamayı Kaldır</string>
+    <string name="virus_severity_critical">Kritik</string>
+    <string name="virus_severity_high">Yüksek</string>
+    <string name="virus_severity_medium">Orta</string>
+    <string name="virus_severity_low">Düşük</string>
+    <string name="virus_type_malware">Bilinen Zararlı Yazılım</string>
+    <string name="virus_type_dangerous_perms">Tehlikeli İzinler</string>
+    <string name="virus_type_fake_app">Sahte Uygulama</string>
+    <string name="virus_type_sideloaded">Riskli Yan Yükleme</string>
+    <string name="virus_type_hidden">Gizli Uygulama</string>
+    <string name="virus_type_cert">Şüpheli Sertifika</string>
+    <string name="virus_type_trojan">Truva Atı Kalıbı</string>
+    <string name="virus_type_spyware">Casus Yazılım Kalıbı</string>
+    <string name="virus_type_ransomware">Fidye Yazılımı Kalıbı</string>
+    <string name="virus_type_miner">Kripto Madenci</string>
+    <string name="virus_type_banking">Bankacılık Truva Atı</string>
+    <string name="virus_system_usb">USB Hata Ayıklama</string>
+    <string name="virus_system_unknown_sources">Bilinmeyen Kaynaklar</string>
+    <string name="virus_system_dev_options">Geliştirici Seçenekleri</string>
+    <string name="virus_system_root">Root Erişimi</string>
+    <string name="virus_system_screen_lock">Ekran Kilidi</string>
+    <string name="virus_system_encryption">Cihaz Şifreleme</string>
+    <string name="virus_system_play_protect">Play Protect</string>
+
+    <!-- Screen Time Timer -->
+    <string name="fs_screen_time_channel">Ekran Süresi Zamanlayıcı</string>
+    <string name="fs_screen_time_channel_desc">Kalan ekran süresi geri sayımını gösterir</string>
+    <string name="fs_screen_time_notification_title">Ekran Süresi Aktif</string>
+    <string name="fs_remaining">kaldı</string>
+    <string name="fs_time_up_channel">Süre Doldu Alarmı</string>
+    <string name="fs_time_up_channel_desc">Ekran süresi dolduğunda alarm bildirimi</string>
+    <string name="fs_time_up_title">Süre Doldu!</string>
+    <string name="fs_time_up_text">İzin verilen ekran süren sona erdi. Lütfen cihazını bırak.</string>
+    <string name="fs_time_up_dismiss">Alarmı Kapat</string>
+    <string name="fs_timer_active">Zamanlayıcı aktif: %d dk kaldı</string>
+    <string name="fs_apply_timer">Uygula</string>
+    <string name="fs_stop_timer">Durdur</string>
+
+    <!-- Per-App Firewall -->
+    <string name="firewall_title">Uygulama Güvenlik Duvarı</string>
+    <string name="firewall_card_title">Uygulama Güvenlik Duvarı</string>
+    <string name="firewall_card_subtitle">Uygulamaların internet erişimini engelle</string>
+    <string name="firewall_toggle">Güvenlik Duvarı</string>
+    <string name="firewall_active">Güvenlik duvarı aktif — engelli uygulamalar internete erişemez</string>
+    <string name="firewall_inactive">Güvenlik duvarı kapalı</string>
+    <string name="firewall_info">Wi-Fi veya mobil veri ikonuna dokunarak o bağlantı türünü engelleyin. Kırmızı = engelli, yeşil = izinli. Güvenlik duvarının çalışması için VPN aktif olmalıdır.</string>
+    <string name="firewall_wifi">Wi-Fi</string>
+    <string name="firewall_mobile">Mobil</string>
+    <string name="firewall_blocked_apps">%d uygulama engelli</string>
+    <string name="firewall_no_rules">Güvenlik duvarı kuralı yok</string>
+    <string name="firewall_vpn_required">Güvenlik duvarının çalışması için VPN aktif olmalıdır. Önce ana ekrandan VPN korumasını etkinleştirin.</string>
+    <string name="firewall_apply_changes">Değişiklikleri Uygula (VPN Yeniden Başlat)</string>
+
+    <!-- Fake Identity Engine -->
+    <string name="fake_id_title">Sahte Kimlik</string>
+    <string name="fake_id_card_title">Sahte Kimlik</string>
+    <string name="fake_id_card_subtitle">Rastgele cihaz parmak izi oluştur</string>
+    <string name="fake_id_desc">Gerçek kimliğinizi korumak için sahte cihaz tanımlayıcıları oluşturun. Bunlar gizlilik araçları veya Xposed modülleri ile cihaz parmak izinizi değiştirmek için kullanılabilir.</string>
+    <string name="fake_id_generate">Kimlik Oluştur</string>
+    <string name="fake_id_regenerate">Yeni Kimlik Oluştur</string>
+    <string name="fake_id_clear">Kimliği Temizle</string>
+    <string name="fake_id_model">Cihaz Modeli</string>
+    <string name="fake_id_android_version">Android Sürümü</string>
+    <string name="fake_id_android_id">Android ID</string>
+    <string name="fake_id_imei">IMEI</string>
+    <string name="fake_id_mac">MAC Adresi</string>
+    <string name="fake_id_serial">Seri Numarası</string>
+    <string name="fake_id_fingerprint">Build Parmak İzi</string>
+    <string name="fake_id_disclaimer">Not: Oluşturulan kimlikler gizlilik araçları (Xposed, Magisk modülleri) ile kullanım içindir. TrustGuard root erişimi olmadan gerçek cihaz tanımlayıcılarınızı değiştirmez.</string>
+    <string name="fake_id_how_to_use">Nasıl Kullanılır</string>
+    <string name="fake_id_step1">1. Herhangi bir değerin yanındaki kopyala düğmesine dokunun</string>
+    <string name="fake_id_step2">2. Xposed modülünüzü (LSPosed) veya Magisk modül ayarlarını açın</string>
+    <string name="fake_id_step3">3. Değerleri ilgili alanlara yapıştırın</string>
+    <string name="fake_id_step4">4. Değişikliklerin geçerli olması için hedef uygulamayı yeniden başlatın</string>
+    <string name="fake_id_use_cases">Kullanım Alanları:</string>
+    <string name="fake_id_usecase1">• Uygulamaların gerçek cihaz kimliğinizi takip etmesini önleyin</string>
+    <string name="fake_id_usecase2">• Cihaz tabanlı yasakları veya kısıtlamaları aşın</string>
+    <string name="fake_id_usecase3">• Cihaz parmak izi takibine karşı korunun</string>
+    <string name="fake_id_usecase4">• Farklı uygulamalar için farklı kimlikler oluşturun</string>
+    <string name="fake_id_root_note">⚠ Bu değerleri gerçekten uygulamak için root erişimi (Magisk) ve bir cihaz sahteleyici modül gereklidir.</string>
+
+    <!-- Encrypted Vault -->
+    <string name="vault_title">Şifreli Kasa</string>
+    <string name="vault_card_title">Şifreli Kasa</string>
+    <string name="vault_card_subtitle">AES-256 şifreli dosya depolama</string>
+    <string name="vault_setup_title">Kasanızı Oluşturun</string>
+    <string name="vault_setup_desc">Dosyalarınızı AES-256 şifreleme ile korumak için bir şifre belirleyin.</string>
+    <string name="vault_unlock_title">Kasayı Aç</string>
+    <string name="vault_password">Şifre</string>
+    <string name="vault_confirm_password">Şifre Tekrar</string>
+    <string name="vault_create">Kasa Oluştur</string>
+    <string name="vault_unlock">Kilidi Aç</string>
+    <string name="vault_encrypting">Dosya şifreleniyor…</string>
+    <string name="vault_stats">Kasa Depolama</string>
+    <string name="vault_empty">Kasanız boş. Dosya eklemek için + düğmesine dokunun.</string>
+
+    <!-- Packet Sniffer -->
+    <string name="sniffer_title">Paket İzleyici</string>
+    <string name="sniffer_card_title">Paket İzleyici</string>
+    <string name="sniffer_card_subtitle">Uygulama ağ trafiğini izle</string>
+    <string name="sniffer_tab_traffic">Uygulama Trafiği</string>
+    <string name="sniffer_tab_summary">Özet</string>
+    <string name="sniffer_no_data">Trafik verisi bulunamadı</string>
+    <string name="sniffer_total_traffic">Trafik Özeti</string>
+    <string name="sniffer_uploaded">Yüklenen</string>
+    <string name="sniffer_downloaded">İndirilen</string>
+    <string name="sniffer_total">Toplam</string>
+    <string name="sniffer_tx_packets">Gönderilen Paket</string>
+    <string name="sniffer_rx_packets">Alınan Paket</string>
+    <string name="sniffer_apps_count">Trafiği olan uygulamalar</string>
+
+    <!-- Bloatware Remover -->
+    <string name="bloatware_title">Gereksiz Uygulama Temizleyici</string>
+    <string name="bloatware_card_title">Gereksiz Uygulama Temizleyici</string>
+    <string name="bloatware_card_subtitle">Önceden yüklü gereksiz uygulamaları tespit et</string>
+    <string name="bloatware_scanning">Gereksiz uygulamalar taranıyor…</string>
+    <string name="bloatware_found">%d gereksiz uygulama tespit edildi</string>
+    <string name="bloatware_space">%s depolama alanı kullanıyor</string>
+    <string name="bloatware_manage">Yönet</string>
+    <string name="bloatware_disabled">Devre Dışı</string>
+    <string name="bloatware_cat_carrier">Operatör</string>
+    <string name="bloatware_cat_oem">Üretici</string>
+    <string name="bloatware_cat_google">Google</string>
+    <string name="bloatware_cat_social">Sosyal Medya</string>
+    <string name="bloatware_cat_system">Sistem</string>
+    <string name="bloatware_root_note">Not: Sistem uygulamalarını tamamen kaldırmak root erişimi gerektirir. Uygulamaların çalışmasını engellemek için uygulama ayarları sayfasından devre dışı bırakabilirsiniz.</string>
+
+    <!-- Privacy Tools -->
+    <string name="privacy_title">Gizlilik Paneli</string>
+    <string name="privacy_card_title">Gizlilik Araçları</string>
+    <string name="privacy_card_subtitle">Pano koruması, izleyici haritası ve daha fazlası</string>
+    <string name="privacy_tab_guards">Gizlilik Korumaları</string>
+    <string name="privacy_tab_trackers">İzleyici Haritası</string>
+    <string name="privacy_clipboard_guard">Pano Koruması</string>
+    <string name="privacy_clipboard_desc">Pano verilerinize erişen uygulamaları izle</string>
+    <string name="privacy_camera_monitor">Kamera İzleyici</string>
+    <string name="privacy_camera_desc">%d uygulamanın kamera erişimi var</string>
+    <string name="privacy_mic_monitor">Mikrofon İzleyici</string>
+    <string name="privacy_mic_desc">%d uygulamanın mikrofon erişimi var</string>
+    <string name="privacy_permission_stats">İzin Özeti</string>
+    <string name="privacy_camera_apps">Kamera Erişimi</string>
+    <string name="privacy_mic_apps">Mikrofon Erişimi</string>
+    <string name="privacy_location_apps">Konum Erişimi</string>
+    <string name="privacy_no_trackers">Yüklü uygulamalarda izleyici tespit edilmedi</string>
+    <string name="privacy_tracker_info">Uygulamalar bilinen izleyici SDK\'ları, reklam kimlikleri ve izleme izinleri için analiz edilir.</string>
+    <string name="privacy_trackers_count">%d izleyici</string>
+    <string name="privacy_camera_apps_list">Kameraya Erişen Uygulamalar:</string>
+    <string name="privacy_mic_apps_list">Mikrofona Erişen Uygulamalar:</string>
+    <string name="privacy_location_apps_list">Konuma Erişen Uygulamalar:</string>
+    <string name="privacy_tracker_location">Konum İzleme</string>
+    <string name="privacy_tracker_fingerprint">Cihaz Parmak İzi Takibi</string>
+    <string name="privacy_tracker_adid">Reklam Kimliği Takibi</string>
+    <string name="privacy_tracker_account">Hesap Takibi</string>
+    <string name="privacy_tracker_admob">AdMob Reklam SDK\'sı</string>
+    <string name="privacy_tracker_facebook">Facebook SDK\'sı</string>
+    <string name="privacy_tracker_branch">Branch Analitik</string>
+    <string name="privacy_tracker_crashlytics">Çökme Raporlama</string>
+
+    <!-- Advanced Security -->
+    <string name="appsec_title">Gelişmiş Güvenlik</string>
+    <string name="appsec_card_title">Gelişmiş Güvenlik</string>
+    <string name="appsec_card_subtitle">APK analizi, ADB koruması ve daha fazlası</string>
+    <string name="appsec_tab_analysis">APK Analizi</string>
+    <string name="appsec_tab_device">Cihaz Güvenliği</string>
+    <string name="appsec_scanning">Uygulama güvenliği analiz ediliyor…</string>
+    <string name="appsec_summary">%d uygulama analiz edildi</string>
+    <string name="appsec_high_risk">%d yüksek riskli uygulama bulundu</string>
+    <string name="appsec_adb_status">USB Hata Ayıklama (ADB)</string>
+    <string name="appsec_adb_enabled">ADB etkin — cihazınız USB saldırılarına açık</string>
+    <string name="appsec_adb_disabled">ADB kapalı — güvenli</string>
+    <string name="appsec_dev_options">Geliştirici Seçenekleri</string>
+    <string name="appsec_dev_enabled">Geliştirici seçenekleri açık — bazı güvenlik özellikleri zayıflamış olabilir</string>
+    <string name="appsec_dev_disabled">Geliştirici seçenekleri kapalı — güvenli</string>
+    <string name="appsec_device_info">Bu kontroller cihazınızdaki olası saldırı vektörlerini tespit etmeye yardımcı olur. Kullanmadığınızda ADB ve geliştirici seçeneklerini kapatın.</string>
+    <string name="appsec_risk_high">Yüksek</string>
+    <string name="appsec_risk_medium">Orta</string>
+    <string name="appsec_risk_low">Düşük</string>
+    <string name="appsec_flag_debug">Hata Ayıklama</string>
+    <string name="appsec_flag_backup">Yedekleme Açık</string>
+    <string name="appsec_flag_cleartext">Şifresiz Trafik</string>
+    <string name="appsec_risky_perms">%d riskli izin</string>
+    <string name="appsec_perms_header">Tehlikeli İzinler:</string>
+    <string name="appsec_tap_detail">İzin detayları için dokun</string>
+
+    <!-- Family Shield Enhanced -->
+    <string name="fs_content_filter">İçerik Filtreleme</string>
+    <string name="fs_content_filter_desc">Çocuk güvenliği için uygulamaları kategoriye göre engelle</string>
+    <string name="fs_category_social">Sosyal Medya</string>
+    <string name="fs_category_dating">Flört Uygulamaları</string>
+    <string name="fs_category_gambling">Kumar</string>
+    <string name="fs_category_browser">Web Tarayıcıları</string>
+    <string name="fs_category_vpn">VPN Uygulamaları</string>
+    <string name="fs_weekly_report">Haftalık Kullanım Raporu</string>
+    <string name="fs_weekly_report_desc">Çocuğunuzun bu haftaki uygulama kullanım özeti</string>
+    <string name="fs_most_used">En Çok Kullanılan Uygulamalar</string>
+    <string name="fs_total_screen_time">Toplam Ekran Süresi</string>
+    <string name="fs_blocked_attempts">Engellenen Girişimler</string>
+    <string name="fs_location_tracking">Konum Paylaşımı</string>
+    <string name="fs_location_tracking_desc">Çocuğunuzun konumunu ebeveyn cihazıyla paylaşın (konum izni gerektirir)</string>
+    <string name="fs_safe_search">Güvenli Arama</string>
+    <string name="fs_safe_search_desc">DNS filtreleme ile desteklenen tarayıcılarda güvenli aramayı zorunlu kıl</string>
+
+</resources>

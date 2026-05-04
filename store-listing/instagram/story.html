@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: linear-gradient(180deg, #0a0f1a 0%, #0d1925 40%, #081018 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Top glow */
+  body::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(0,230,118,0.12) 0%, transparent 70%);
+  }
+
+  .container {
+    padding: 60px 55px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .header .shield {
+    font-size: 52px;
+    margin-bottom: 8px;
+  }
+
+  .header h1 {
+    font-size: 38px;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 800;
+  }
+
+  .header .sub {
+    font-size: 15px;
+    color: #00E676;
+    letter-spacing: 5px;
+    margin-top: 4px;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .section-title.red {
+    color: #FF1744;
+  }
+
+  .section-title.green {
+    color: #00E676;
+  }
+
+  /* Villain section */
+  .villain-section {
+    margin-bottom: 30px;
+  }
+
+  .villain-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .villain-header .emoji {
+    font-size: 70px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .villain-header .text {
+    font-size: 26px;
+    color: #FF1744;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  /* Bad items */
+  .bad-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    background: rgba(255, 23, 68, 0.06);
+    border: 1px solid rgba(255, 23, 68, 0.25);
+    border-radius: 16px;
+    transition: all 0.3s;
+  }
+
+  .bad-item .icon {
+    font-size: 36px;
+    flex-shrink: 0;
+  }
+
+  .bad-item .x-mark {
+    color: #FF1744;
+    font-size: 26px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .bad-item .text {
+    font-size: 24px;
+    color: #ccc;
+    line-height: 1.3;
+  }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+  }
+
+  .divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,23,68,0.15) 0%, rgba(0,230,118,0.15) 100%);
+    filter: blur(30px);
+  }
+
+  .divider .vs {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF1744 0%, #00E676 100%);
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Hero section */
+  .hero-section {
+    margin-bottom: 30px;
+  }
+
+  .hero-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-header .emoji {
+    font-size: 70px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .hero-header .text {
+    font-size: 26px;
+    color: #00E676;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  /* Good items */
+  .good-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    background: rgba(0, 230, 118, 0.06);
+    border: 1px solid rgba(0, 230, 118, 0.25);
+    border-radius: 16px;
+  }
+
+  .good-item .icon {
+    font-size: 36px;
+    flex-shrink: 0;
+  }
+
+  .good-item .check {
+    color: #00E676;
+    font-size: 28px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .good-item .text {
+    font-size: 24px;
+    color: #e0e0e0;
+    line-height: 1.3;
+  }
+
+  /* Bottom */
+  .bottom {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .bottom .tagline {
+    font-size: 34px;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .bottom .subtitle {
+    font-size: 20px;
+    color: #666;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .play-badge {
+    display: inline-block;
+    padding: 12px 36px;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .yakinda {
+    display: inline-block;
+    padding: 10px 40px;
+    background: linear-gradient(90deg, #00E676, #00C853);
+    border-radius: 25px;
+    color: #0d1f2d;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="shield">🛡️</div>
+      <h1>TRUSTGUARD</h1>
+      <div class="sub">by TrustEdge Labs</div>
+    </div>
+
+    <!-- Villain Section -->
+    <div class="villain-section">
+      <div class="villain-header">
+        <span class="emoji">🤡</span>
+        <div class="text">"Güvenlik" Uygulamaların<br>Sana Yaptıkları</div>
+      </div>
+
+      <div class="bad-item">
+        <span class="icon">📢</span>
+        <span class="x-mark">✕</span>
+        <span class="text">Koruyacağım deyip reklam yağmuruna tutuyor</span>
+      </div>
+      <div class="bad-item">
+        <span class="icon">📡</span>
+        <span class="x-mark">✕</span>
+        <span class="text">Verilerini dış sunuculara gönderiyor</span>
+      </div>
+      <div class="bad-item">
+        <span class="icon">🎤</span>
+        <span class="x-mark">✕</span>
+        <span class="text">Kamera, mikrofon, konum izni istiyor</span>
+      </div>
+      <div class="bad-item">
+        <span class="icon">👤</span>
+        <span class="x-mark">✕</span>
+        <span class="text">Hesap açmadan kullandırtmıyor</span>
+      </div>
+      <div class="bad-item">
+        <span class="icon">👁️</span>
+        <span class="x-mark">✕</span>
+        <span class="text">"Güvenlik" adı altında seni izliyor</span>
+      </div>
+    </div>
+
+    <!-- VS Divider -->
+    <div class="divider">
+      <div class="vs">VS</div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-header">
+        <span class="emoji">🛡️</span>
+        <div class="text">TrustGuard Farkı</div>
+      </div>
+
+      <div class="good-item">
+        <span class="icon">🚫</span>
+        <span class="check">✓</span>
+        <span class="text">Sıfır reklam — Hiçbir yerde görmezsin</span>
+      </div>
+      <div class="good-item">
+        <span class="icon">📱</span>
+        <span class="check">✓</span>
+        <span class="text">Tüm veriler cihazında kalır, dışarı çıkmaz</span>
+      </div>
+      <div class="good-item">
+        <span class="icon">🔒</span>
+        <span class="check">✓</span>
+        <span class="text">Gereksiz donanım izni istemiyor</span>
+      </div>
+      <div class="good-item">
+        <span class="icon">⚡</span>
+        <span class="check">✓</span>
+        <span class="text">Hesap yok, kayıt yok — Aç ve kullan</span>
+      </div>
+      <div class="good-item">
+        <span class="icon">💎</span>
+        <span class="check">✓</span>
+        <span class="text">Şeffaf, dürüst, kullanıcı odaklı</span>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="bottom">
+      <div class="tagline">Gerçek Güvenlik. Gerçek Gizlilik.</div>
+      <div class="subtitle">Reklamsız · Sunucusuz · Hesapsız</div>
+      <div class="play-badge">▶ Google Play'de</div>
+      <br><br>
+      <div class="yakinda">YAKINDA</div>
+    </div>
+
+  </div>
+</body>
+</html>

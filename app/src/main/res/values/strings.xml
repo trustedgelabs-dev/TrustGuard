@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">TrustGuard</string>
+    <string name="company_name">TrustEdge Labs</string>
+    <string name="by_company">by TrustEdge Labs</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Security Dashboard</string>
+    <string name="security_score">Privacy Score</string>
+    <string name="apps_scanned">%d apps analyzed</string>
+    <string name="top_risks">Most Permission Requests</string>
+    <string name="view_all">View All</string>
+    <string name="rescan">Rescan</string>
+
+    <!-- Traffic Light (permission sensitivity, NOT app judgment) -->
+    <string name="high_risk">Sensitive</string>
+    <string name="medium_risk">Moderate</string>
+    <string name="safe">Safe</string>
+    <string name="trusted">Trusted</string>
+
+    <!-- App List -->
+    <string name="app_list_title">All Apps</string>
+    <string name="search_apps">Search apps…</string>
+    <string name="filter_all">All</string>
+    <string name="show_system_apps">Show System Apps</string>
+    <string name="apps_count">%d apps</string>
+    <string name="back">Back</string>
+
+    <!-- App Card -->
+    <string name="permissions_count">%d permissions</string>
+    <string name="permissions_dangerous">%1$d permissions (%2$d sensitive)</string>
+    <string name="details">Details</string>
+
+    <!-- Detail Screen -->
+    <string name="detail_title">Permission Analysis</string>
+    <string name="total_permissions">Total Permissions</string>
+    <string name="dangerous">Sensitive</string>
+    <string name="risk_score">Permission Score</string>
+    <string name="permissions_header">Permissions (%d)</string>
+    <string name="no_permissions">No permissions requested</string>
+    <string name="open_settings">Open in Settings</string>
+    <string name="system_app">System App</string>
+    <string name="disclaimer">This analysis is based solely on the permissions requested by the app. A high permission count does not necessarily indicate malicious intent. Many permissions are required for legitimate app functionality.</string>
+
+    <!-- Scan -->
+    <string name="scanning">Scanning apps…</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="language">Language</string>
+    <string name="language_system">System Default</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_english">English</string>
+    <string name="about">About</string>
+    <string name="version">Version %s</string>
+    <string name="app_description">Privacy &amp; security assistant that analyzes app permissions, blocks trackers and recovers deleted files.</string>
+    <string name="general">General</string>
+    <string name="feedback_title">Feedback &amp; Contact</string>
+    <string name="feedback_description">Reach out for questions, suggestions, or bug reports.</string>
+    <string name="feedback_email">E-mail</string>
+
+    <!-- DNS Blocking (Phase 2) -->
+    <string name="dns_blocking_title">Ad &amp; Tracker Blocking</string>
+    <string name="blocked_today">%d blocked today</string>
+    <string name="blocked_today_label">Blocked Today</string>
+    <string name="total_queries_today">Total Queries Today</string>
+    <string name="blocked_all_time">Blocked All Time</string>
+    <string name="vpn_enabled">Protection Active</string>
+    <string name="vpn_disabled">Protection Off</string>
+    <string name="vpn_local_info">Local VPN only — Your traffic is never routed through external servers. All filtering happens on your device.</string>
+    <string name="vpn_enable_prompt">Enable Protection</string>
+    <string name="vpn_permission_required">VPN permission is required to block ads and trackers</string>
+    <string name="blocklists">Blocklists</string>
+    <string name="blocklist_ads">Ad Domains</string>
+    <string name="blocklist_ads_desc">Blocks ad-serving domains from known advertising networks</string>
+    <string name="blocklist_trackers">Tracker Domains</string>
+    <string name="blocklist_trackers_desc">Blocks tracking and analytics domains</string>
+    <string name="add_custom_list">Add Custom List</string>
+    <string name="domains_count">%d domains</string>
+    <string name="premium_required">Premium Required</string>
+    <string name="top_blocked">Most Blocked</string>
+    <string name="vpn_notification_title">TrustGuard Protection Active</string>
+    <string name="vpn_notification_text">%d trackers blocked today</string>
+    <string name="vpn_notification_channel">VPN Protection</string>
+    <string name="protection">Protection</string>
+    <string name="tap_to_manage">Tap to manage</string>
+    <string name="blocklist_inapp_ads">In-App Ad SDKs</string>
+    <string name="blocklist_inapp_ads_desc">Blocks mobile ad SDKs used in apps (AdMob, Unity, AppLovin, etc.)</string>
+
+    <!-- Per-App Filtering -->
+    <string name="per_app_filtering">Per-App Filtering</string>
+    <string name="per_app_filtering_desc">Choose which apps are filtered through VPN</string>
+    <string name="app_excluded">Excluded</string>
+    <string name="app_filtered">Filtered</string>
+    <string name="all_apps_filtered">All apps are filtered</string>
+    <string name="apps_excluded_count">%d apps excluded</string>
+    <string name="search_apps_filter">Search apps…</string>
+    <string name="restart_vpn_required">Restart VPN to apply changes</string>
+
+    <!-- Notification Ad Detection -->
+    <string name="notification_ads">Notification Ads</string>
+    <string name="notification_ads_desc">Detect apps that send ad notifications</string>
+    <string name="notification_ads_detected">%d ad notification(s) detected</string>
+    <string name="notification_ads_none">No ad notifications detected</string>
+    <string name="notification_access_required">Notification access permission is required</string>
+    <string name="grant_notification_access">Grant Access</string>
+    <string name="detected_from">From: %s</string>
+
+    <!-- File Recovery (Phase 3) -->
+    <string name="recovery_title">File Recovery</string>
+    <string name="recovery_description">Scan your device for deleted photos, videos and documents</string>
+    <string name="scan_files">Scan for Deleted Files</string>
+    <string name="scanning_files">Scanning for recoverable files…</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="audio">Audio</string>
+    <string name="documents">Documents</string>
+    <string name="all_files">All Files</string>
+    <string name="files_found">%d files found</string>
+    <string name="file_size">%s</string>
+    <string name="deleted_date">Deleted: %s</string>
+    <string name="recover">Recover</string>
+    <string name="recover_selected">Recover Selected (%d)</string>
+    <string name="recover_all">Recover All</string>
+    <string name="recovering">Recovering…</string>
+    <string name="recovery_success">%d files recovered successfully</string>
+    <string name="recovery_failed">Recovery failed</string>
+    <string name="no_files_found">No recoverable files found</string>
+    <string name="free_limit_title">Free Limit Reached</string>
+    <string name="free_limit_message">Free version allows recovering up to 3 files. Upgrade to Premium for unlimited recovery.</string>
+    <string name="upgrade_premium">Upgrade to Premium</string>
+    <string name="free_recoveries_left">%d free recoveries left</string>
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
+    <string name="storage_permission_required">Storage permission is required to scan for deleted files</string>
+    <string name="all_files_access_required">All Files Access permission is required to find deleted files from other apps</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="open_permission_settings">Open Settings</string>
+    <string name="recovered_to">Recovered to: %s</string>
+    <string name="scanning_trashed">Scanning trashed files…</string>
+    <string name="scanning_filesystem">Scanning filesystem…</string>
+    <string name="recovery_card_title">File Recovery</string>
+    <string name="recovery_card_subtitle">Recover deleted photos &amp; files</string>
+
+    <!-- Recovery Scan Modes -->
+    <string name="quick_scan">Quick Scan</string>
+    <string name="quick_scan_desc">Checks trash and recently deleted files</string>
+    <string name="deep_scan">Deep Scan</string>
+    <string name="deep_scan_desc">Thumbnails, caches, hidden folders and app data</string>
+    <string name="root_scan">Full Scan (Root)</string>
+    <string name="root_scan_desc">Deep filesystem analysis for maximum recovery</string>
+    <string name="root_required">Requires rooted device</string>
+    <string name="root_not_available">Root access not available on this device</string>
+    <string name="premium_required_for_recovery">Premium required to recover files from deep scan</string>
+    <string name="premium_required_for_root">Premium required for root scan</string>
+
+    <!-- Recovery Sources -->
+    <string name="source_trash">Trash</string>
+    <string name="source_thumbnail">Thumbnail</string>
+    <string name="source_cache">Cache</string>
+    <string name="source_hidden">Hidden</string>
+    <string name="source_root">Root Scan</string>
+
+    <!-- Scan Stats -->
+    <string name="scan_stats">%1$d files found from %2$d sources</string>
+    <string name="scanning_thumbnails">Scanning thumbnails…</string>
+    <string name="scanning_caches">Scanning app caches…</string>
+    <string name="scanning_hidden">Scanning hidden folders…</string>
+    <string name="scanning_root">Root scan in progress…</string>
+    <string name="device_rooted">Root Detected</string>
+    <string name="device_not_rooted">Not Rooted</string>
+    <string name="files_found_count">files found</string>
+    <string name="recovery_warning_android11">Android 11+ restricts direct file access. Recovery is limited to trash, thumbnails, caches and app data. Permanently deleted files cannot be fully restored without root access.</string>
+    <string name="recovery_warning_android10">Android 10 has limited file access (Scoped Storage). Some deleted files may not be detectable. Results depend on how the file was deleted.</string>
+    <string name="recovery_quality_note">Some files may be thumbnails or cached versions with reduced quality. Full-resolution originals may not be recoverable on Android 11+.</string>
+
+    <!-- Adware Detection -->
+    <string name="adware_title">Ad Threat Scan</string>
+    <string name="adware_card_title">Ad Threat Detection</string>
+    <string name="adware_card_subtitle">Detect apps with suspicious ad behavior</string>
+    <string name="adware_found">%d suspicious app(s) found</string>
+    <string name="adware_none_found">No suspicious apps detected</string>
+    <string name="adware_score">Suspicion: %d%%</string>
+    <string name="adware_overlay_ads">Can display ads over other apps (uses screen overlay permission)</string>
+    <string name="adware_auto_start">Starts automatically on boot with internet access and overlay capability</string>
+    <string name="adware_known_sdk">Contains known aggressive advertising SDK</string>
+    <string name="adware_aggressive_bg">Shows aggressive background activity patterns</string>
+    <string name="adware_install_apps">Can silently install other apps (pay-per-install behavior)</string>
+    <string name="adware_known_package">Matches known adware application pattern</string>
+    <string name="adware_suspicious_combo">Suspicious combination of intrusive permissions</string>
+    <string name="adware_what_to_do">What can you do?</string>
+    <string name="adware_tip_uninstall">Uninstall the app if you don\'t need it</string>
+    <string name="adware_tip_overlay">Revoke overlay permission from Settings → Apps</string>
+    <string name="adware_tip_background">Restrict background activity from battery settings</string>
+    <string name="adware_scanning">Scanning for ad threats…</string>
+    <string name="adware_highly_suspicious">Highly Suspicious</string>
+    <string name="adware_suspicious">Suspicious</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="app_settings">App Settings</string>
+
+    <!-- Premium Subscription -->
+    <string name="premium_title">TrustGuard Premium</string>
+    <string name="premium_headline">Unlock Full Protection</string>
+    <string name="premium_subtitle">Get unlimited file recovery, deep scanning, root access and more with Premium.</string>
+    <string name="premium_subscribe">Subscribe to Premium</string>
+    <string name="premium_restore">Restore Purchases</string>
+    <string name="premium_per_year">year</string>
+    <string name="premium_loading_price">Loading…</string>
+    <string name="premium_price_from_store">Price loaded from Play Store</string>
+    <string name="premium_active">Premium Active</string>
+    <string name="premium_active_desc">You have access to all premium features. Thank you for your support!</string>
+    <string name="premium_feature_recovery">Unlimited File Recovery</string>
+    <string name="premium_feature_recovery_desc">Recover unlimited deleted files (free version: 3 files)</string>
+    <string name="premium_feature_deep_scan">Deep Scan Recovery</string>
+    <string name="premium_feature_deep_scan_desc">Recover files from thumbnails, caches and hidden folders</string>
+    <string name="premium_feature_root">Root Full Scan</string>
+    <string name="premium_feature_root_desc">Full filesystem scan on rooted devices for maximum recovery</string>
+    <string name="premium_feature_adware">Advanced Threat Detection</string>
+    <string name="premium_feature_adware_desc">Priority ad threat scanning and real-time monitoring</string>
+    <string name="premium_feature_blocklist">Custom Blocklists</string>
+    <string name="premium_feature_blocklist_desc">Add your own custom domain blocklists for ad blocking</string>
+    <string name="premium_feature_optimize">Device Optimization</string>
+    <string name="premium_feature_optimize_desc">Clean junk files, duplicates, app caches and free up storage space</string>
+    <string name="premium_legal">Subscription automatically renews unless canceled at least 24 hours before the end of the current period. You can manage or cancel your subscription in Google Play Store settings. By subscribing, you agree to our Terms of Service and Privacy Policy.</string>
+    <string name="premium_card_title">Go Premium</string>
+    <string name="premium_card_subtitle">Unlock unlimited recovery &amp; advanced features</string>
+
+    <!-- Optimization Tools -->
+    <string name="optimize_title">Optimization</string>
+    <string name="optimize_card_title">Device Optimization</string>
+    <string name="optimize_card_subtitle">Clean junk, find duplicates &amp; free up space</string>
+    <string name="optimize_tab_junk">Junk</string>
+    <string name="optimize_tab_duplicates">Duplicates</string>
+    <string name="optimize_tab_large">Large Files</string>
+    <string name="optimize_tab_cache">App Cache</string>
+    <string name="optimize_tab_email">Email</string>
+    <string name="optimize_scan_now">Scan Now</string>
+    <string name="optimize_scanning">Scanning…</string>
+    <string name="optimize_cleaned">items cleaned</string>
+    <string name="optimize_files">files</string>
+    <string name="optimize_copies">copies</string>
+    <string name="optimize_clean_all">Clean All</string>
+    <string name="optimize_premium_clean">Upgrade to Clean</string>
+    <string name="optimize_premium_message">Cleaning requires Premium subscription. Scanning is free!</string>
+    <string name="optimize_delete_selected">Delete Selected</string>
+    <string name="optimize_delete_duplicates">Delete Duplicates (Keep First)</string>
+    <string name="optimize_clean_email">Clean Email Cache</string>
+
+    <!-- Junk -->
+    <string name="optimize_junk_title">System Cleanup</string>
+    <string name="optimize_junk_desc">Find temp files, old APKs, thumbnail caches and empty folders</string>
+    <string name="optimize_junk_found">Junk data found</string>
+    <string name="optimize_no_junk">Your device is clean!</string>
+    <string name="optimize_cat_temp">Temporary Files</string>
+    <string name="optimize_cat_apk">Downloaded APKs</string>
+    <string name="optimize_cat_thumbs">Thumbnail Cache</string>
+    <string name="optimize_cat_system">System Cache</string>
+    <string name="optimize_cat_empty">Empty Folders</string>
+
+    <!-- Duplicates -->
+    <string name="optimize_dup_title">Duplicate Photos</string>
+    <string name="optimize_dup_desc">Find identical photos taking up extra storage space</string>
+    <string name="optimize_dup_found">%d duplicate groups found</string>
+    <string name="optimize_no_duplicates">No duplicate photos found</string>
+
+    <!-- Large Files -->
+    <string name="optimize_large_title">Large Files</string>
+    <string name="optimize_large_desc">Find files larger than 100 MB that you may not need</string>
+    <string name="optimize_large_found">Large files found</string>
+    <string name="optimize_no_large">No large files found</string>
+
+    <!-- App Cache -->
+    <string name="optimize_cache_title">App Cache</string>
+    <string name="optimize_cache_desc">See how much cache each app is using</string>
+    <string name="optimize_cache_total">Cache from %d apps</string>
+    <string name="optimize_cache_hint">Tip: You can clear app caches individually from Settings → Apps</string>
+    <string name="optimize_no_cache">No significant app caches found</string>
+
+    <!-- Email -->
+    <string name="optimize_email_title">Email Cache</string>
+    <string name="optimize_email_desc">Find cached email attachments and data</string>
+    <string name="optimize_email_found">Email cache found</string>
+    <string name="optimize_no_email">No email cache found</string>
+
+    <!-- Trusted App Transparency -->
+    <string name="transparency_title">Developer Transparency</string>
+    <string name="transparency_developer">Developer</string>
+    <string name="transparency_privacy">Privacy Guarantee</string>
+    <string name="transparency_permissions">Why These Permissions?</string>
+    <string name="transparency_network">Network Connections</string>
+    <string name="transparency_network_host">Host</string>
+    <string name="transparency_network_purpose">Purpose</string>
+    <string name="transparency_network_data">Data Transferred</string>
+    <string name="transparency_data_policy">Data Policy</string>
+    <string name="transparency_verified">Verified by TrustGuard</string>
+    <string name="transparency_badge">This app is developed by a trusted developer. All permission uses have been verified.</string>
+    <string name="transparency_no_external">No data sent to external servers</string>
+
+    <!-- App Activity Tracking -->
+    <string name="activity_title">Activity (24h)</string>
+    <string name="activity_foreground">Foreground</string>
+    <string name="activity_background">Background</string>
+    <string name="activity_last_used">Last Used</string>
+    <string name="activity_network">Network Usage</string>
+    <string name="activity_sent">Sent</string>
+    <string name="activity_received">Received</string>
+    <string name="activity_total_data">Total Data</string>
+    <string name="activity_privacy">Privacy Access</string>
+    <string name="activity_camera">Camera</string>
+    <string name="activity_microphone">Microphone</string>
+    <string name="activity_location">Location</string>
+    <string name="activity_times_accessed">%d access(es)</string>
+    <string name="activity_last_access">Last: %s</string>
+    <string name="activity_no_access">No access detected</string>
+    <string name="activity_suspicious_bg">⚠ Excessive background activity detected</string>
+    <string name="activity_no_permission">Usage access permission required</string>
+    <string name="activity_grant_permission">Grant in Settings</string>
+    <string name="activity_never">Never</string>
+
+    <!-- New Dashboard -->
+    <string name="dashboard_greeting_morning">Good Morning</string>
+    <string name="dashboard_greeting_afternoon">Good Afternoon</string>
+    <string name="dashboard_greeting_evening">Good Evening</string>
+    <string name="dashboard_device_status">Your device security status</string>
+    <string name="dashboard_section_security">Security Tools</string>
+    <string name="dashboard_section_optimization">Optimization</string>
+    <string name="dashboard_section_advanced">Advanced Tools</string>
+    <string name="dashboard_section_pro_tools">Pro Tools</string>
+    <string name="dashboard_pro_badge">PRO</string>
+    <string name="dashboard_quick_actions">Quick Actions</string>
+    <string name="dashboard_security_summary">Security Summary</string>
+
+    <!-- Wi-Fi Security Scanner -->
+    <string name="wifi_title">Wi-Fi Security</string>
+    <string name="wifi_card_title">Wi-Fi Security</string>
+    <string name="wifi_card_subtitle">Check your network security</string>
+    <string name="wifi_scanning">Analyzing network security…</string>
+    <string name="wifi_not_connected">Not connected to any Wi-Fi network</string>
+    <string name="wifi_network_name">Network Name</string>
+    <string name="wifi_security_type">Security Type</string>
+    <string name="wifi_signal_strength">Signal Strength</string>
+    <string name="wifi_frequency">Frequency</string>
+    <string name="wifi_ip_address">IP Address</string>
+    <string name="wifi_gateway">Gateway</string>
+    <string name="wifi_dns">DNS Server</string>
+    <string name="wifi_speed">Link Speed</string>
+    <string name="wifi_secure">Secure Network</string>
+    <string name="wifi_warning">Security Warning</string>
+    <string name="wifi_danger">Insecure Network</string>
+    <string name="wifi_open_network">Open network — no encryption. Your data can be intercepted.</string>
+    <string name="wifi_wep_network">WEP encryption is outdated and easily cracked. Consider upgrading.</string>
+    <string name="wifi_wpa_network">WPA encryption detected. WPA2 or WPA3 recommended for better security.</string>
+    <string name="wifi_wpa2_network">WPA2 encryption protects your data in transit. However, encryption alone does not guarantee full network safety.</string>
+    <string name="wifi_wpa3_network">WPA3 provides the strongest Wi-Fi encryption available. Network-level risks may still apply — see below.</string>
+    <string name="wifi_unknown_security">Security type could not be determined. Location services may need to be enabled for detailed analysis.</string>
+    <string name="wifi_encryption_strong">Strong Encryption</string>
+    <string name="wifi_encryption_weak">Weak Encryption</string>
+    <string name="wifi_encryption_none">No Encryption</string>
+    <string name="wifi_network_risks_title">Network-Level Risks</string>
+    <string name="wifi_network_risks_body">Even with strong encryption, your connection can still be vulnerable to these attacks:</string>
+    <string name="wifi_risk_dns_hijack">DNS Hijacking — Attacker redirects your web traffic to malicious sites</string>
+    <string name="wifi_risk_mitm">Man-in-the-Middle — Attacker intercepts communication between you and the router</string>
+    <string name="wifi_risk_rogue_ap">Rogue Access Point — Fake Wi-Fi network mimicking a trusted one</string>
+    <string name="wifi_tip_vpn">Use a VPN on public networks</string>
+    <string name="wifi_tip_https">Only visit HTTPS websites</string>
+    <string name="wifi_tip_auto">Disable auto-connect to open networks</string>
+    <string name="wifi_tip_dns">Use encrypted DNS (DNS-over-HTTPS) for extra protection</string>
+    <string name="wifi_security_tips">Security Tips</string>
+    <string name="wifi_signal_excellent">Excellent</string>
+    <string name="wifi_signal_good">Good</string>
+    <string name="wifi_signal_fair">Fair</string>
+    <string name="wifi_signal_weak">Weak</string>
+
+    <!-- Battery Analyzer -->
+    <string name="battery_title">Battery Health</string>
+    <string name="battery_card_title">Battery Health</string>
+    <string name="battery_card_subtitle">Analyze battery drain</string>
+    <string name="battery_level">Battery Level</string>
+    <string name="battery_status">Status</string>
+    <string name="battery_temperature">Temperature</string>
+    <string name="battery_voltage">Voltage</string>
+    <string name="battery_technology">Technology</string>
+    <string name="battery_health">Health</string>
+    <string name="battery_charging">Charging</string>
+    <string name="battery_discharging">Discharging</string>
+    <string name="battery_full">Full</string>
+    <string name="battery_not_charging">Not Charging</string>
+    <string name="battery_health_good">Good</string>
+    <string name="battery_health_overheat">Overheat</string>
+    <string name="battery_health_dead">Dead</string>
+    <string name="battery_health_unknown">Unknown</string>
+    <string name="battery_top_drainers">Top Battery Drainers</string>
+    <string name="battery_usage_percent">%s usage</string>
+    <string name="battery_tips">Battery Tips</string>
+    <string name="battery_tip_brightness">Lower screen brightness</string>
+    <string name="battery_tip_background">Restrict background apps</string>
+    <string name="battery_tip_location">Disable location when not needed</string>
+    <string name="battery_tip_sync">Reduce sync frequency</string>
+    <string name="battery_scanning">Analyzing battery usage…</string>
+
+    <!-- Storage Analyzer -->
+    <string name="storage_title">Storage Analyzer</string>
+    <string name="storage_card_title">Storage Analyzer</string>
+    <string name="storage_card_subtitle">Visualize your storage usage</string>
+    <string name="storage_total">Total Storage</string>
+    <string name="storage_used">Used</string>
+    <string name="storage_free">Available</string>
+    <string name="storage_apps">Apps</string>
+    <string name="storage_images">Images</string>
+    <string name="storage_videos">Videos</string>
+    <string name="storage_audio">Audio</string>
+    <string name="storage_documents">Documents</string>
+    <string name="storage_other">Other</string>
+    <string name="storage_system">System</string>
+    <string name="storage_scanning">Analyzing storage…</string>
+
+    <!-- App Integrity -->
+    <string name="integrity_title">App Integrity</string>
+    <string name="integrity_card_title">App Integrity</string>
+    <string name="integrity_card_subtitle">Verify app signatures</string>
+    <string name="integrity_verified">Verified</string>
+    <string name="integrity_warning">Warning</string>
+    <string name="integrity_play_store">Play Store</string>
+    <string name="integrity_sideloaded">Sideloaded</string>
+    <string name="integrity_system">System App</string>
+    <string name="integrity_unknown_source">Unknown Source</string>
+    <string name="integrity_scanning">Checking app integrity…</string>
+    <string name="integrity_all_safe">All apps verified</string>
+    <string name="integrity_sideloaded_count">%d sideloaded apps detected</string>
+    <string name="integrity_desc">Apps installed from outside Play Store may pose security risks</string>
+
+    <!-- Network Monitor -->
+    <string name="network_title">Network Monitor</string>
+    <string name="network_card_title">Network Monitor</string>
+    <string name="network_card_subtitle">Real-time traffic analysis</string>
+    <string name="network_total_sent">Total Sent</string>
+    <string name="network_total_received">Total Received</string>
+    <string name="network_top_consumers">Top Data Consumers</string>
+    <string name="network_mobile_data">Mobile Data</string>
+    <string name="network_wifi_data">Wi-Fi Data</string>
+    <string name="network_scanning">Analyzing network usage…</string>
+
+    <!-- Trust Messaging for Premium -->
+    <string name="trust_headline">Support Independent Privacy</string>
+    <string name="trust_message">TrustEdge Labs does not sell your data, display intrusive ads, or monetize your personal information. We rely solely on the support of users like you to develop stronger, ad-free privacy tools. Your subscription directly funds better protection for everyone.</string>
+    <string name="trust_badge_no_ads">No Ads Ever</string>
+    <string name="trust_badge_no_data_sale">Zero Data Sales</string>
+    <string name="trust_badge_local">100%% On-Device</string>
+    <string name="trust_badge_independent">Independent Developer</string>
+    <string name="premium_why_pay">Why go Premium?</string>
+    <string name="premium_trust_title">Your Privacy, Our Mission</string>
+    <string name="premium_community">Join %d+ users protecting their privacy</string>
+
+    <!-- Pro-only features messaging -->
+    <string name="pro_feature_locked">Pro Feature</string>
+    <string name="pro_feature_unlock_hint">Available with TrustGuard Pro</string>
+    <string name="pro_feature_discover">Discover what Pro unlocks</string>
+
+    <!-- Premium screen redesigned -->
+    <string name="premium_section_free">Included Free</string>
+    <string name="premium_section_pro">Pro Exclusive</string>
+    <string name="premium_free_feature_scan">Permission Analysis</string>
+    <string name="premium_free_feature_vpn">Ad &amp; Tracker Blocking</string>
+    <string name="premium_free_feature_wifi">Wi-Fi Security Scanner</string>
+    <string name="premium_free_feature_battery">Battery Health Monitor</string>
+    <string name="premium_free_feature_storage">Storage Analyzer</string>
+    <string name="premium_free_feature_basic_recovery">Basic File Recovery (3 files)</string>
+    <string name="premium_pro_feature_unlimited_recovery">Unlimited File Recovery</string>
+    <string name="premium_pro_feature_deep_scan">Deep &amp; Root Scan</string>
+    <string name="premium_pro_feature_network_monitor">Advanced Network Monitor</string>
+    <string name="premium_pro_feature_integrity">App Integrity Checker</string>
+    <string name="premium_pro_feature_custom_blocklist">Custom Blocklists</string>
+    <string name="premium_pro_feature_advanced_clean">Advanced Cleanup Tools</string>
+    <string name="premium_pro_feature_priority">Priority Updates</string>
+    <string name="premium_pro_feature_export">Security Report Export</string>
+
+    <!-- Pro Dashboard extras -->
+    <string name="pro_dashboard_realtime">Real-time Monitoring</string>
+    <string name="pro_dashboard_threats_blocked">Threats Blocked</string>
+    <string name="pro_dashboard_data_saved">Data Saved</string>
+    <string name="pro_dashboard_security_events">Security Events (24h)</string>
+
+    <!-- Family Shield (Pro) -->
+    <string name="family_shield_title">Family Shield</string>
+    <string name="family_shield_subtitle">Protect your children from harmful content, adware, and risky apps</string>
+    <string name="family_shield_scenario_title">Does This Sound Familiar?</string>
+    <string name="family_shield_scenario">Your child is playing a game and suddenly taps on a pop-up ad. Minutes later, strange apps appear on the device, notifications start flooding in, and the phone slows down. You don\'t know what was installed or what data was shared.</string>
+    <string name="family_shield_solution">With Family Shield, TrustGuard monitors your child\'s device in real-time and alerts you before threats become problems.</string>
+    <string name="family_shield_feature_monitor">Real-time App Monitoring</string>
+    <string name="family_shield_feature_monitor_desc">Get notified when risky apps are installed</string>
+    <string name="family_shield_feature_adblock">Enhanced Ad Protection</string>
+    <string name="family_shield_feature_adblock_desc">Block intrusive game ads and pop-ups</string>
+    <string name="family_shield_feature_scan">Auto Threat Scanning</string>
+    <string name="family_shield_feature_scan_desc">Automatic background scanning for new threats</string>
+    <string name="family_shield_feature_report">Weekly Safety Reports</string>
+    <string name="family_shield_feature_report_desc">See which apps your child uses and what risks were blocked</string>
+
+    <!-- Daily Limits -->
+    <string name="daily_limit_title">Daily Limit Reached</string>
+    <string name="daily_limit_message">Free version includes 1 full scan per day. Upgrade to Pro for unlimited scans and real-time background protection.</string>
+    <string name="daily_limit_scans_left">%d scans remaining today</string>
+    <string name="daily_limit_reset">Resets at midnight</string>
+    <string name="daily_limit_upgrade">Unlock Unlimited</string>
+
+    <!-- Premium redesigned V2 -->
+    <string name="premium_headline_v2">Complete Protection for You &amp; Your Family</string>
+    <string name="premium_subtitle_v2">Go beyond basic security. Protect your children, get real-time monitoring, and unlock the full power of TrustGuard.</string>
+    <string name="premium_pro_feature_family">Family Shield Mode</string>
+    <string name="premium_pro_feature_family_desc">Real-time protection for your children\'s devices</string>
+    <string name="premium_pro_feature_realtime">Real-time Background Protection</string>
+    <string name="premium_pro_feature_realtime_desc">Automatic scanning — no manual action needed</string>
+    <string name="premium_pro_feature_unlimited_scan">Unlimited Daily Scans</string>
+    <string name="premium_pro_feature_unlimited_scan_desc">Free: 1 scan/day — Pro: scan anytime</string>
+    <string name="premium_pro_feature_alerts">Instant Threat Alerts</string>
+    <string name="premium_pro_feature_alerts_desc">Get notified the moment a risky app is installed</string>
+
+    <!-- Family Shield Feature -->
+    <string name="fs_title">Family Shield</string>
+    <string name="fs_card_title">Family Shield</string>
+    <string name="fs_card_subtitle">Parental controls &amp; child protection</string>
+    <string name="fs_pin_setup_title">Set Parent PIN</string>
+    <string name="fs_pin_setup_desc">Create a 4–6 digit PIN to protect Family Shield settings. Only you will be able to change or disable protection.</string>
+    <string name="fs_pin_label">PIN</string>
+    <string name="fs_pin_confirm">Confirm PIN</string>
+    <string name="fs_pin_set_button">Set PIN</string>
+    <string name="fs_pin_enter_title">Enter Parent PIN</string>
+    <string name="fs_pin_enter_desc">Enter your PIN to access Family Shield settings.</string>
+    <string name="fs_pin_unlock">Unlock</string>
+    <string name="fs_setup_title">Setup Family Shield</string>
+    <string name="fs_setup_desc">Enter your child\'s information to activate protection.</string>
+    <string name="fs_child_name">Child\'s Name</string>
+    <string name="fs_child_age">Child\'s Age</string>
+    <string name="fs_enable_button">Enable Family Shield</string>
+    <string name="fs_active_title">Family Shield Active</string>
+    <string name="fs_protecting">Protecting %s</string>
+    <string name="fs_blocked_apps">Blocked Apps</string>
+    <string name="fs_today_usage">Today\'s Usage</string>
+    <string name="fs_daily_limit_label">Daily Limit</string>
+    <string name="fs_top_apps_today">Top Apps Today</string>
+    <string name="fs_recent_activity">Recent Activity</string>
+    <string name="fs_clear_log">Clear Log</string>
+    <string name="fs_parent_panel">Parent Panel</string>
+    <string name="fs_disable_shield">Disable Family Shield</string>
+    <string name="fs_daily_limit_section">Daily Time Limit</string>
+    <string name="fs_protection_section">Protection Settings</string>
+    <string name="fs_age_filter">Age-Based Filtering</string>
+    <string name="fs_age_filter_desc">Automatically flag apps inappropriate for your child\'s age (dating, gambling, etc.)</string>
+    <string name="fs_adware_autoblock">Auto-Block Adware</string>
+    <string name="fs_adware_autoblock_desc">Automatically block newly installed apps detected as adware</string>
+    <string name="fs_install_alerts">New Install Alerts</string>
+    <string name="fs_install_alerts_desc">Get notified when a new app is installed on the device</string>
+    <string name="fs_blocked_apps_section">App Blocking</string>
+    <string name="fs_no_apps">No apps available to block</string>
+    <string name="fs_unlimited">Unlimited</string>
+    <string name="fs_minutes">min</string>
+    <string name="fs_daily_limit_hint">Set to 0 for unlimited screen time</string>
+    <string name="fs_notification_channel">Family Shield Alerts</string>
+    <string name="fs_notification_channel_desc">Notifications for new app installs and Family Shield events</string>
+    <string name="fs_new_app_alert_title">New App Installed</string>
+    <string name="fs_new_app_alert_body">%s was just installed on this device</string>
+    <string name="fs_new_app_alert_detail">%1$s (%2$s) was installed. Open Family Shield to review.</string>
+
+    <!-- Family Shield: Security Question -->
+    <string name="fs_security_question_title">Security Question (for PIN recovery)</string>
+    <string name="fs_security_q1">What is your mother\'s maiden name?</string>
+    <string name="fs_security_q2">What was the name of your first pet?</string>
+    <string name="fs_security_q3">What city were you born in?</string>
+    <string name="fs_security_q4">What is your favorite color?</string>
+    <string name="fs_security_q5">What is the name of your childhood friend?</string>
+    <string name="fs_security_answer">Your Answer</string>
+    <string name="fs_forgot_pin">Forgot PIN?</string>
+    <string name="fs_forgot_pin_title">Reset PIN</string>
+    <string name="fs_forgot_pin_desc">Answer your security question to reset your PIN.</string>
+    <string name="fs_new_pin">New PIN</string>
+    <string name="fs_reset_pin">Reset PIN</string>
+    <string name="fs_change_pin">Change PIN</string>
+    <string name="fs_current_pin">Current PIN</string>
+    <string name="fs_pin_section">PIN Security</string>
+
+    <!-- Family Shield: Multi-profile -->
+    <string name="fs_active_profile">Active Profile</string>
+    <string name="fs_switch_profile">Switch Profile</string>
+    <string name="fs_add_profile">Add Child Profile</string>
+    <string name="fs_add_profile_confirm">Add</string>
+
+    <!-- Family Shield: Usage Permission -->
+    <string name="fs_usage_permission_title">Usage Access Required</string>
+    <string name="fs_usage_permission_desc">Tap to grant Usage Access permission for app usage tracking and app blocking.</string>
+
+    <!-- Family Shield: App Blocker Service -->
+    <string name="fs_blocker_service_channel">Family Shield Monitor</string>
+    <string name="fs_blocker_service_desc">Background service that monitors and blocks restricted apps</string>
+    <string name="fs_blocker_notification_title">Family Shield Active</string>
+    <string name="fs_blocker_notification_text">Monitoring app usage and enforcing restrictions</string>
+
+    <!-- Family Shield: Blocked App Screen -->
+    <string name="fs_blocked_app_title">App Blocked</string>
+    <string name="fs_blocked_app_message">%s is blocked by Family Shield. Ask your parent to unblock it.</string>
+    <string name="fs_blocked_app_hint">This app has been restricted by your parent for your safety.</string>
+    <string name="fs_blocked_by_family_shield">Protected by Family Shield</string>
+    <string name="fs_go_home">Go Home</string>
+
+    <!-- Screen Time Limit -->
+    <string name="fs_screen_time_exceeded_title">Screen Time Limit Reached</string>
+    <string name="fs_screen_time_exceeded_message">Your daily screen time limit has been reached. Please take a break.</string>
+    <string name="fs_screen_time_exceeded_hint">Your parent set a daily usage limit for your safety.</string>
+    <string name="fs_overlay_permission_required">Overlay permission is required for app blocking to work. Please grant it in settings.</string>
+
+    <!-- Family Shield: Enhanced -->
+    <string name="fs_content_filter">Content Filtering</string>
+    <string name="fs_content_filter_desc">Block apps by category for child safety</string>
+    <string name="fs_category_social">Social Media</string>
+    <string name="fs_category_dating">Dating Apps</string>
+    <string name="fs_category_gambling">Gambling</string>
+    <string name="fs_category_browser">Web Browsers</string>
+    <string name="fs_category_vpn">VPN Apps</string>
+    <string name="fs_weekly_report">Weekly Usage Report</string>
+    <string name="fs_weekly_report_desc">Summary of your child\'s app usage this week</string>
+    <string name="fs_most_used">Most Used Apps</string>
+    <string name="fs_total_screen_time">Total Screen Time</string>
+    <string name="fs_blocked_attempts">Blocked Attempts</string>
+    <string name="fs_location_tracking">Location Sharing</string>
+    <string name="fs_location_tracking_desc">Share your child\'s location with the parent device (requires location permission)</string>
+    <string name="fs_safe_search">Safe Search</string>
+    <string name="fs_safe_search_desc">Force safe search on supported browsers via DNS filtering</string>
+
+    <!-- Virus Scanner -->
+    <string name="virus_scan_title">Virus Scanner</string>
+    <string name="virus_scan_card_title">Virus Scanner</string>
+    <string name="virus_scan_card_subtitle">Scan for malware and threats</string>
+    <string name="virus_scan_ready_title">Device Security Scan</string>
+    <string name="virus_scan_ready_desc">Comprehensive scan for malware, spyware, trojans, fake apps and system vulnerabilities. Works completely offline.</string>
+    <string name="virus_scan_start">Start Full Scan</string>
+    <string name="virus_scan_scanning">Scanning…</string>
+    <string name="virus_scan_phase_apps">Analyzing installed apps…</string>
+    <string name="virus_scan_phase_perms">Checking permission patterns…</string>
+    <string name="virus_scan_phase_sigs">Verifying app signatures…</string>
+    <string name="virus_scan_phase_system">Checking system security…</string>
+    <string name="virus_scan_clean">Device is Clean</string>
+    <string name="virus_scan_warnings">Warnings Found</string>
+    <string name="virus_scan_threats">Threats Detected!</string>
+    <string name="virus_scan_critical">Critical Threats!</string>
+    <string name="virus_scan_summary">%1$d apps scanned in %2$.1f seconds</string>
+    <string name="virus_scan_safe">Safe</string>
+    <string name="virus_scan_warning_count">Warnings</string>
+    <string name="virus_scan_threat_count">Threats</string>
+    <string name="virus_scan_threats_title">Threats</string>
+    <string name="virus_scan_warnings_title">Warnings</string>
+    <string name="virus_scan_system_security">System Security</string>
+    <string name="virus_scan_uninstall">Uninstall App</string>
+    <string name="virus_severity_critical">Critical</string>
+    <string name="virus_severity_high">High</string>
+    <string name="virus_severity_medium">Medium</string>
+    <string name="virus_severity_low">Low</string>
+    <string name="virus_type_malware">Known Malware</string>
+    <string name="virus_type_dangerous_perms">Dangerous Permissions</string>
+    <string name="virus_type_fake_app">Fake App</string>
+    <string name="virus_type_sideloaded">Sideloaded Risky</string>
+    <string name="virus_type_hidden">Hidden App</string>
+    <string name="virus_type_cert">Suspicious Certificate</string>
+    <string name="virus_type_trojan">Trojan Pattern</string>
+    <string name="virus_type_spyware">Spyware Pattern</string>
+    <string name="virus_type_ransomware">Ransomware Pattern</string>
+    <string name="virus_type_miner">Crypto Miner</string>
+    <string name="virus_type_banking">Banking Trojan</string>
+    <string name="virus_system_usb">USB Debugging</string>
+    <string name="virus_system_unknown_sources">Unknown Sources</string>
+    <string name="virus_system_dev_options">Developer Options</string>
+    <string name="virus_system_root">Root Access</string>
+    <string name="virus_system_screen_lock">Screen Lock</string>
+    <string name="virus_system_encryption">Device Encryption</string>
+    <string name="virus_system_play_protect">Play Protect</string>
+
+    <!-- Screen Time Timer -->
+    <string name="fs_screen_time_channel">Screen Time Timer</string>
+    <string name="fs_screen_time_channel_desc">Shows remaining screen time countdown</string>
+    <string name="fs_screen_time_notification_title">Screen Time Active</string>
+    <string name="fs_remaining">remaining</string>
+    <string name="fs_time_up_channel">Time Up Alarm</string>
+    <string name="fs_time_up_channel_desc">Alarm notification when screen time expires</string>
+    <string name="fs_time_up_title">Time\'s Up!</string>
+    <string name="fs_time_up_text">Your allowed screen time has ended. Please put your device down.</string>
+    <string name="fs_time_up_dismiss">Dismiss Alarm</string>
+    <string name="fs_timer_active">Timer active: %d min remaining</string>
+    <string name="fs_apply_timer">Apply</string>
+    <string name="fs_stop_timer">Stop</string>
+
+    <!-- Per-App Firewall -->
+    <string name="firewall_title">Per-App Firewall</string>
+    <string name="firewall_card_title">Per-App Firewall</string>
+    <string name="firewall_card_subtitle">Block internet access per app</string>
+    <string name="firewall_toggle">Firewall</string>
+    <string name="firewall_active">Firewall is active — blocked apps cannot access internet</string>
+    <string name="firewall_inactive">Firewall is disabled</string>
+    <string name="firewall_info">Tap the Wi-Fi or mobile data icon to block that connection type for an app. Red = blocked, green = allowed. VPN must be active for firewall to work.</string>
+    <string name="firewall_wifi">Wi-Fi</string>
+    <string name="firewall_mobile">Mobile</string>
+    <string name="firewall_blocked_apps">%d apps blocked</string>
+    <string name="firewall_no_rules">No firewall rules set</string>
+    <string name="firewall_vpn_required">VPN must be active for firewall to work. Enable VPN protection from the dashboard first.</string>
+    <string name="firewall_apply_changes">Apply Changes (Restart VPN)</string>
+
+    <!-- Fake Identity Engine -->
+    <string name="fake_id_title">Fake Identity</string>
+    <string name="fake_id_card_title">Fake Identity</string>
+    <string name="fake_id_card_subtitle">Generate random device fingerprints</string>
+    <string name="fake_id_desc">Generate fake device identifiers to protect your real identity. These can be used with privacy tools or Xposed modules to spoof your device fingerprint.</string>
+    <string name="fake_id_generate">Generate Identity</string>
+    <string name="fake_id_regenerate">Regenerate Identity</string>
+    <string name="fake_id_clear">Clear Identity</string>
+    <string name="fake_id_model">Device Model</string>
+    <string name="fake_id_android_version">Android Version</string>
+    <string name="fake_id_android_id">Android ID</string>
+    <string name="fake_id_imei">IMEI</string>
+    <string name="fake_id_mac">MAC Address</string>
+    <string name="fake_id_serial">Serial Number</string>
+    <string name="fake_id_fingerprint">Build Fingerprint</string>
+    <string name="fake_id_disclaimer">Note: Generated identities are for use with privacy tools (Xposed, Magisk modules). TrustGuard does not modify your real device identifiers without root access.</string>
+    <string name="fake_id_how_to_use">How to Use</string>
+    <string name="fake_id_step1">1. Tap the copy button next to any value</string>
+    <string name="fake_id_step2">2. Open your Xposed module (LSPosed) or Magisk module settings</string>
+    <string name="fake_id_step3">3. Paste the values into the relevant fields</string>
+    <string name="fake_id_step4">4. Restart the target app for changes to take effect</string>
+    <string name="fake_id_use_cases">Use Cases:</string>
+    <string name="fake_id_usecase1">• Prevent apps from tracking your real device ID</string>
+    <string name="fake_id_usecase2">• Bypass device-based bans or restrictions</string>
+    <string name="fake_id_usecase3">• Protect against device fingerprinting</string>
+    <string name="fake_id_usecase4">• Create different identities for different apps</string>
+    <string name="fake_id_root_note">⚠ Requires root access (Magisk) and a device spoofer module to actually apply these values.</string>
+
+    <!-- Encrypted Vault -->
+    <string name="vault_title">Encrypted Vault</string>
+    <string name="vault_card_title">Encrypted Vault</string>
+    <string name="vault_card_subtitle">AES-256 encrypted file storage</string>
+    <string name="vault_setup_title">Create Your Vault</string>
+    <string name="vault_setup_desc">Set a password to protect your files with AES-256 encryption.</string>
+    <string name="vault_unlock_title">Unlock Vault</string>
+    <string name="vault_password">Password</string>
+    <string name="vault_confirm_password">Confirm Password</string>
+    <string name="vault_create">Create Vault</string>
+    <string name="vault_unlock">Unlock</string>
+    <string name="vault_encrypting">Encrypting file…</string>
+    <string name="vault_stats">Vault Storage</string>
+    <string name="vault_empty">Your vault is empty. Tap + to add files.</string>
+
+    <!-- Packet Sniffer -->
+    <string name="sniffer_title">Packet Sniffer</string>
+    <string name="sniffer_card_title">Packet Sniffer</string>
+    <string name="sniffer_card_subtitle">Monitor app network traffic</string>
+    <string name="sniffer_tab_traffic">Per-App Traffic</string>
+    <string name="sniffer_tab_summary">Summary</string>
+    <string name="sniffer_no_data">No traffic data available</string>
+    <string name="sniffer_total_traffic">Traffic Summary</string>
+    <string name="sniffer_uploaded">Uploaded</string>
+    <string name="sniffer_downloaded">Downloaded</string>
+    <string name="sniffer_total">Total</string>
+    <string name="sniffer_tx_packets">TX Packets</string>
+    <string name="sniffer_rx_packets">RX Packets</string>
+    <string name="sniffer_apps_count">Apps with traffic</string>
+
+    <!-- Bloatware Remover -->
+    <string name="bloatware_title">Bloatware Remover</string>
+    <string name="bloatware_card_title">Bloatware Remover</string>
+    <string name="bloatware_card_subtitle">Detect &amp; remove pre-installed junk</string>
+    <string name="bloatware_scanning">Scanning for bloatware…</string>
+    <string name="bloatware_found">%d bloatware apps detected</string>
+    <string name="bloatware_space">Using %s storage</string>
+    <string name="bloatware_manage">Manage</string>
+    <string name="bloatware_disabled">Disabled</string>
+    <string name="bloatware_cat_carrier">Carrier</string>
+    <string name="bloatware_cat_oem">Manufacturer</string>
+    <string name="bloatware_cat_google">Google</string>
+    <string name="bloatware_cat_social">Social</string>
+    <string name="bloatware_cat_system">System</string>
+    <string name="bloatware_root_note">Note: Completely uninstalling system apps requires root access. You can disable them from the app settings page to prevent them from running.</string>
+
+    <!-- Privacy Tools -->
+    <string name="privacy_title">Privacy Dashboard</string>
+    <string name="privacy_card_title">Privacy Tools</string>
+    <string name="privacy_card_subtitle">Clipboard guard, tracker map &amp; more</string>
+    <string name="privacy_tab_guards">Privacy Guards</string>
+    <string name="privacy_tab_trackers">Tracker Map</string>
+    <string name="privacy_clipboard_guard">Clipboard Guard</string>
+    <string name="privacy_clipboard_desc">Monitor apps accessing your clipboard data</string>
+    <string name="privacy_camera_monitor">Camera Monitor</string>
+    <string name="privacy_camera_desc">%d apps have camera access</string>
+    <string name="privacy_mic_monitor">Microphone Monitor</string>
+    <string name="privacy_mic_desc">%d apps have microphone access</string>
+    <string name="privacy_permission_stats">Permission Overview</string>
+    <string name="privacy_camera_apps">Camera Access</string>
+    <string name="privacy_mic_apps">Microphone Access</string>
+    <string name="privacy_location_apps">Location Access</string>
+    <string name="privacy_no_trackers">No trackers detected in installed apps</string>
+    <string name="privacy_tracker_info">Apps are analyzed for known tracker SDKs, advertising IDs, and tracking permissions.</string>
+    <string name="privacy_trackers_count">%d trackers</string>
+    <string name="privacy_camera_apps_list">Apps with Camera Access:</string>
+    <string name="privacy_mic_apps_list">Apps with Microphone Access:</string>
+    <string name="privacy_location_apps_list">Apps with Location Access:</string>
+    <string name="privacy_tracker_location">Location Tracking</string>
+    <string name="privacy_tracker_fingerprint">Device Fingerprinting</string>
+    <string name="privacy_tracker_adid">Advertising ID</string>
+    <string name="privacy_tracker_account">Account Tracking</string>
+    <string name="privacy_tracker_admob">AdMob Ad SDK</string>
+    <string name="privacy_tracker_facebook">Facebook SDK</string>
+    <string name="privacy_tracker_branch">Branch Analytics</string>
+    <string name="privacy_tracker_crashlytics">Crash Reporting</string>
+
+    <!-- Advanced Security -->
+    <string name="appsec_title">Advanced Security</string>
+    <string name="appsec_card_title">Advanced Security</string>
+    <string name="appsec_card_subtitle">APK analysis, ADB guard &amp; more</string>
+    <string name="appsec_tab_analysis">APK Analysis</string>
+    <string name="appsec_tab_device">Device Security</string>
+    <string name="appsec_scanning">Analyzing app security…</string>
+    <string name="appsec_summary">%d apps analyzed</string>
+    <string name="appsec_high_risk">%d high-risk apps found</string>
+    <string name="appsec_adb_status">USB Debugging (ADB)</string>
+    <string name="appsec_adb_enabled">ADB is enabled — your device is exposed to USB attacks</string>
+    <string name="appsec_adb_disabled">ADB is disabled — secure</string>
+    <string name="appsec_dev_options">Developer Options</string>
+    <string name="appsec_dev_enabled">Developer options enabled — some security features may be weakened</string>
+    <string name="appsec_dev_disabled">Developer options disabled — secure</string>
+    <string name="appsec_device_info">These checks help detect potential attack vectors on your device. Disable ADB and developer options when not in use.</string>
+    <string name="appsec_risk_high">High</string>
+    <string name="appsec_risk_medium">Medium</string>
+    <string name="appsec_risk_low">Low</string>
+    <string name="appsec_flag_debug">Debug Mode</string>
+    <string name="appsec_flag_backup">Backup Open</string>
+    <string name="appsec_flag_cleartext">Unencrypted</string>
+    <string name="appsec_risky_perms">%d risky permissions</string>
+    <string name="appsec_perms_header">Dangerous Permissions:</string>
+    <string name="appsec_tap_detail">Tap to see permission details</string>
+
+</resources>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1B2A"/>
+      <stop offset="100%" style="stop-color:#060E18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00E5FF"/>
+      <stop offset="100%" style="stop-color:#00E676"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="phoneClip">
+      <rect x="90" y="280" width="900" height="1440" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <!-- Caption -->
+  <text x="540" y="120" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="bold" fill="url(#accent)">Permission Analysis</text>
+  <text x="540" y="175" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="30" fill="#9AA0A6">See what every app can access</text>
+  <text x="540" y="225" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="26" fill="#6B7280">Her uygulamanın erişimini görün</text>
+
+  <!-- Phone frame -->
+  <rect x="80" y="270" width="920" height="1460" rx="40" fill="#1A1A2E" stroke="#2A3A4A" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="90" y="280" width="900" height="40" fill="#0A0E14"/>
+  <text x="540" y="307" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" fill="#9AA0A6">12:00</text>
+
+  <g clip-path="url(#phoneClip)">
+    <rect x="90" y="320" width="900" height="1400" fill="#0A0E14"/>
+
+    <!-- Top bar with back arrow -->
+    <rect x="90" y="320" width="900" height="70" fill="#0A0E14"/>
+    <text x="130" y="365" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" fill="#E8EAED">←</text>
+    <text x="540" y="365" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#E8EAED">Permission Analysis</text>
+
+    <!-- App info header -->
+    <rect x="120" y="410" width="840" height="100" rx="16" fill="#1E2A3A"/>
+    <circle cx="185" cy="460" r="32" fill="#E91E63" opacity="0.3"/>
+    <text x="185" y="468" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28">📷</text>
+    <text x="235" y="448" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="bold" fill="#E8EAED">Instagram</text>
+    <text x="235" y="478" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" fill="#9AA0A6">com.instagram.android</text>
+
+    <!-- Stats row -->
+    <g transform="translate(120, 530)">
+      <!-- Total -->
+      <rect width="260" height="90" rx="14" fill="#1E2A3A"/>
+      <text x="130" y="35" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="bold" fill="#E8EAED">24</text>
+      <text x="130" y="60" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Total Permissions</text>
+
+      <!-- Sensitive -->
+      <rect x="280" width="260" height="90" rx="14" fill="#1E2A3A"/>
+      <text x="410" y="35" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="bold" fill="#FF1744">8</text>
+      <text x="410" y="60" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Sensitive</text>
+
+      <!-- Score -->
+      <rect x="560" width="260" height="90" rx="14" fill="#1E2A3A"/>
+      <text x="690" y="35" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="bold" fill="#FF9800">67</text>
+      <text x="690" y="60" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA0A6">Permission Score</text>
+    </g>
+
+    <!-- Permissions header -->
+    <text x="130" y="670" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#E8EAED">Permissions (24)</text>
+
+    <!-- Permission items -->
+    <!-- Camera - Sensitive -->
+    <rect x="120" y="690" width="840" height="70" rx="12" fill="#1E2A3A"/>
+    <circle cx="155" cy="725" r="6" fill="#FF1744"/>
+    <text x="175" y="720" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">CAMERA</text>
+    <text x="175" y="742" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Take photos and videos</text>
+    <rect x="840" y="710" width="90" height="28" rx="14" fill="#FF1744" opacity="0.15"/>
+    <text x="885" y="729" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FF1744">Sensitive</text>
+
+    <!-- Location - Sensitive -->
+    <rect x="120" y="775" width="840" height="70" rx="12" fill="#1E2A3A"/>
+    <circle cx="155" cy="810" r="6" fill="#FF1744"/>
+    <text x="175" y="805" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">ACCESS_FINE_LOCATION</text>
+    <text x="175" y="827" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Precise GPS location</text>
+    <rect x="840" y="795" width="90" height="28" rx="14" fill="#FF1744" opacity="0.15"/>
+    <text x="885" y="814" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FF1744">Sensitive</text>
+
+    <!-- Microphone - Sensitive -->
+    <rect x="120" y="860" width="840" height="70" rx="12" fill="#1E2A3A"/>
+    <circle cx="155" cy="895" r="6" fill="#FF1744"/>
+    <text x="175" y="890" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">RECORD_AUDIO</text>
+    <text x="175" y="912" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Record audio with microphone</text>
+    <rect x="840" y="880" width="90" height="28" rx="14" fill="#FF1744" opacity="0.15"/>
+    <text x="885" y="899" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FF1744">Sensitive</text>
+
+    <!-- Contacts - Moderate -->
+    <rect x="120" y="945" width="840" height="70" rx="12" fill="#1E2A3A"/>
+    <circle cx="155" cy="980" r="6" fill="#FFD600"/>
+    <text x="175" y="975" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">READ_CONTACTS</text>
+    <text x="175" y="997" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Read your contacts</text>
+    <rect x="830" y="965" width="100" height="28" rx="14" fill="#FFD600" opacity="0.15"/>
+    <text x="880" y="984" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#FFD600">Moderate</text>
+
+    <!-- Internet - Safe -->
+    <rect x="120" y="1030" width="840" height="70" rx="12" fill="#1E2A3A"/>
+    <circle cx="155" cy="1065" r="6" fill="#00E676"/>
+    <text x="175" y="1060" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">INTERNET</text>
+    <text x="175" y="1082" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Full network access</text>
+    <rect x="860" y="1050" width="70" height="28" rx="14" fill="#00E676" opacity="0.15"/>
+    <text x="895" y="1069" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#00E676">Safe</text>
+
+    <!-- Vibrate - Safe -->
+    <rect x="120" y="1115" width="840" height="70" rx="12" fill="#1E2A3A"/>
+    <circle cx="155" cy="1150" r="6" fill="#00E676"/>
+    <text x="175" y="1145" font-family="'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#E8EAED">VIBRATE</text>
+    <text x="175" y="1167" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA0A6">Control vibration</text>
+    <rect x="860" y="1135" width="70" height="28" rx="14" fill="#00E676" opacity="0.15"/>
+    <text x="895" y="1154" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#00E676">Safe</text>
+
+    <!-- More indicator -->
+    <text x="540" y="1230" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6B7280">+ 18 more permissions...</text>
+
+    <!-- Open Settings button -->
+    <rect x="120" y="1270" width="840" height="56" rx="28" fill="#FFD600"/>
+    <text x="540" y="1305" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#000">Open in Settings</text>
+
+    <!-- Disclaimer -->
+    <rect x="120" y="1350" width="840" height="90" rx="12" fill="#1E2A3A" opacity="0.6"/>
+    <text x="145" y="1378" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#6B7280">ℹ️ This analysis is based solely on the permissions</text>
+    <text x="145" y="1398" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#6B7280">requested by the app. A high permission count does not</text>
+    <text x="145" y="1418" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" fill="#6B7280">necessarily indicate malicious intent.</text>
+  </g>
+
+  <!-- Bottom -->
+  <text x="540" y="1810" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#E8EAED">TrustGuard</text>
+  <text x="540" y="1850" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" fill="#9AA0A6">by TrustEdge Labs</text>
+</svg>

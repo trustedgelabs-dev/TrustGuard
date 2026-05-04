@@ -1,0 +1,303 @@
+# TrustGuard In-App Ad SDK Blocklist
+# Targets mobile ad SDK network calls specifically
+# Blocks ad loading, mediation, and reward callbacks for in-app ads
+# Last updated: 2026-03-28
+
+# ===== Google AdMob =====
+admob-sdk.google.com
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+pagead.googlesyndication.com
+tpc.googlesyndication.com
+googleads4.g.doubleclick.net
+googleads2.g.doubleclick.net
+s0.2mdn.net
+s1.2mdn.net
+2mdn.net
+adservice.google.com
+fundingchoicesmessages.google.com
+imasdk.googleapis.com
+
+# ===== Facebook Audience Network =====
+an.facebook.com
+audience-network.facebook.com
+audiencenetwork.facebook.com
+bidder.facebook.com
+graph.facebook.com/network_ads
+
+# ===== Unity Ads =====
+unityads.unity3d.com
+config.unityads.unity3d.com
+adserver.unityads.unity3d.com
+auction.unityads.unity3d.com
+webview.unityads.unity3d.com
+cdn-creatives-highwind-prd.unityads.unity3d.com
+publisher-event.unityads.unity3d.com
+httpkafka.unityads.unity3d.com
+creative.unityads.unity3d.com
+gamingadshub.unity3d.com
+
+# ===== AppLovin / MAX =====
+ms.applovin.com
+d.applvn.com
+rt.applovin.com
+a.applovin.com
+img.applovin.com
+pdn.applovin.com
+assets.applovin.com
+ms.applvn.com
+ms2.applvn.com
+sdk.applovin.com
+api.applovin.com
+init.applovin.com
+postback.applovin.com
+prod-a.applovin.com
+prod-b.applovin.com
+
+# ===== ironSource / IS =====
+outcome-ssp.supersonicads.com
+supersonicads.com
+init.supersonicads.com
+sdk.supersonicads.com
+edge.supersonicads.com
+is-sdk.supersonicads.com
+o.supersonicads.com
+rv.supersonicads.com
+ia.supersonicads.com
+bn.supersonicads.com
+outcome.supersonicads.com
+sdk.is.com
+init.is.com
+rewarded.is.com
+outcome-ssp.is.com
+levelsource.is.com
+
+# ===== Vungle / Liftoff =====
+ads.api.vungle.com
+api.vungle.com
+3rdparty-assets.vungle.com
+edge.vungle.com
+cdn-lb.vungle.com
+liftoff.io
+lftff.io
+clicktrack.liftoff.io
+
+# ===== Chartboost =====
+da.chartboost.com
+live.chartboost.com
+ads.chartboost.com
+a.chartboost.com
+www.chartboost.com
+
+# ===== AdColony / Digital Turbine =====
+ads3.adcolony.com
+wd.adcolony.com
+events3alt.adcolony.com
+adc3-launch.adcolony.com
+adcolony.com
+events.adcolony.com
+ssa.adcolony.com
+androidads23.adcolony.com
+androidads34.adcolony.com
+
+# ===== InMobi =====
+config.inmobi.com
+sdk.inmobi.com
+ads.inmobi.com
+api.w.inmobi.com
+i.w.inmobi.com
+cr.inmobi.com
+sdkconf.inmobi.com
+
+# ===== Mintegral / Mobvista =====
+configure.rayjump.com
+net.rayjump.com
+analytics.rayjump.com
+a.rayjump.com
+hb.rayjump.com
+cdn-adn.rayjump.com
+cdn-setting.rayjump.com
+
+# ===== Pangle / ByteDance =====
+pangolin-sdk-toutiao.com
+is.snssdk.com
+sf16-scmcdn-sg.ibytedtos.com
+ad.oceanengine.com
+pangolin.snssdk.com
+open.snssdk.com
+toblog.ctobsnssdk.com
+mon.snssdk.com
+log.snssdk.com
+
+# ===== Fyber / Digital Turbine =====
+ads.fyber.com
+ia.fyber.com
+mraid.fyber.com
+offer.fyber.com
+ads.inner-active.mobi
+ia-cert.inner-active.mobi
+cdn1.inner-active.mobi
+
+# ===== Smaato =====
+soma.smaato.net
+s.smaato.net
+prebid.smaato.net
+ad.smaato.net
+img.smaato.net
+soma-assets.smaato.net
+
+# ===== StartApp =====
+req.startappservice.com
+init.startappservice.com
+imp.startappservice.com
+infoevent.startappservice.com
+trackdownload.startappservice.com
+
+# ===== Tapjoy =====
+ads.tapjoy.com
+connect.tapjoy.com
+rpc.tapjoy.com
+ws.tapjoy.com
+placements.tapjoy.com
+rv-gateway.prod.tapjoy.com
+offers.tapjoy.com
+images.tapjoy.com
+
+# ===== MoPub (Twitter/X) =====
+ads.mopub.com
+mopub.com
+
+# ===== MobileFuse =====
+mfx.mobilefuse.com
+api.mobilefuse.com
+cdn.mobilefuse.com
+sdk.mobilefuse.com
+
+# ===== Ogury =====
+msp.ogury.com
+ms.ogury.com
+api.ogury.com
+sdk.ogury.com
+
+# ===== Verve Group =====
+ads.verve.com
+sdk.verve.com
+events.verve.com
+config.verve.com
+
+# ===== Kidoz =====
+ads.kidoz.net
+sdk.kidoz.net
+
+# ===== AerServ =====
+ads.aerserv.com
+
+# ===== Digital Turbine =====
+delivery.adaction.co
+hoster.adaction.co
+
+# ===== Yandex Mobile Ads =====
+an.yandex.ru
+mobile-ads.yandex.ru
+an.yandex.com
+mobile-ads.yandex.com
+
+# ===== Samsung Ads SDK =====
+samsungads.com
+ad.samsungadhub.com
+config.samsungads.com
+
+# ===== Huawei Ads SDK =====
+adx-dre.op.dbankcloud.com
+adx-dre.op.hicloud.com
+ads-dre.op.dbankcloud.com
+
+# ===== Xiaomi Ad SDK =====
+sdkconfig.ad.xiaomi.com
+globalapi.ad.xiaomi.com
+api.ad.xiaomi.com
+new.api.ad.xiaomi.com
+t.ad.xiaomi.com
+data.mistat.xiaomi.com
+
+# ===== Oppo / Realme Ad SDK =====
+bdapi-in-ads.realmemobile.com
+bdapi-ads.realmemobile.com
+adsfs.oppomobile.com
+
+# ===== Vivo Ad SDK =====
+ads-market-api.vivo.com.cn
+ads-analytics.vivo.com.cn
+
+# ===== Criteo Mobile =====
+gum.criteo.com
+bidder.criteo.com
+sslwidget.criteo.com
+rdi.criteo.com
+
+# ===== Amazon Publisher Services =====
+aax-us-east.amazon-adsystem.com
+aax-us-west.amazon-adsystem.com
+aax-eu.amazon-adsystem.com
+aax-fe.amazon-adsystem.com
+aax.amazon-adsystem.com
+mads.amazon-adsystem.com
+
+# ===== Baidu Mobile Ads =====
+mobads.baidu.com
+mobads-sdk.baidu.com
+baidumobad.baidu.com
+cpro.baidustatic.com
+
+# ===== Tencent GDT (Guangdiantong) =====
+e.qq.com
+gdt.qq.com
+pgdt.ugdtimg.com
+mi.gdt.qq.com
+v.gdt.qq.com
+t.gdt.qq.com
+win.gdt.qq.com
+
+# ===== GameAnalytics Ads =====
+ads.gameanalytics.com
+
+# ===== AdTiming =====
+sdk.adtiming.com
+api.adtiming.com
+
+# ===== Moloco =====
+sdk-a.adsmoloco.com
+api.adsmoloco.com
+
+# ===== Bigo Ads =====
+api.bigoads.com
+sdk.bigoads.com
+
+# ===== Meson =====
+sdk.meson.ai
+config.meson.ai
+
+# ===== PubNative / Verve =====
+sdk.pubnative.net
+dsp-x.pubnative.net
+
+# ===== AdinCube =====
+sdk.adincube.com
+api.adincube.com
+
+# ===== Cauly (Korea) =====
+ad.cauly.net
+image.cauly.net
+sdk.cauly.net
+
+# ===== AdStir (Japan) =====
+ssp.ad-stir.com
+ad.ad-stir.com
+
+# ===== Reward Video Mediation =====
+rv.supersonicads.com
+rv-gateway.prod.tapjoy.com
+rewarded.is.com
+ads.api.vungle.com
+live.chartboost.com
+adserver.unityads.unity3d.com

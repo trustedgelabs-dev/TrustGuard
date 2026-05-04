@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Inter', sans-serif;
+    background: #0A0E14;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .logo-sm {
+    width: 50px; height: 50px;
+    background: linear-gradient(135deg, #00E676, #00C853);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-sm svg { width: 30px; height: 30px; fill: #0A0E14; }
+  .brand { font-size: 28px; font-weight: 800; color: #00E676; }
+
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 35px;
+    line-height: 1.2;
+  }
+
+  .table {
+    width: 100%;
+    flex: 1;
+  }
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 1fr 160px 160px;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 0 16px;
+  }
+
+  .col-label {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+  }
+  .col-label:first-child { text-align: left; }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 1fr 160px 160px;
+    gap: 8px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    padding: 18px 16px;
+    margin-bottom: 6px;
+    align-items: center;
+  }
+  .table-row:nth-child(odd) { background: rgba(255,255,255,0.05); }
+
+  .row-label {
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .row-emoji { font-size: 28px; }
+
+  .cell {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .yes { color: #00E676; }
+  .no { color: #F44336; }
+  .partial { color: #FF9800; }
+
+  .footer {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .footer-text {
+    font-size: 26px;
+    color: rgba(255,255,255,0.4);
+  }
+  .footer-text span { color: #00E676; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="header">
+      <div class="logo-sm">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <span class="brand">TrustGuard vs Di&#287;erleri</span>
+    </div>
+
+    <h2>Neden TrustGuard?</h2>
+
+    <div class="table">
+      <div class="table-header">
+        <div class="col-label">&#214;zellik</div>
+        <div class="col-label">TrustGuard</div>
+        <div class="col-label">Di&#287;erleri</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128737;&#65039;</span> Reklam Engelleme</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell partial">&#36;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128293;</span> Uygulama Firewall</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell no">&#10007;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128274;</span> &#350;ifreli Kasa</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell no">&#10007;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128373;&#65039;</span> Vir&#252;s Taray&#305;c&#305;</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell partial">&#36;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128065;&#65039;</span> &#304;zleyici Tespiti</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell no">&#10007;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128100;</span> Sahte Kimlik</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell no">&#10007;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128118;</span> Ebeveyn Kontrol&#252;</div>
+        <div class="cell yes">&#10003;</div>
+        <div class="cell partial">&#36;</div>
+      </div>
+
+      <div class="table-row">
+        <div class="row-label"><span class="row-emoji">&#128176;</span> Fiyat</div>
+        <div class="cell yes">&#220;cretsiz</div>
+        <div class="cell no">&#36;&#36;&#36;</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-text"><span>trustedgelabs.dev</span> &#8212; T&#252;m &#246;zellikler &#252;cretsiz</div>
+    </div>
+  </div>
+</body>
+</html>

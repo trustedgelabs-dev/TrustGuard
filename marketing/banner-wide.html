@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  body {
+    width: 1200px;
+    height: 628px;
+    font-family: 'Inter', sans-serif;
+    background: #0A0E14;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bg-glow {
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+  }
+  .g1 { top: -200px; left: -100px; background: #00E676; }
+  .g2 { bottom: -200px; right: -100px; background: #00BCD4; }
+
+  .content {
+    position: relative; z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 50px 60px;
+    gap: 50px;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .logo-box {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #00E676, #00C853);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-box svg { width: 28px; height: 28px; fill: #0A0E14; }
+
+  .brand { font-size: 24px; font-weight: 800; color: #00E676; }
+
+  h1 {
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  h1 .green { color: #00E676; }
+
+  .sub {
+    font-size: 22px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+    margin-bottom: 28px;
+  }
+
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cta-btn {
+    background: linear-gradient(135deg, #00E676, #00C853);
+    border-radius: 40px;
+    padding: 16px 40px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #0A0E14;
+    box-shadow: 0 6px 24px rgba(0,230,118,0.3);
+  }
+
+  .cta-url {
+    font-size: 20px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 440px;
+    flex-shrink: 0;
+  }
+
+  .mini-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .mini-icon { font-size: 32px; margin-bottom: 6px; }
+  .mini-label { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.75); }
+
+  .mini-card.hl {
+    background: rgba(0,230,118,0.08);
+    border-color: rgba(0,230,118,0.2);
+  }
+</style>
+</head>
+<body>
+  <div class="bg-glow g1"></div>
+  <div class="bg-glow g2"></div>
+
+  <div class="content">
+    <div class="left">
+      <div class="header-row">
+        <div class="logo-box">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <span class="brand">TrustGuard</span>
+      </div>
+
+      <h1>Telefonunun<br><span class="green">Tam G&#252;venli&#287;i</span></h1>
+
+      <p class="sub">VPN, firewall, &#351;ifreli kasa, vir&#252;s taray&#305;c&#305;<br>ve 12+ g&#252;venlik arac&#305; tek uygulamada.</p>
+
+      <div class="cta-row">
+        <div class="cta-btn">&#220;cretsiz &#304;ndir</div>
+        <div class="cta-url">trustedgelabs.dev</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="mini-card hl">
+        <div class="mini-icon">&#128737;&#65039;</div>
+        <div class="mini-label">VPN</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-icon">&#128293;</div>
+        <div class="mini-label">Firewall</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-icon">&#128274;</div>
+        <div class="mini-label">&#350;ifreli Kasa</div>
+      </div>
+      <div class="mini-card hl">
+        <div class="mini-icon">&#128373;&#65039;</div>
+        <div class="mini-label">Vir&#252;s Tarama</div>
+      </div>
+      <div class="mini-card hl">
+        <div class="mini-icon">&#128065;&#65039;</div>
+        <div class="mini-label">Gizlilik</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-icon">&#128118;</div>
+        <div class="mini-label">Ebeveyn</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

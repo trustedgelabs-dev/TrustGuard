@@ -1,0 +1,122 @@
+═══════════════════════════════════════════════════════════════
+  DEMO VIDEO GUIDE — Emülatörde Test Verisi Oluşturma
+  (Play Console için 30 saniyelik video)
+═══════════════════════════════════════════════════════════════
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  YÖNTEM 1: Galeri'den Sil (En Kolay)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Emülatörde Kamera uygulamasını aç
+2. 5-6 fotoğraf çek (emülatör sanal kamerası olsa bile olur)
+3. Galeri/Google Photos'a git
+4. Fotoğrafları seç ve SİL (çöp kutusuna gidecek)
+5. ÖNEMLİ: Google Photos kullanıyorsan "Çöp Kutusunu Boşalt" yapMA
+6. TrustGuard'ı aç → File Recovery → Quick Scan
+7. Silinen fotoğraflar MediaStore Trash'ten bulunacak
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  YÖNTEM 2: ADB ile Test Dosyaları (Daha Güvenilir)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Terminal/CMD'den şu komutları çalıştır:
+
+# 1. Emülatöre bağlı olduğundan emin ol
+adb devices
+
+# 2. Test fotoğrafları oluştur (basit PNG dosyaları)
+adb shell "dd if=/dev/urandom bs=1024 count=50 > /sdcard/DCIM/Camera/test_photo_1.jpg"
+adb shell "dd if=/dev/urandom bs=1024 count=80 > /sdcard/DCIM/Camera/test_photo_2.jpg"
+adb shell "dd if=/dev/urandom bs=1024 count=120 > /sdcard/DCIM/Camera/test_photo_3.jpg"
+adb shell "dd if=/dev/urandom bs=1024 count=200 > /sdcard/Download/test_document.pdf"
+adb shell "dd if=/dev/urandom bs=1024 count=500 > /sdcard/DCIM/Camera/test_video.mp4"
+
+# 3. MediaStore'a kaydet (Galeri görsün)
+adb shell "am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/DCIM/Camera/"
+
+# 4. Dosyaları "sil" - .Trash klasörüne taşı
+adb shell "mkdir -p /sdcard/.Trash"
+adb shell "mv /sdcard/DCIM/Camera/test_photo_1.jpg /sdcard/.Trash/"
+adb shell "mv /sdcard/DCIM/Camera/test_photo_2.jpg /sdcard/.Trash/"
+
+# 5. .trashed- prefix ile dosya oluştur (Android'in silme formatı)
+adb shell "mv /sdcard/DCIM/Camera/test_photo_3.jpg /sdcard/DCIM/Camera/.trashed-1234567890-test_photo_3.jpg"
+
+# 6. Thumbnail dizinine dosya koy (Deep Scan bulacak)
+adb shell "mkdir -p /sdcard/DCIM/.thumbnails"
+adb shell "dd if=/dev/urandom bs=1024 count=30 > /sdcard/DCIM/.thumbnails/thumb_001.jpg"
+adb shell "dd if=/dev/urandom bs=1024 count=30 > /sdcard/DCIM/.thumbnails/thumb_002.jpg"
+
+# 7. Hidden folder (.nomedia) oluştur (Deep Scan bulacak)
+adb shell "mkdir -p /sdcard/Pictures/.hidden_album"
+adb shell "touch /sdcard/Pictures/.hidden_album/.nomedia"
+adb shell "dd if=/dev/urandom bs=1024 count=100 > /sdcard/Pictures/.hidden_album/secret_photo.jpg"
+
+# 8. Cache dizinine dosya koy
+adb shell "mkdir -p /sdcard/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images"
+adb shell "dd if=/dev/urandom bs=1024 count=60 > /sdcard/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp\ Images/IMG-20260315-WA0001.jpg"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  YÖNTEM 3: Gerçek Fotoğraf Kullan (En İyi Görünüm)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Bilgisayarından gerçek fotoğrafları emülatöre gönder
+adb push C:\Users\CIHAN\Pictures\foto1.jpg /sdcard/DCIM/Camera/
+adb push C:\Users\CIHAN\Pictures\foto2.jpg /sdcard/DCIM/Camera/
+adb push C:\Users\CIHAN\Pictures\foto3.jpg /sdcard/DCIM/Camera/
+
+# MediaStore'a kaydet
+adb shell "am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/DCIM/Camera/"
+
+# 30 saniye bekle (MediaStore indekslesin)
+
+# Galeri'den sil (çöp kutusuna gitsin)
+# VEYA direkt .Trash'e taşı:
+adb shell "mkdir -p /sdcard/.Trash"
+adb shell "mv /sdcard/DCIM/Camera/foto1.jpg /sdcard/.Trash/"
+adb shell "mv /sdcard/DCIM/Camera/foto2.jpg /sdcard/.Trash/"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ÖNEMLİ: MANAGE_EXTERNAL_STORAGE İzni
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Emülatörde ilk taramadan önce TrustGuard'a dosya erişim
+izni verildiğinden emin ol:
+
+  Ayarlar → Uygulamalar → TrustGuard → İzinler →
+  Dosyalar ve medya → Tüm dosyalara erişime izin ver
+
+ADB ile hızlı yol:
+  adb shell appops set com.trustedgelabs.trustguard MANAGE_EXTERNAL_STORAGE allow
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  VIDEO SENARYO (30 saniye)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+0-5s:   Dashboard açılır, Privacy Score görünür
+5-10s:  File Recovery'ye tıkla
+10-13s: Quick Scan seç, tarama başlar
+13-18s: Tarama ilerler (strateji adları görünür)
+18-22s: Sonuçlar listelenir, source badge'ler görünür
+22-25s: Dosya seç, "Recover" butonuna tıkla
+25-28s: Kurtarma başarılı mesajı
+28-30s: Kurtarılan dosyayı Galeri'de göster
+
+KAYIT:
+  Android Studio → Emulator → ⋯ → Record Screen
+  veya scrcpy ile: scrcpy --record trustguard-demo.mp4
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  TEMİZLİK (Video sonrası)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+adb shell "rm -rf /sdcard/.Trash"
+adb shell "rm -rf /sdcard/DCIM/.thumbnails"
+adb shell "rm -rf /sdcard/Pictures/.hidden_album"
+adb shell "rm -f /sdcard/DCIM/Camera/.trashed-*"

@@ -1,0 +1,112 @@
+═══════════════════════════════════════════════════════════════
+  MANAGE_EXTERNAL_STORAGE — Play Console Declaration
+  (All Files Access Permission)
+═══════════════════════════════════════════════════════════════
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ENGLISH — For Play Console Form
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Core functionality that requires this permission:
+─────────────────────────────────────────────────
+File Recovery / Data Recovery
+
+Explanation:
+────────────
+TrustGuard is a privacy and security assistant that includes a
+file recovery feature. This feature scans the device storage to
+locate and recover accidentally deleted files (photos, videos,
+documents, audio files).
+
+To perform file recovery, the app must access:
+  • Trash/recycle bin directories across all storage volumes
+  • Thumbnail cache directories (.thumbnails)
+  • Application cache folders that may contain recoverable data
+  • Hidden directories where deleted file remnants may exist
+
+The MANAGE_EXTERNAL_STORAGE permission is essential because:
+  1. MediaStore API alone cannot access deleted file remnants,
+     trash directories, or hidden folders
+  2. Recovery requires scanning directories outside the app's
+     own scoped storage sandbox
+  3. The app must read file headers and metadata across the
+     full filesystem to identify recoverable files
+
+Data handling:
+  • All file scanning and recovery is performed 100% locally
+    on the user's device
+  • No file data, metadata, or directory listings are collected,
+    transmitted, or stored on any external server
+  • The app does not modify or delete any files — it only reads
+    storage to find recoverable items and copies recovered files
+    to a user-selected destination
+  • Internet permission is used exclusively for Google Play
+    subscription management, not for any data transmission
+
+This permission is only requested when the user explicitly
+navigates to the File Recovery feature and initiates a scan.
+
+Alternative APIs considered:
+  • MediaStore API — insufficient, cannot access trash/hidden dirs
+  • SAF (Storage Access Framework) — requires per-folder user
+    selection, impractical for full-device recovery scanning
+  • Scoped Storage — by design prevents access to the directories
+    where deleted file remnants exist
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  TÜRKÇE — Yedek / Referans
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Bu izni gerektiren temel işlevsellik:
+─────────────────────────────────────
+Dosya Kurtarma / Veri Kurtarma
+
+Açıklama:
+─────────
+TrustGuard, dosya kurtarma özelliği içeren bir gizlilik ve
+güvenlik asistanıdır. Bu özellik, yanlışlıkla silinen dosyaları
+(fotoğraflar, videolar, belgeler, ses dosyaları) bulmak ve
+kurtarmak için cihaz depolamasını tarar.
+
+Dosya kurtarma işlemi için uygulamanın erişmesi gerekenler:
+  • Tüm depolama birimlerindeki çöp kutusu dizinleri
+  • Küçük resim önbellek dizinleri (.thumbnails)
+  • Kurtarılabilir veri içerebilecek uygulama önbellek klasörleri
+  • Silinen dosya kalıntılarının bulunabileceği gizli dizinler
+
+Veri işleme:
+  • Tüm dosya tarama ve kurtarma işlemleri %100 yerel olarak
+    kullanıcının cihazında gerçekleştirilir
+  • Hiçbir dosya verisi, meta verisi veya dizin listesi
+    harici sunucuya gönderilmez
+  • Uygulama hiçbir dosyayı değiştirmez veya silmez
+  • İnternet izni yalnızca Google Play abonelik yönetimi için
+    kullanılır
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PLAY CONSOLE FORM — Quick Copy/Paste Answers
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Q: What is the core feature that requires All Files Access?
+A: File Recovery — scanning device storage to locate and recover
+   accidentally deleted photos, videos, documents and audio files.
+
+Q: Why can't you use a more privacy-friendly alternative?
+A: MediaStore cannot access deleted file remnants in trash dirs,
+   thumbnail caches, or hidden folders. SAF requires individual
+   folder selection which is impractical for recovery scanning.
+   Scoped Storage by design blocks access to the exact directories
+   where recoverable files exist.
+
+Q: Is the permission essential for your app's core purpose?
+A: Yes. File recovery is a primary advertised feature. Without
+   MANAGE_EXTERNAL_STORAGE, the app cannot scan for or locate
+   deleted files outside its own sandbox.
+
+Q: Do you transfer any data off-device?
+A: No. All operations are performed locally. No file data or
+   metadata is ever transmitted. Internet is only used for
+   Google Play Billing subscription verification.
